@@ -10,7 +10,6 @@
   <remote fetch="git://git.linaro.org" name="linaro"/>
   <remote fetch="http://git.shr-project.org" name="shr"/>
 
-  <project remote="shr"    revision="master" name="repo/meta-smartphone" path="sources/meta-smartphone"/>
   <project remote="linaro" revision="master" name="openembedded/meta-linaro" path="sources/meta-linaro"/>
   
   <project remote="oe"     revision="master" name="meta-handheld" path="sources/meta-handheld"/>
@@ -31,6 +30,7 @@
   <project remote="github" revision="master" name="woglinde/meta-java" path="sources/meta-java"/>
   <project remote="github" revision="master" name="OSSystems/meta-browser" path="sources/meta-browser"/>
   <project remote="github" revision="master" name="meta-qt5/meta-qt5" path="sources/meta-qt5"/>
+  <project remote="github" revision="master" name="shr-distribution/meta-smartphone" path="sources/meta-smartphone"/>
 
   <project remote="github" revision="master" name="Angstrom-distribution/meta-angstrom" path="sources/meta-angstrom">
 	<copyfile dest="README" src="README"/>
