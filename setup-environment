@@ -41,6 +41,19 @@ cd $OEROOT
 export PATH="`echo $PATH | sed 's/\(:.\|:\)*:/:/g;s/^.\?://;s/:.\?$//'`"
 export PATH=${OEROOT}/sources/openembedded-core/scripts:${OEROOT}/sources/bitbake/bin:${PATH}
 
+if [ ! -e conf/checksum ]
+then
+    sha512sum ${OEROOT}/setup-environment 2>&1 > conf/checksum
+fi
+sha512sum --quiet -c conf/checksum > /dev/null 2>&1
+if [ $? -eq 0 ]
+then
+    return
+fi
+
+# re-evaluate new checksum and regenerate the conf files
+sha512sum ${OEROOT}/setup-environment 2>&1 > conf/checksum
+
 mkdir -p conf
 
 ln -sf $TEMPLATES/local.conf conf/local.conf
@@ -102,6 +115,7 @@ Your build environemnt has been configured with:
 
     MACHINE=$MACHINE
     SDKMACHINE=$SDKMACHINE
+    DISTRO=$DISTRO
 EOF
 else
     echo "Your configuration files at $1 has not been touched."
