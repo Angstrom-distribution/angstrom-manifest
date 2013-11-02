@@ -54,6 +54,8 @@ fi
 # re-evaluate new checksum and regenerate the conf files
 sha512sum ${OEROOT}/setup-environment 2>&1 > conf/checksum
 
+TEMPLATES=$CWD/.repo/manifests/conf 
+
 mkdir -p conf
 
 ln -sf $TEMPLATES/local.conf conf/local.conf
@@ -62,7 +64,6 @@ ln -sf $TEMPLATES/bblayers.conf conf/bblayers.conf
 DISTRO=$(grep -w DISTRO conf/local.conf | grep -v '^#' | awk -F\" '{print $2}')
 export DISTRO_DIRNAME=`echo $DISTRO | sed s#[.-]#_#g`
 
-TEMPLATES=$CWD/.repo/manifests/conf 
 NCPU=`grep -c processor /proc/cpuinfo`
 cat > conf/auto.conf <<EOF
 BB_NUMBER_THREADS = "$NCPU"
@@ -71,7 +72,7 @@ MACHINE ?= "$MACHINE"
 SDKMACHINE ?= "$SDKMACHINE"
 EOF
 if [ ! -e conf/site.conf ]; then
-        cat > conf/site.conf <<_EOF
+    cat > conf/site.conf <<_EOF
 
 SCONF_VERSION = "1"
 
@@ -99,6 +100,12 @@ Welcome to Ångström ( A Yocto Project Compatible Distribution )
 For more information about OpenEmbedded see their website:
     http://www.openembedded.org/
 
+Your build environemnt has been configured with:
+
+    MACHINE=$MACHINE
+    SDKMACHINE=$SDKMACHINE
+    DISTRO=$DISTRO
+
 You can now run 'bitbake <target>'
 
 Common targets are:
@@ -108,15 +115,3 @@ Common targets are:
     meta-toolchain-sdk
 
 EOF
-
-if [ -n "$generated_config" ]; then
-    cat <<EOF
-Your build environemnt has been configured with:
-
-    MACHINE=$MACHINE
-    SDKMACHINE=$SDKMACHINE
-    DISTRO=$DISTRO
-EOF
-else
-    echo "Your configuration files at $1 has not been touched."
-fi
