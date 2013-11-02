@@ -34,28 +34,6 @@ fi
 CWD=$PWD
 OEROOT=$CWD
 
-# Ensure all files in base are kept in sync with project root
-updated=
-for f in `find $CWD/.repo/manifests/ -type f`; do
-    file="$(basename $f)"
-    case $file in
-	*.xml)
-	    continue;;
-	*)
-	    ;;
-    esac
-
-    if ! cmp -s "$file" "$f"; then
-        updated="true"
-        [ -e $file ] && chmod u+w $file
-        cp $f $file
-    fi
-done
-if [ "$updated" = "true" ]; then
-    echo "The project root content has been updated. Please run $0 again."
-    return
-fi
-
 cd $OEROOT
 
 # Clean up PATH, because if it includes tokens to current directories somehow,
