@@ -40,6 +40,19 @@ More rarely, Linux clients experience connectivity issues, getting stuck in the 
 	$ sudo sysctl -w net.ipv4.tcp_window_scaling=0
 	$ repo sync -j1
 
+Create a local topic branch
+---------------------------
+
+We need to create local branches for all repos which then can be updated e.g.
+
+	$ ~/bin/repo start $USER/work --all
+
+Updating the sandbox
+--------------------
+
+	$ repo sync
+	$ repo rebase
+
 Setup Environment
 -----------------
 	$ . setup-environment
