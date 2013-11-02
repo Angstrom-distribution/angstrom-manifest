@@ -36,6 +36,7 @@
   </project>
   
   <project remote="yocto" revision="master" name="meta-fsl-arm" path="sources/meta-fsl-arm"/>
+  <project remote="yocto" revision="master" name="meta-fsl-arm-extra" path="sources/meta-fsl-arm-extra"/>
   <project remote="yocto" revision="master" name="meta-intel" path="sources/meta-intel"/>
   <project remote="yocto" revision="master" name="meta-xilinx" path="sources/meta-xilinx"/>
   <project remote="yocto" revision="master" name="meta-ti" path="sources/meta-ti"/>
