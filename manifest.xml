@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+  <default revision="master" sync-j="4"/>
+
+  <remote fetch="git://git.yoctoproject.org" name="yocto"/>
+  <remote fetch="git://git.openembedded.org" name="oe"/>
+  <remote fetch="git://github.com" name="github"/>
+  <remote fetch="git://gitorious.org" name="gitorious"/>
+  <remote fetch="git://git.linaro.org" name="linaro"/>
+  <remote fetch="http://git.shr-project.org" name="shr"/>
+
+  <project remote="shr"    revision="master" name="repo/meta-smartphone" path="sources/meta-smartphone"/>
+  <project remote="linaro" revision="master" name="openembedded/meta-linaro" path="sources/meta-linaro"/>
+  
+  <project remote="oe"     revision="master" name="meta-handheld" path="sources/meta-handheld"/>
+  <project remote="oe"     revision="master" name="meta-opie" path="sources/meta-opie"/>
+
+  <project remote="gitorious" revision="master" name="openembedded-core-layers/meta-kde" path="sources/meta-kde"/>
+  <project remote="gitorious" revision="master" name="schnitzeltony-oe-meta/meta-gumstix-community" path="sources/meta-gumstix-community"/>
+
+  <project remote="github" revision="master" name="openembedded/oe-core" path="sources/openembedded-core"/>
+  <project remote="github" revision="master" name="openembedded/meta-oe" path="sources/meta-openembedded"/>
+  <project remote="github" revision="master" name="openembedded/bitbake" path="sources/bitbake"/>
+  <project remote="github" revision="master" name="openembedded/meta-openembedded" path="sources/meta-openembedded"/>
+  <project remote="github" revision="master" name="koenkooi/meta-beagleboard" path="sources/meta-beagleboard"/>
+  <project remote="github" revision="master" name="balister/meta-ettus" path="sources/meta-ettus"/>
+  <project remote="github" revision="master" name="kraj/meta-nslu2" path="sources/meta-nslu2"/>
+  <project remote="github" revision="master" name="openpandora/meta-openpandora" path="sources/meta-openpandora"/>
+  <project remote="github" revision="master" name="djwillis/meta-raspberrypi" path="sources/meta-raspberrypi"/>
+  <project remote="github" revision="master" name="woglinde/meta-java" path="sources/meta-java"/>
+  <project remote="github" revision="master" name="OSSystems/meta-browser" path="sources/meta-browser"/>
+  <project remote="github" revision="master" name="meta-qt5/meta-qt5" path="sources/meta-qt5"/>
+
+  <project remote="github" revision="master" name="Angstrom-distribution/meta-angstrom" path="sources/meta-angstrom">
+	<copyfile dest="README" src="README"/>
+	<copyfile dest="setup-environment" src="scripts/setup-environment"/>
+  </project>
+  
+  <project remote="yocto" revision="master" name="meta-fsl-arm" path="sources/meta-fsl-arm"/>
+  <project remote="yocto" revision="master" name="meta-intel" path="sources/meta-intel"/>
+  <project remote="yocto" revision="master" name="meta-xilinx" path="sources/meta-xilinx"/>
+  <project remote="yocto" revision="master" name="meta-ti" path="sources/meta-ti"/>
+  <project remote="yocto" revision="master" name="meta-mono" path="sources/meta-mono"/>
+  <project remote="yocto" revision="master" name="meta-minnow" path="sources/meta-minnow"/>
+
+</manifest>
