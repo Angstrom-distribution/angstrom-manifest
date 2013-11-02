@@ -1,0 +1,110 @@
+#!/bin/sh
+# -*- mode: shell-script-mode; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*-
+#
+# Copyright (C) 2012 O.S. Systems Software LTDA.
+# Authored-by:  Otavio Salvador <otavio@ossystems.com.br>
+#
+# This program is free software; you can redistribute it and/or modify
+# it under the terms of the GNU General Public License version 2 as
+# published by the Free Software Foundation.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License along
+# with this program; if not, write to the Free Software Foundation, Inc.,
+# 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+#
+
+if [ "$(whoami)" = "root" ]; then
+    echo "ERROR: do not use the BSP as root. Exiting..."
+fi
+
+if [ -z "$MACHINE" ]; then
+    MACHINE='beaglebone'
+fi
+
+if [ -z "$SDKMACHINE" ]; then
+    SDKMACHINE='x86-64'
+fi
+
+if [ -z "$DISTRO" ]; then
+    DISTRO='angstrom-next'
+fi
+
+CWD=$PWD
+OEROOT=$CWD
+
+# Ensure all files in sources/base are kept in sync with project root
+updated=
+for f in $CWD/sources/base/*; do
+    file="$(basename $f)"
+    if [ "$file" = "conf" ] || echo $file | grep -q '~$'; then
+        continue
+    fi
+
+    if ! cmp -s "$file" "$f"; then
+        updated="true"
+        [ -e $file ] && chmod u+w $file
+        cp $f $file
+    fi
+done
+if [ "$updated" = "true" ]; then
+    echo "The project root content has been updated. Please run $0 again."
+    return
+fi
+
+cd $OEROOT
+
+# Clean up PATH, because if it includes tokens to current directories somehow,
+# wrong binaries can be used instead of the expected ones during task execution
+export PATH="`echo $PATH | sed 's/\(:.\|:\)*:/:/g;s/^.\?://;s/:.\?$//'`"
+
+# Generate the local.conf based on the Yocto defaults
+TEMPLATES=$CWD/sources/base/conf 
+NCPU=`grep -c processor /proc/cpuinfo`
+grep -v '^#\|^$' conf/local.conf.sample > conf/local.conf
+echo 'BBMASK = "meta-star/recipes-zollapps"' >> conf/local.conf
+cat >> conf/auto.conf <<EOF
+
+BB_NUMBER_THREADS = '$NCPU'
+PARALLEL_MAKE = '-j $NCPU'
+EOF
+    # Change settings according environment
+sed -e "s,MACHINE ??=.*,MACHINE ??= '$MACHINE',g" \
+    -e "s,SDKMACHINE ??=.*,SDKMACHINE ??= '$SDKMACHINE',g" \
+    -e "s,DISTRO ?=.*,DISTRO ?= '$DISTRO',g" \
+    -i conf/local.conf
+
+cp $TEMPLATES/* conf/
+
+cat <<EOF
+
+Welcome to Ångström ( A Yocto Project Compatible Distribution )
+
+For more information about OpenEmbedded see their website:
+    http://www.openembedded.org/
+
+You can now run 'bitbake <target>'
+
+Common targets are:
+    systemd-image
+    systemd-gnome-image
+    meta-toolchain
+    meta-toolchain-sdk
+
+EOF
+
+if [ -n "$generated_config" ]; then
+    cat <<EOF
+Your build environemnt has been configured with:
+
+    MACHINE=$MACHINE
+    SDKMACHINE=$SDKMACHINE
+    DISTRO=$DISTRO
+EOF
+else
+    echo "Your configuration files at $1 has not been touched."
+fi
