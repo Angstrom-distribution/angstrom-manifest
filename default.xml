@@ -30,13 +30,13 @@
   <project remote="github" revision="master" name="OSSystems/meta-browser" path="sources/meta-browser"/>
   <project remote="github" revision="master" name="meta-qt5/meta-qt5" path="sources/meta-qt5"/>
   <project remote="github" revision="master" name="shr-distribution/meta-smartphone" path="sources/meta-smartphone"/>
+  <project remote="github" revision="master" name="Freescale/meta-fsl-arm-extra" path="sources/meta-fsl-arm-extra"/>
 
   <project remote="github" revision="master" name="Angstrom-distribution/meta-angstrom" path="sources/meta-angstrom">
       <copyfile dest="setup-environment" src="../../.repo/manifests/setup-environment"/>
   </project>
   
   <project remote="yocto" revision="master" name="meta-fsl-arm" path="sources/meta-fsl-arm"/>
-  <project remote="yocto" revision="master" name="meta-fsl-arm-extra" path="sources/meta-fsl-arm-extra"/>
   <project remote="yocto" revision="master" name="meta-intel" path="sources/meta-intel"/>
   <project remote="yocto" revision="master" name="meta-xilinx" path="sources/meta-xilinx"/>
   <project remote="yocto" revision="master" name="meta-ti" path="sources/meta-ti"/>
