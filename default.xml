@@ -21,7 +21,6 @@
   <project remote="github" revision="master" name="openembedded/oe-core" path="sources/openembedded-core"/>
   <project remote="github" revision="master" name="openembedded/meta-oe" path="sources/meta-openembedded"/>
   <project remote="github" revision="master" name="openembedded/bitbake" path="sources/bitbake"/>
-  <project remote="github" revision="master" name="openembedded/meta-openembedded" path="sources/meta-openembedded"/>
   <project remote="github" revision="master" name="koenkooi/meta-beagleboard" path="sources/meta-beagleboard"/>
   <project remote="github" revision="master" name="balister/meta-ettus" path="sources/meta-ettus"/>
   <project remote="github" revision="master" name="kraj/meta-nslu2" path="sources/meta-nslu2"/>
