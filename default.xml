@@ -31,7 +31,7 @@
   <project remote="github" revision="master" name="meta-qt5/meta-qt5" path="sources/meta-qt5"/>
   <project remote="github" revision="master" name="shr-distribution/meta-smartphone" path="sources/meta-smartphone"/>
 
-  <project remote="github" revision="master" name="Angstrom-distribution/meta-angstrom" path="sources/meta-angstrom">
+  <project remote="github" revision="master" name="kraj/meta-angstrom" path="sources/meta-angstrom">
 	<copyfile dest="README" src="README"/>
 	<copyfile dest="setup-environment" src="scripts/setup-environment"/>
   </project>
