@@ -30,11 +30,7 @@
   <project remote="github" revision="master" name="OSSystems/meta-browser" path="sources/meta-browser"/>
   <project remote="github" revision="master" name="meta-qt5/meta-qt5" path="sources/meta-qt5"/>
   <project remote="github" revision="master" name="shr-distribution/meta-smartphone" path="sources/meta-smartphone"/>
-
-  <project remote="github" revision="master" name="kraj/meta-angstrom" path="sources/meta-angstrom">
-	<copyfile dest="README" src="README"/>
-	<copyfile dest="setup-environment" src="scripts/setup-environment"/>
-  </project>
+  <project remote="github" revision="master" name="kraj/meta-angstrom" path="sources/meta-angstrom"/>
   
   <project remote="yocto" revision="master" name="meta-fsl-arm" path="sources/meta-fsl-arm"/>
   <project remote="yocto" revision="master" name="meta-intel" path="sources/meta-intel"/>
@@ -42,5 +38,7 @@
   <project remote="yocto" revision="master" name="meta-ti" path="sources/meta-ti"/>
   <project remote="yocto" revision="master" name="meta-mono" path="sources/meta-mono"/>
   <project remote="yocto" revision="master" name="meta-minnow" path="sources/meta-minnow"/>
+
+  <copyfile dest="setup-environment" src=".repo/manifests/setup-environment"/>
 
 </manifest>
