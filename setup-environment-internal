@@ -1,0 +1,116 @@
+#!/bin/sh
+# -*- mode: shell-script-mode; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*-
+#
+# Copyright (C) 2012-13 O.S. Systems Software LTDA.
+# Authored-by:  Otavio Salvador <otavio@ossystems.com.br>
+# Adopted to Angstrom:  Khem Raj <raj.khem@gmail.com>
+#
+# This program is free software; you can redistribute it and/or modify
+# it under the terms of the GNU General Public License version 2 as
+# published by the Free Software Foundation.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License along
+# with this program; if not, write to the Free Software Foundation, Inc.,
+# 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+#
+
+if [ "$(whoami)" = "root" ]; then
+    echo "ERROR: do not use the BSP as root. Exiting..."
+fi
+
+if [ -z "${MACHINE}" ]; then
+    MACHINE='beaglebone'
+fi
+
+if [ -z "${SDKMACHINE}" ]; then
+    SDKMACHINE='x86-64'
+fi
+
+OEROOT=${PWD}
+TEMPLATES=${OEROOT}/.repo/manifests
+
+cd $OEROOT
+
+# Clean up PATH, because if it includes tokens to current directories somehow,
+# wrong binaries can be used instead of the expected ones during task execution
+export PATH="`echo ${PATH} | sed 's/\(:.\|:\)*:/:/g;s/^.\?://;s/:.\?$//'`"
+export PATH=${OEROOT}/sources/openembedded-core/scripts:${OEROOT}/sources/bitbake/bin:${PATH}
+
+if [ ! -e conf/checksum ]
+then
+    sha512sum ${TEMPLATES}/setup-environment-internal 2>&1 > conf/checksum
+fi
+sha512sum --quiet -c conf/checksum > /dev/null 2>&1
+if [ $? -eq 0 ]
+then
+    return
+fi
+
+# re-evaluate new checksum and regenerate the conf files
+sha512sum ${TEMPLATES}/setup-environment-internal 2>&1 > conf/checksum
+
+
+mkdir -p conf
+
+ln -sf ${TEMPLATES}/conf/local.conf conf/local.conf
+ln -sf ${TEMPLATES}/conf/bblayers.conf conf/bblayers.conf
+
+DISTRO=$(grep -w DISTRO conf/local.conf | grep -v '^#' | awk -F\" '{print $2}')
+export DISTRO_DIRNAME=`echo ${DISTRO} | sed s#[.-]#_#g`
+
+NCPU=`grep -c processor /proc/cpuinfo`
+cat > conf/auto.conf <<EOF
+BB_NUMBER_THREADS = "${NCPU}"
+PARALLEL_MAKE = "-j ${NCPU}"
+MACHINE ?= "${MACHINE}"
+SDKMACHINE ?= "${SDKMACHINE}"
+EOF
+if [ ! -e conf/site.conf ]; then
+    cat > conf/site.conf <<_EOF
+
+SCONF_VERSION = "1"
+
+# Where to store sources
+DL_DIR = "${OEROOT}/downloads"
+
+# Where to save shared state
+SSTATE_DIR = "${OEROOT}/build/sstate-cache"
+
+# Which files do we want to parse:
+BBFILES ?= "${OEROOT}/sources/openembedded-core/meta/recipes-*/*/*.bb"
+
+TMPDIR = "${OEROOT}/build/tmp-${DISTRO_DIRNAME}"
+
+# Go through the Firewall
+#HTTP_PROXY        = "http://${PROXYHOST}:${PROXYPORT}/"
+
+_EOF
+fi
+
+cat <<EOF
+
+Welcome to Ångström ( A Yocto Project Compatible Distribution )
+
+For more information about OpenEmbedded see their website:
+    http://www.openembedded.org/
+
+Your build environemnt has been configured with:
+
+    MACHINE=${MACHINE}
+    SDKMACHINE=${SDKMACHINE}
+    DISTRO=${DISTRO}
+
+You can now run 'bitbake <target>'
+
+Common targets are:
+    systemd-image
+    systemd-gnome-image
+    meta-toolchain
+    meta-toolchain-sdk
+
+EOF
