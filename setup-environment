@@ -1,8 +1,9 @@
 #!/bin/sh
 # -*- mode: shell-script-mode; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*-
 #
-# Copyright (C) 2012 O.S. Systems Software LTDA.
+# Copyright (C) 2012-13 O.S. Systems Software LTDA.
 # Authored-by:  Otavio Salvador <otavio@ossystems.com.br>
+# Adopted to Angstrom:  Khem Raj <raj.khem@gmail.com>
 #
 # This program is free software; you can redistribute it and/or modify
 # it under the terms of the GNU General Public License version 2 as
@@ -30,20 +31,19 @@ if [ -z "$SDKMACHINE" ]; then
     SDKMACHINE='x86-64'
 fi
 
-if [ -z "$DISTRO" ]; then
-    DISTRO='angstrom-next'
-fi
-
 CWD=$PWD
 OEROOT=$CWD
 
-# Ensure all files in sources/base are kept in sync with project root
+# Ensure all files in base are kept in sync with project root
 updated=
-for f in $CWD/sources/base/*; do
+for f in `find $CWD/.repo/manifests/ -type f`; do
     file="$(basename $f)"
-    if [ "$file" = "conf" ] || echo $file | grep -q '~$'; then
-        continue
-    fi
+    case $file in
+	*.xml)
+	    continue;;
+	*)
+	    ;;
+    esac
 
     if ! cmp -s "$file" "$f"; then
         updated="true"
@@ -61,24 +61,45 @@ cd $OEROOT
 # Clean up PATH, because if it includes tokens to current directories somehow,
 # wrong binaries can be used instead of the expected ones during task execution
 export PATH="`echo $PATH | sed 's/\(:.\|:\)*:/:/g;s/^.\?://;s/:.\?$//'`"
+export PATH=${OEROOT}/sources/openembedded-core/scripts:${OEROOT}/sources/bitbake/bin:${PATH}
 
-# Generate the local.conf based on the Yocto defaults
-TEMPLATES=$CWD/sources/base/conf 
+mkdir -p conf
+
+ln -sf $TEMPLATES/local.conf conf/local.conf
+ln -sf $TEMPLATES/bblayers.conf conf/bblayers.conf
+
+DISTRO=$(grep -w DISTRO conf/local.conf | grep -v '^#' | awk -F\" '{print $2}')
+export DISTRO_DIRNAME=`echo $DISTRO | sed s#[.-]#_#g`
+
+TEMPLATES=$CWD/.repo/manifests/conf 
 NCPU=`grep -c processor /proc/cpuinfo`
-grep -v '^#\|^$' conf/local.conf.sample > conf/local.conf
-echo 'BBMASK = "meta-star/recipes-zollapps"' >> conf/local.conf
-cat >> conf/auto.conf <<EOF
-
-BB_NUMBER_THREADS = '$NCPU'
-PARALLEL_MAKE = '-j $NCPU'
+cat > conf/auto.conf <<EOF
+BB_NUMBER_THREADS = "$NCPU"
+PARALLEL_MAKE = "-j $NCPU"
+MACHINE ?= "$MACHINE"
+SDKMACHINE ?= "$SDKMACHINE"
 EOF
-    # Change settings according environment
-sed -e "s,MACHINE ??=.*,MACHINE ??= '$MACHINE',g" \
-    -e "s,SDKMACHINE ??=.*,SDKMACHINE ??= '$SDKMACHINE',g" \
-    -e "s,DISTRO ?=.*,DISTRO ?= '$DISTRO',g" \
-    -i conf/local.conf
+if [ ! -e conf/site.conf ]; then
+        cat > conf/site.conf <<_EOF
 
-cp $TEMPLATES/* conf/
+SCONF_VERSION = "1"
+
+# Where to store sources
+DL_DIR = "${OEROOT}/downloads"
+
+# Where to save shared state
+SSTATE_DIR = "${OEROOT}/build/sstate-cache"
+
+# Which files do we want to parse:
+BBFILES ?= "${OEROOT}/sources/openembedded-core/meta/recipes-*/*/*.bb"
+
+TMPDIR = "${OEROOT}/build/tmp-${DISTRO_DIRNAME}"
+
+# Go through the Firewall
+#HTTP_PROXY        = "http://${PROXYHOST}:${PROXYPORT}/"
+
+_EOF
+fi
 
 cat <<EOF
 
@@ -103,7 +124,6 @@ Your build environemnt has been configured with:
 
     MACHINE=$MACHINE
     SDKMACHINE=$SDKMACHINE
-    DISTRO=$DISTRO
 EOF
 else
     echo "Your configuration files at $1 has not been touched."
