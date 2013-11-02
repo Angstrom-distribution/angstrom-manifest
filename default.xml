@@ -33,7 +33,7 @@
 
   <project remote="github" revision="master" name="kraj/meta-angstrom" path="sources/meta-angstrom">
 	<copyfile dest="README" src="README"/>
-	<copyfile dest="setup-environment" src="scripts/setup-environment"/>
+	<copyfile dest="setup-environment" src="../../.repo/manifests/setup-environment"/>
   </project>
   
   <project remote="yocto" revision="master" name="meta-fsl-arm" path="sources/meta-fsl-arm"/>
