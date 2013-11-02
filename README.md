@@ -51,5 +51,8 @@ f you find any bugs please report them here: https://github.com/kraj/angstrom-ma
 
 If you have questions or feedback, please subscribe to http://lists.linuxtogo.org/cgi-bin/mailman/listinfo/angstrom-distro-devel
 
-Ångström Distribution maintainers: Koen Kooi <koen@dominion.thruhere.net>
-                                   Khem Raj  <raj.khem@gmail.com>
+Ångström Distribution maintainers
+---------------------------------
+
+* Koen Kooi <mailto:koen@dominion.thruhere.net>
+* Khem Raj  <mailto:raj.khem@gmail.com>
