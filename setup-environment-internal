@@ -59,6 +59,7 @@ mkdir -p conf
 
 ln -sf ${TEMPLATES}/conf/local.conf conf/local.conf
 ln -sf ${TEMPLATES}/conf/bblayers.conf conf/bblayers.conf
+ln -sf ${TEMPLATES}/README.md README.md
 
 DISTRO=$(grep -w DISTRO conf/local.conf | grep -v '^#' | awk -F\" '{print $2}')
 export DISTRO_DIRNAME=`echo ${DISTRO} | sed s#[.-]#_#g`
