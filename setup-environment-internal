@@ -43,17 +43,16 @@ export PATH=${OEROOT}/sources/openembedded-core/scripts:${OEROOT}/sources/bitbak
 
 mkdir -p conf
 
-if [ ! -e conf/checksum ]
+if [ -e conf/checksum ]
 then
-    sha512sum ${TEMPLATES}/setup-environment-internal 2>&1 > conf/checksum
-fi
-sha512sum --quiet -c conf/checksum > /dev/null 2>&1
-if [ $? -eq 0 ]
-then
-    return
+    sha512sum --quiet -c conf/checksum > /dev/null 2>&1
+    if [ $? -eq 0 ]
+    then
+       return
+    fi
 fi
 
-# re-evaluate new checksum and regenerate the conf files
+# evaluate new checksum and regenerate the conf files
 sha512sum ${TEMPLATES}/setup-environment-internal 2>&1 > conf/checksum
 
 repo sync
