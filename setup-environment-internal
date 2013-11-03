@@ -41,6 +41,8 @@ cd $OEROOT
 export PATH="`echo ${PATH} | sed 's/\(:.\|:\)*:/:/g;s/^.\?://;s/:.\?$//'`"
 export PATH=${OEROOT}/sources/openembedded-core/scripts:${OEROOT}/sources/bitbake/bin:${OEROOT}/.repo/repo:${PATH}
 
+mkdir -p conf
+
 if [ ! -e conf/checksum ]
 then
     sha512sum ${TEMPLATES}/setup-environment-internal 2>&1 > conf/checksum
@@ -54,10 +56,10 @@ fi
 # re-evaluate new checksum and regenerate the conf files
 sha512sum ${TEMPLATES}/setup-environment-internal 2>&1 > conf/checksum
 
+repo sync
 # start a default topic branch for all repos
 repo start $USER/work --all
-
-mkdir -p conf
+repo rebase
 
 ln -sf ${TEMPLATES}/conf/local.conf conf/local.conf
 ln -sf ${TEMPLATES}/conf/bblayers.conf conf/bblayers.conf
