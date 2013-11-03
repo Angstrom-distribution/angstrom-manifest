@@ -54,6 +54,8 @@ fi
 # re-evaluate new checksum and regenerate the conf files
 sha512sum ${TEMPLATES}/setup-environment-internal 2>&1 > conf/checksum
 
+# start a default topic branch for all repos
+repo start $USER/work --all
 
 mkdir -p conf
 
