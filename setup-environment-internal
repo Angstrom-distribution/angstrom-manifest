@@ -39,7 +39,7 @@ cd $OEROOT
 # Clean up PATH, because if it includes tokens to current directories somehow,
 # wrong binaries can be used instead of the expected ones during task execution
 export PATH="`echo ${PATH} | sed 's/\(:.\|:\)*:/:/g;s/^.\?://;s/:.\?$//'`"
-export PATH=${OEROOT}/sources/openembedded-core/scripts:${OEROOT}/sources/bitbake/bin:${PATH}
+export PATH=${OEROOT}/sources/openembedded-core/scripts:${OEROOT}/sources/bitbake/bin:${OEROOT}/.repo/repo:${PATH}
 
 if [ ! -e conf/checksum ]
 then
@@ -77,7 +77,7 @@ if [ ! -e conf/site.conf ]; then
 SCONF_VERSION = "1"
 
 # Where to store sources
-DL_DIR = "${OEROOT}/downloads"
+DL_DIR = "${OEROOT}/sources/downloads"
 
 # Where to save shared state
 SSTATE_DIR = "${OEROOT}/build/sstate-cache"
