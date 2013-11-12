@@ -31,6 +31,8 @@
   <project remote="github" revision="master" name="meta-qt5/meta-qt5" path="sources/meta-qt5"/>
   <project remote="github" revision="master" name="shr-distribution/meta-smartphone" path="sources/meta-smartphone"/>
   <project remote="github" revision="master" name="Freescale/meta-fsl-arm-extra" path="sources/meta-fsl-arm-extra"/>
+  <project remote="github" revision="master" name="bmwcarit/meta-ros" path="sources/meta-ros"/>
+  <project remote="github" revision="master" name="naguirre/meta-allwinner" path="sources/meta-allwinner"/>
 
   <project remote="github" revision="master" name="Angstrom-distribution/meta-angstrom" path="sources/meta-angstrom">
       <copyfile dest="setup-environment" src="../../.repo/manifests/setup-environment"/>
