@@ -25,7 +25,6 @@
   <project remote="github" revision="5a6a642f6707dc42a5210dbbf01d2bdfd869d4b0" name="balister/meta-ettus" path="sources/meta-ettus"/>
   <project remote="github" revision="392b7799314a49b00f20a1bef004f9b0a0c9c364" name="kraj/meta-nslu2" path="sources/meta-nslu2"/>
   <project remote="github" revision="53ad3e60e4ed4fc7b946a2130da4bb9a8671341c" name="openpandora/meta-openpandora" path="sources/meta-openpandora"/>
-  <project remote="github" revision="0537685dc76d28808f6333dcb191bb1afce0e02f" name="djwillis/meta-raspberrypi" path="sources/meta-raspberrypi"/>
   <project remote="github" revision="14d6ad1608c66b8970d4052dce4cd1fc64fb6ea2" name="woglinde/meta-java" path="sources/meta-java"/>
   <project remote="github" revision="fc3969f63bda343c38c40a23f746c560c4735f3e" name="OSSystems/meta-browser" path="sources/meta-browser"/>
   <project remote="github" revision="dora" name="meta-qt5/meta-qt5" path="sources/meta-qt5"/>
@@ -44,5 +43,6 @@
   <project remote="yocto" revision="466575a7e7312b57c4b43241d16894dea8692049" name="meta-ti" path="sources/meta-ti"/>
   <project remote="yocto" revision="ac286b1682e6bcc486ceb30ef90a936949bbfeab" name="meta-mono" path="sources/meta-mono"/>
   <project remote="yocto" revision="57459d0753d3b6e25b3ac431496eafa5e668d6fa" name="meta-minnow" path="sources/meta-minnow"/>
+  <project remote="yocto" revision="0537685dc76d28808f6333dcb191bb1afce0e02f" name="meta-raspberrypi" path="sources/meta-raspberrypi"/>
 
 </manifest>
