@@ -28,7 +28,7 @@ if [ -z "${MACHINE}" ]; then
 fi
 
 if [ -z "${SDKMACHINE}" ]; then
-    SDKMACHINE='x86-64'
+    SDKMACHINE='x86_64'
 fi
 
 OEROOT=${PWD}
