@@ -10,25 +10,25 @@
   <remote fetch="git://git.linaro.org" name="linaro"/>
   <remote fetch="http://git.shr-project.org" name="shr"/>
 
-  <project remote="linaro" revision="a809652d1cf4d06b14d0be525dd85a7efdd11864" name="openembedded/meta-linaro" path="sources/meta-linaro"/>
+  <project remote="linaro" revision="dora" name="openembedded/meta-linaro" path="sources/meta-linaro"/>
   
-  <project remote="oe"     revision="5b5e68a93aae1016f5ac1d057a721b2dbf30b8d8" name="meta-handheld" path="sources/meta-handheld"/>
-  <project remote="oe"     revision="b241408b31c2ffd941b8b38bd385136ef675a703" name="meta-opie" path="sources/meta-opie"/>
+  <project remote="oe"     revision="dora" name="meta-handheld" path="sources/meta-handheld"/>
+  <project remote="oe"     revision="fee694fc683a8c8976de79ecbab5e3b047fad561" name="meta-opie" path="sources/meta-opie"/>
 
   <project remote="gitorious" revision="f45abfd4d87b0132a2565499392d2d49f465d847" name="openembedded-core-layers/meta-kde" path="sources/meta-kde"/>
-  <project remote="gitorious" revision="ca179d4d83d00617309dccedfb5e64c0f52aee2d" name="schnitzeltony-oe-meta/meta-gumstix-community" path="sources/meta-gumstix-community"/>
+  <project remote="gitorious" revision="dora" name="schnitzeltony-oe-meta/meta-gumstix-community" path="sources/meta-gumstix-community"/>
 
-  <project remote="github" revision="dora" name="openembedded/oe-core" path="sources/openembedded-core"/>
-  <project remote="github" revision="dora" name="openembedded/meta-oe" path="sources/meta-openembedded"/>
+  <project remote="github" revision="angstrom-v2013.12-yocto1.5" name="Angstrom-distribution/oe-core" path="sources/openembedded-core"/>
+  <project remote="github" revision="angstrom-v2013.12-yocto1.5" name="Angstrom-distribution/meta-oe" path="sources/meta-openembedded"/>
   <project remote="github" revision="1.20" name="openembedded/bitbake" path="sources/bitbake"/>
-  <project remote="github" revision="b5c709b2b6bd3bf236df923fa8f245a00fbb1b60" name="koenkooi/meta-beagleboard" path="sources/meta-beagleboard"/>
+  <project remote="github" revision="dora" name="koenkooi/meta-beagleboard" path="sources/meta-beagleboard"/>
   <project remote="github" revision="5a6a642f6707dc42a5210dbbf01d2bdfd869d4b0" name="balister/meta-ettus" path="sources/meta-ettus"/>
-  <project remote="github" revision="392b7799314a49b00f20a1bef004f9b0a0c9c364" name="kraj/meta-nslu2" path="sources/meta-nslu2"/>
+  <project remote="github" revision="bdcb4297ddb22f4eecddd4d8436cf9b6c6111922" name="kraj/meta-nslu2" path="sources/meta-nslu2"/>
   <project remote="github" revision="53ad3e60e4ed4fc7b946a2130da4bb9a8671341c" name="openpandora/meta-openpandora" path="sources/meta-openpandora"/>
-  <project remote="github" revision="14d6ad1608c66b8970d4052dce4cd1fc64fb6ea2" name="woglinde/meta-java" path="sources/meta-java"/>
-  <project remote="github" revision="fc3969f63bda343c38c40a23f746c560c4735f3e" name="OSSystems/meta-browser" path="sources/meta-browser"/>
+  <project remote="github" revision="9dfb7ecb87e67052e94641d6e02907c582264217" name="woglinde/meta-java" path="sources/meta-java"/>
+  <project remote="github" revision="dora" name="OSSystems/meta-browser" path="sources/meta-browser"/>
   <project remote="github" revision="dora" name="meta-qt5/meta-qt5" path="sources/meta-qt5"/>
-  <project remote="github" revision="537d0c2ab41284012e1ba79716b085a861a6812a" name="shr-distribution/meta-smartphone" path="sources/meta-smartphone"/>
+  <project remote="github" revision="dora" name="shr-distribution/meta-smartphone" path="sources/meta-smartphone"/>
   <project remote="github" revision="dora" name="Freescale/meta-fsl-arm-extra" path="sources/meta-fsl-arm-extra"/>
   <project remote="github" revision="028d9ac86d1d1cb4222865bf78038084c0a06dd1" name="bmwcarit/meta-ros" path="sources/meta-ros"/>
   <project remote="github" revision="e6415635f6144d48691ccd2ec9fc23ad6f87a177" name="naguirre/meta-allwinner" path="sources/meta-allwinner"/>
@@ -39,10 +39,10 @@
   
   <project remote="yocto" revision="dora" name="meta-fsl-arm" path="sources/meta-fsl-arm"/>
   <project remote="yocto" revision="dora" name="meta-intel" path="sources/meta-intel"/>
-  <project remote="yocto" revision="21c3cd3f058d736742ebc23a7a954f23456fbea5" name="meta-xilinx" path="sources/meta-xilinx"/>
-  <project remote="yocto" revision="466575a7e7312b57c4b43241d16894dea8692049" name="meta-ti" path="sources/meta-ti"/>
+  <project remote="yocto" revision="dora" name="meta-xilinx" path="sources/meta-xilinx"/>
+  <project remote="yocto" revision="280c88666ff2c845f27cef2d4da91e92c8b4631f" name="meta-ti" path="sources/meta-ti"/>
   <project remote="yocto" revision="ac286b1682e6bcc486ceb30ef90a936949bbfeab" name="meta-mono" path="sources/meta-mono"/>
-  <project remote="yocto" revision="57459d0753d3b6e25b3ac431496eafa5e668d6fa" name="meta-minnow" path="sources/meta-minnow"/>
-  <project remote="yocto" revision="0537685dc76d28808f6333dcb191bb1afce0e02f" name="meta-raspberrypi" path="sources/meta-raspberrypi"/>
+  <project remote="yocto" revision="dora" name="meta-minnow" path="sources/meta-minnow"/>
+  <project remote="yocto" revision="dora" name="meta-raspberrypi" path="sources/meta-raspberrypi"/>
 
 </manifest>
