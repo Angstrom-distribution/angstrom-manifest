@@ -30,8 +30,8 @@
   <project remote="github" revision="dora" name="meta-qt5/meta-qt5" path="sources/meta-qt5"/>
   <project remote="github" revision="dora" name="shr-distribution/meta-smartphone" path="sources/meta-smartphone"/>
   <project remote="github" revision="dora" name="Freescale/meta-fsl-arm-extra" path="sources/meta-fsl-arm-extra"/>
-  <project remote="github" revision="028d9ac86d1d1cb4222865bf78038084c0a06dd1" name="bmwcarit/meta-ros" path="sources/meta-ros"/>
-  <project remote="github" revision="e6415635f6144d48691ccd2ec9fc23ad6f87a177" name="naguirre/meta-allwinner" path="sources/meta-allwinner"/>
+  <project remote="github" revision="9db849de2900d4c53201eafd39f5ba74e053533f" name="bmwcarit/meta-ros" path="sources/meta-ros"/>
+  <project remote="github" revision="217e80e1335c5f9787b2dc6855d35efc83e3c04f" name="linux-sunxi/meta-sunxi" path="sources/meta-sunxi"/>
 
   <project remote="github" revision="angstrom-v2013.12-yocto1.5" name="Angstrom-distribution/meta-angstrom" path="sources/meta-angstrom">
       <copyfile dest="setup-environment" src="../../.repo/manifests/setup-environment"/>
