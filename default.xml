@@ -15,7 +15,7 @@
   <project remote="oe"     revision="dora" name="meta-handheld" path="sources/meta-handheld"/>
   <project remote="oe"     revision="fee694fc683a8c8976de79ecbab5e3b047fad561" name="meta-opie" path="sources/meta-opie"/>
 
-  <project remote="gitorious" revision="f45abfd4d87b0132a2565499392d2d49f465d847" name="openembedded-core-layers/meta-kde" path="sources/meta-kde"/>
+  <project remote="github" revision="angstrom-staging-yocto1.5" name="Angstrom-distribution/meta-kde" path="sources/meta-kde"/>
   <project remote="gitorious" revision="dora" name="schnitzeltony-oe-meta/meta-gumstix-community" path="sources/meta-gumstix-community"/>
 
   <project remote="github" revision="angstrom-staging-yocto1.5" name="Angstrom-distribution/oe-core" path="sources/openembedded-core"/>
