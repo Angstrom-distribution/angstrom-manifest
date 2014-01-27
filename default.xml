@@ -29,7 +29,8 @@
   <project remote="github" revision="dora" name="OSSystems/meta-browser" path="sources/meta-browser"/>
   <project remote="github" revision="dora" name="meta-qt5/meta-qt5" path="sources/meta-qt5"/>
   <project remote="github" revision="dora" name="shr-distribution/meta-smartphone" path="sources/meta-smartphone"/>
-  <project remote="github" revision="dora" name="Freescale/meta-fsl-arm-extra" path="sources/meta-fsl-arm-extra"/>
+  <project remote="github" revision="angstrom-staging-yocto1.5" name="Angstrom-distribution/meta-fsl-arm" path="sources/meta-fsl-arm"/>
+  <project remote="github" revision="angstrom-staging-yocto1.5" name="Angstrom-distribution/meta-fsl-arm-extra" path="sources/meta-fsl-arm-extra"/>
   <project remote="github" revision="ed42a957903f8d25cff920288de5a20e3d3b0127" name="bmwcarit/meta-ros" path="sources/meta-ros"/>
   <project remote="github" revision="217e80e1335c5f9787b2dc6855d35efc83e3c04f" name="linux-sunxi/meta-sunxi" path="sources/meta-sunxi"/>
 
@@ -37,7 +38,6 @@
       <copyfile dest="setup-environment" src="../../.repo/manifests/setup-environment"/>
   </project>
   
-  <project remote="yocto" revision="dora" name="meta-fsl-arm" path="sources/meta-fsl-arm"/>
   <project remote="yocto" revision="dora" name="meta-intel" path="sources/meta-intel"/>
   <project remote="yocto" revision="dora" name="meta-xilinx" path="sources/meta-xilinx"/>
   <project remote="yocto" revision="280c88666ff2c845f27cef2d4da91e92c8b4631f" name="meta-ti" path="sources/meta-ti"/>
