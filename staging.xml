@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+  <default revision="master" sync-j="4"/>
+
+  <remote fetch="git://git.yoctoproject.org" name="yocto"/>
+  <remote fetch="git://git.openembedded.org" name="oe"/>
+  <remote fetch="git://github.com" name="github"/>
+  <remote fetch="git://gitorious.org" name="gitorious"/>
+  <remote fetch="git://git.linaro.org" name="linaro"/>
+  <remote fetch="http://git.shr-project.org" name="shr"/>
+
+  <project remote="linaro" revision="dora" name="openembedded/meta-linaro" path="sources/meta-linaro"/>
+  
+  <project remote="oe"     revision="dora" name="meta-handheld" path="sources/meta-handheld"/>
+  <project remote="oe"     revision="fee694fc683a8c8976de79ecbab5e3b047fad561" name="meta-opie" path="sources/meta-opie"/>
+
+  <project remote="github" revision="angstrom-staging-yocto1.5" name="Angstrom-distribution/meta-kde" path="sources/meta-kde"/>
+  <project remote="gitorious" revision="dora" name="schnitzeltony-oe-meta/meta-gumstix-community" path="sources/meta-gumstix-community"/>
+
+  <project remote="github" revision="angstrom-staging-yocto1.5-staging" name="Angstrom-distribution/oe-core" path="sources/openembedded-core"/>
+  <project remote="github" revision="angstrom-staging-yocto1.5-staging" name="Angstrom-distribution/meta-oe" path="sources/meta-openembedded"/>
+  <project remote="github" revision="1.20" name="openembedded/bitbake" path="sources/bitbake"/>
+  <project remote="github" revision="dora" name="koenkooi/meta-beagleboard" path="sources/meta-beagleboard"/>
+  <project remote="github" revision="5a6a642f6707dc42a5210dbbf01d2bdfd869d4b0" name="balister/meta-ettus" path="sources/meta-ettus"/>
+  <project remote="github" revision="bdcb4297ddb22f4eecddd4d8436cf9b6c6111922" name="kraj/meta-nslu2" path="sources/meta-nslu2"/>
+  <project remote="github" revision="53ad3e60e4ed4fc7b946a2130da4bb9a8671341c" name="openpandora/meta-openpandora" path="sources/meta-openpandora"/>
+  <project remote="github" revision="9dfb7ecb87e67052e94641d6e02907c582264217" name="woglinde/meta-java" path="sources/meta-java"/>
+  <project remote="github" revision="dora" name="OSSystems/meta-browser" path="sources/meta-browser"/>
+  <project remote="github" revision="dora" name="meta-qt5/meta-qt5" path="sources/meta-qt5"/>
+  <project remote="github" revision="dora" name="shr-distribution/meta-smartphone" path="sources/meta-smartphone"/>
+  <project remote="github" revision="angstrom-staging-yocto1.5" name="Angstrom-distribution/meta-fsl-arm" path="sources/meta-fsl-arm"/>
+  <project remote="github" revision="angstrom-staging-yocto1.5" name="Angstrom-distribution/meta-fsl-arm-extra" path="sources/meta-fsl-arm-extra"/>
+  <project remote="github" revision="ed42a957903f8d25cff920288de5a20e3d3b0127" name="bmwcarit/meta-ros" path="sources/meta-ros"/>
+  <project remote="github" revision="217e80e1335c5f9787b2dc6855d35efc83e3c04f" name="linux-sunxi/meta-sunxi" path="sources/meta-sunxi"/>
+
+  <project remote="github" revision="angstrom-v2013.12-yocto1.5" name="Angstrom-distribution/meta-angstrom" path="sources/meta-angstrom">
+      <copyfile dest="setup-environment" src="../../.repo/manifests/setup-environment"/>
+  </project>
+  
+  <project remote="yocto" revision="dora" name="meta-intel" path="sources/meta-intel"/>
+  <project remote="yocto" revision="dora" name="meta-xilinx" path="sources/meta-xilinx"/>
+  <project remote="yocto" revision="280c88666ff2c845f27cef2d4da91e92c8b4631f" name="meta-ti" path="sources/meta-ti"/>
+  <project remote="yocto" revision="ac286b1682e6bcc486ceb30ef90a936949bbfeab" name="meta-mono" path="sources/meta-mono"/>
+  <project remote="yocto" revision="dora" name="meta-minnow" path="sources/meta-minnow"/>
+  <project remote="yocto" revision="dora" name="meta-raspberrypi" path="sources/meta-raspberrypi"/>
+
+</manifest>
