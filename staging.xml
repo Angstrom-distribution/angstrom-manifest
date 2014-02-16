@@ -10,7 +10,7 @@
   <remote fetch="git://git.linaro.org" name="linaro"/>
   <remote fetch="http://git.shr-project.org" name="shr"/>
 
-  <project remote="linaro" revision="master" name="openembedded/meta-linaro" path="sources/meta-linaro"/>
+  <project remote="github" revision="master" name="kraj/meta-linaro" path="sources/meta-linaro"/>
   
   <project remote="oe"     revision="master" name="meta-handheld" path="sources/meta-handheld"/>
   <project remote="oe"     revision="master" name="meta-opie" path="sources/meta-opie"/>
@@ -32,7 +32,7 @@
   <project remote="github" revision="master" name="Freescale/meta-fsl-arm-extra" path="sources/meta-fsl-arm-extra"/>
   <project remote="github" revision="master" name="bmwcarit/meta-ros" path="sources/meta-ros"/>
   <project remote="github" revision="master" name="linux-sunxi/meta-sunxi" path="sources/meta-sunxi"/>
-  <project remote="github" revision="master" name="Angstrom-distribution/meta-angstrom" path="sources/meta-angstrom">
+  <project remote="github" revision="staging" name="Angstrom-distribution/meta-angstrom" path="sources/meta-angstrom">
       <copyfile dest="setup-environment" src="../../.repo/manifests/setup-environment"/>
   </project>
   
