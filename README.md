@@ -16,11 +16,11 @@ To configure the scripts and download the build metadata, do:
 
 Run repo init to bring down the latest version of Repo with all its most recent bug fixes. You must specify a URL for the manifest, which specifies where the various repositories included in the Android source will be placed within your working directory.
 
-	$ repo init -u git://github.com/kraj/angstrom-manifest
+	$ repo init -u git://github.com/Angstrom-distribution/angstrom-manifest
 
 To check out a branch other than "master", specify it with -b:
 
-	$ repo init -u git://github.com/kraj/angstrom-manifest -b angstrom-v2013.12-yocto1.5
+	$ repo init -u git://github.com/Angstrom-distribution/angstrom-manifest -b angstrom-v2013.12-yocto1.5
 
 When prompted, configure Repo with your real name and email address. 
 
@@ -60,7 +60,7 @@ Setup Environment
 	$ MACHINE=<machine> bitbake <image>
 	e.g. MACHINE=beaglebone bitbake systemd-image
 
-f you find any bugs please report them here: https://github.com/kraj/angstrom-manifest/issues
+f you find any bugs please report them here: https://github.com/Angstrom-distribution/angstrom-manifest/issues
 
 If you have questions or feedback, please subscribe to http://lists.linuxtogo.org/cgi-bin/mailman/listinfo/angstrom-distro-devel
 
