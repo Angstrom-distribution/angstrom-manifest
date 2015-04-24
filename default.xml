@@ -6,18 +6,19 @@
   <remote fetch="git://git.yoctoproject.org" name="yocto"/>
   <remote fetch="git://git.openembedded.org" name="oe"/>
   <remote fetch="git://github.com" name="github"/>
-  <remote fetch="git://gitorious.org" name="gitorious"/>
+  <remote fetch="https://bitbucket.org" name="bitbucket"/>
   <remote fetch="git://git.linaro.org" name="linaro"/>
   <remote fetch="http://git.shr-project.org" name="shr"/>
 
   <project remote="linaro" revision="master" name="openembedded/meta-linaro" path="sources/meta-linaro"/>
+  <project remote="linaro" revision="master" name="people/nicolas.dechesne/meta-qualcomm" path="sources/meta-qualcomm"/>
   
   <project remote="oe"     revision="master" name="meta-handheld" path="sources/meta-handheld"/>
   <project remote="oe"     revision="master" name="meta-opie" path="sources/meta-opie"/>
 
-  <project remote="gitorious" revision="master" name="openembedded-core-layers/meta-kde" path="sources/meta-kde"/>
-  <project remote="github" revision="master" name="schnitzeltony/meta-gumstix-community" path="sources/meta-gumstix-community"/>
+  <project remote="bitbucket" revision="master" name="gen_dev_sst/meta-kde4" path="sources/meta-kde4"/>
 
+  <project remote="github" revision="master" name="schnitzeltony/meta-gumstix-community" path="sources/meta-gumstix-community"/>
   <project remote="github" revision="master" name="openembedded/openembedded-core" path="sources/openembedded-core"/>
   <project remote="github" revision="master" name="openembedded/meta-openembedded" path="sources/meta-openembedded"/>
   <project remote="github" revision="master" name="openembedded/bitbake" path="sources/bitbake"/>
@@ -26,7 +27,6 @@
   <project remote="github" revision="master" name="kraj/meta-nslu2" path="sources/meta-nslu2"/>
   <project remote="github" revision="master" name="kraj/meta-altera" path="sources/meta-altera"/>
   <project remote="github" revision="master" name="openpandora/meta-openpandora" path="sources/meta-openpandora"/>
-  <project remote="github" revision="master" name="woglinde/meta-java" path="sources/meta-java"/>
   <project remote="github" revision="master" name="OSSystems/meta-browser" path="sources/meta-browser"/>
   <project remote="github" revision="master" name="meta-qt5/meta-qt5" path="sources/meta-qt5"/>
   <project remote="github" revision="master" name="shr-distribution/meta-smartphone" path="sources/meta-smartphone"/>
@@ -34,6 +34,15 @@
   <project remote="github" revision="master" name="bmwcarit/meta-ros" path="sources/meta-ros"/>
   <project remote="github" revision="master" name="linux-sunxi/meta-sunxi" path="sources/meta-sunxi"/>
   <project remote="github" revision="master" name="96boards/meta-96boards" path="sources/meta-96boards"/>
+  <project remote="github" revision="master" name="balister/meta-ettus" path="sources/meta-ettus"/>
+  <project remote="github" revision="master" name="linux4sam/meta-atmel" path="sources/meta-atmel"/>
+  <project remote="github" revision="master" name="koenkooi/meta-dominion" path="sources/meta-dominion"/>
+  <project remote="github" revision="master" name="koenkooi/meta-uav" path="sources/meta-uav"/>
+  <project remote="github" revision="master" name="koenkooi/meta-photography" path="sources/meta-photography"/>
+  <project remote="github" revision="master" name="koenkooi/meta-edison" path="sources/meta-edison"/>
+  <project remote="github" revision="master" name="slimlogic/meta-exynos" path="sources/meta-exynos"/>
+  <project remote="github" revision="master" name="sysmocom/meta-telephony" path="sources/meta-telephony"/>
+
   <project remote="github" revision="master" name="Angstrom-distribution/meta-angstrom" path="sources/meta-angstrom">
       <copyfile dest="setup-environment" src="../../.repo/manifests/setup-environment"/>
   </project>
@@ -46,5 +55,6 @@
   <project remote="yocto" revision="master" name="meta-mono" path="sources/meta-mono"/>
   <project remote="yocto" revision="master" name="meta-minnow" path="sources/meta-minnow"/>
   <project remote="yocto" revision="master" name="meta-raspberrypi" path="sources/meta-raspberrypi"/>
+  <project remote="yocto" revision="master" name="meta-java" path="sources/meta-java"/>
 
 </manifest>
