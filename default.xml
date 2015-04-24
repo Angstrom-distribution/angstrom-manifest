@@ -26,6 +26,7 @@
   <project remote="github" revision="master" name="balister/meta-ettus" path="sources/meta-ettus"/>
   <project remote="github" revision="master" name="kraj/meta-nslu2" path="sources/meta-nslu2"/>
   <project remote="github" revision="master" name="kraj/meta-altera" path="sources/meta-altera"/>
+  <project remote="github" revision="master" name="kraj/meta-musl" path="sources/meta-musl"/>
   <project remote="github" revision="master" name="openpandora/meta-openpandora" path="sources/meta-openpandora"/>
   <project remote="github" revision="master" name="OSSystems/meta-browser" path="sources/meta-browser"/>
   <project remote="github" revision="master" name="meta-qt5/meta-qt5" path="sources/meta-qt5"/>
