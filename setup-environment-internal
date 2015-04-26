@@ -32,7 +32,7 @@ if [ -z "${SDKMACHINE}" ]; then
 fi
 
 OEROOT=${PWD}
-TEMPLATES=${OEROOT}/.repo/manifests
+TEMPLATES=${OEROOT}/sources/manifest
 
 cd $OEROOT
 
