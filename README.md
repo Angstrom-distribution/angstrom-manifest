@@ -40,18 +40,6 @@ More rarely, Linux clients experience connectivity issues, getting stuck in the 
 	$ sudo sysctl -w net.ipv4.tcp_window_scaling=0
 	$ repo sync -j1
 
-Create a local topic branch
----------------------------
-
-We need to create local branches for all repos which then can be updated e.g.
-
-	$ ~/bin/repo start $USER/work --all
-
-Updating the sandbox
---------------------
-
-	$ repo sync
-	$ repo rebase
 
 Setup Environment
 -----------------
@@ -60,9 +48,36 @@ Setup Environment
 	$ MACHINE=<machine> bitbake <image>
 	e.g. MACHINE=beaglebone bitbake systemd-image
 
-f you find any bugs please report them here: https://github.com/Angstrom-distribution/angstrom-manifest/issues
+Creating a local topic branch
+-----------------------------
 
-If you have questions or feedback, please subscribe to http://lists.linuxtogo.org/cgi-bin/mailman/listinfo/angstrom-distro-devel
+Setup will already create a branch called $USER/work
+but if you need to create local branches for all repos which then can be done e.g.
+
+	$ ~/bin/repo start myangstrom --all
+	
+Where 'myangstrom' is the name of branch you choose
+
+Updating the sandbox
+--------------------
+
+Setup will do this as well but in between if you need to bring changes from upstream then
+use following commands
+
+	$ repo sync
+
+Rease your local committed changes
+
+	$ repo rebase
+
+
+If you find any bugs please report them here
+
+https://github.com/Angstrom-distribution/angstrom-manifest/issues
+
+If you have questions or feedback, please subscribe to 
+
+http://lists.linuxtogo.org/cgi-bin/mailman/listinfo/angstrom-distro-devel
 
 Ångström Distribution maintainers
 ---------------------------------
