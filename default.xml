@@ -49,11 +49,11 @@
 
   <project remote="yocto" name="meta-fsl-arm" path="sources/meta-fsl-arm" revision="fido"/>
   <project remote="yocto" name="meta-intel" path="sources/meta-intel" revision="53eea4f12311b4808b3af9695ac822eea1fc60c2"/>
-  <project remote="yocto" name="meta-xilinx" path="sources/meta-xilinx" revision="cd67eae1c63c64a2edd9560aec6d0b78fd7549cb"/>
+  <project remote="yocto" name="meta-xilinx" path="sources/meta-xilinx" revision="fido"/>
   <project remote="yocto" name="meta-ti" path="sources/meta-ti" revision="9aac69cf99f5c71c51de62cba577fbd817152f42"/>
   <project remote="yocto" name="meta-mono" path="sources/meta-mono" revision="7bc3cbb5db021700c445f07e2a95219f7298315f"/>
   <project remote="yocto" name="meta-minnow" path="sources/meta-minnow" revision="13a5f2ab84c7284647a3e067a33109c11dae0568"/>
-  <project remote="yocto" name="meta-raspberrypi" path="sources/meta-raspberrypi" revision="b896a7da70dd7a16ba7ffd664f7747cb37e1d142"/>
+  <project remote="yocto" name="meta-raspberrypi" path="sources/meta-raspberrypi" revision="fido"/>
   <project remote="yocto" name="meta-java" path="sources/meta-java" revision="d2b75b615e4612f9fa05950c1d76d4a719e573d4"/>
 
 </manifest>
