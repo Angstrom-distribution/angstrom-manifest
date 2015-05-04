@@ -20,7 +20,7 @@ Run repo init to bring down the latest version of Repo with all its most recent 
 
 To check out a branch other than "master", specify it with -b:
 
-	$ repo init -u git://github.com/Angstrom-distribution/angstrom-manifest -b angstrom-v2013.12-yocto1.5
+	$ repo init -u git://github.com/Angstrom-distribution/angstrom-manifest -b angstrom-v2015.06-yocto1.8
 
 When prompted, configure Repo with your real name and email address. 
 
