@@ -23,7 +23,22 @@ if [ "$(whoami)" = "root" ]; then
     echo "ERROR: do not use the BSP as root. Exiting..."
 fi
 
+OEROOT=${PWD}
+cd $OEROOT
+
 if [ -z "${MACHINE}" ]; then
+    MACHINELIST=`ls $OEROOT/sources/*/conf/machine/*.conf | sed s/\.conf//g | sed -r 's/^.+\///' | sort`
+    PS3='Please choose your machine by entering its number: '
+    select MACHINE in $MACHINELIST; do
+        if [ -n "$MACHINE" ]; then
+            break
+        fi
+        echo "invalid choice, please try again"
+    done
+fi
+
+# guard against Ctrl-D
+if [ -z "$MACHINE" ]; then
     MACHINE='beaglebone'
 fi
 
@@ -31,10 +46,7 @@ if [ -z "${SDKMACHINE}" ]; then
     SDKMACHINE='x86_64'
 fi
 
-OEROOT=${PWD}
 TEMPLATES=${OEROOT}/sources/manifest
-
-cd $OEROOT
 
 # Clean up PATH, because if it includes tokens to current directories somehow,
 # wrong binaries can be used instead of the expected ones during task execution
