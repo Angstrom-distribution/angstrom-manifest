@@ -34,7 +34,7 @@
   <project remote="github" name="Freescale/meta-fsl-arm-extra" path="sources/meta-fsl-arm-extra" revision="fido"/>
   <project remote="github" name="bmwcarit/meta-ros" path="sources/meta-ros" revision="312e6c4ddd76f56fce22a7b9b1a5b0fd8d39c224"/>
   <project remote="github" name="linux-sunxi/meta-sunxi" path="sources/meta-sunxi" revision="4f66286422457d029a55fb8b0c93c10990ebd9f4"/>
-  <project remote="github" name="96boards/meta-96boards" path="sources/meta-96boards" revision="340ab6623bf8246ceb59c7762c904c84b4653d58"/>
+  <project remote="github" name="96boards/meta-96boards" path="sources/meta-96boards" revision="55f684bcf3fb433d43023542f60414254391627e"/>
   <project remote="github" name="linux4sam/meta-atmel" path="sources/meta-atmel" revision="99311588cbaf166ae25b00f01b9a5f171dc0c66c"/>
   <project remote="github" name="koenkooi/meta-dominion" path="sources/meta-dominion" revision="43741f26e100a8c228d10902963f079c3a167f24"/>
   <project remote="github" name="koenkooi/meta-uav" path="sources/meta-uav" revision="edf32a392b55a4267e6b072776e2aab6c8f7617e"/>
