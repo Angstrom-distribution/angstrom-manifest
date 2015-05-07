@@ -14,7 +14,6 @@
   <project remote="linaro" name="people/nicolas.dechesne/meta-qualcomm" path="sources/meta-qualcomm" revision="ffbcdf0cfc07347ac4c560014d1ae41cd00db3cb"/>
 
   <project remote="oe"     name="meta-handheld" path="sources/meta-handheld" revision="318318c74f0e37f4cf54a4c8f3aab9e59555111d"/>
-  <project remote="oe"     name="meta-opie" path="sources/meta-opie" revision="a49922650d0e82cca6eb6a415c1165e8a6782dfb"/>
 
   <project remote="bitbucket" name="gen_dev_sst/meta-kde4" path="sources/meta-kde4" revision="4287bd4a5e23e084b1f9e9d3235b4248bbe772f6"/>
 
@@ -27,7 +26,6 @@
   <project remote="github" name="kraj/meta-nslu2" path="sources/meta-nslu2" revision="ddf38dba9426b4a2047679e936521a5b1b06653e"/>
   <project remote="github" name="kraj/meta-altera" path="sources/meta-altera" revision="5245a79b7e74be43b15f89b2952dec2971e51b6f"/>
   <project remote="github" name="kraj/meta-musl" path="sources/meta-musl" revision="ca780947d7894e5bb0215ccd41a6a470a80954e3"/>
-  <project remote="github" name="openpandora/meta-openpandora" path="sources/meta-openpandora" revision="ef92fcb6d87908ae0be44cd9cc9539395a666cc8"/>
   <project remote="github" name="OSSystems/meta-browser" path="sources/meta-browser" revision="30b8d6b3d0d6501c56ef6967a2fa73a3d4bf5fe9"/>
   <project remote="github" name="meta-qt5/meta-qt5" path="sources/meta-qt5"/>
   <project remote="github" name="shr-distribution/meta-smartphone" path="sources/meta-smartphone"/>
@@ -49,7 +47,6 @@
 
   <project remote="yocto" name="meta-fsl-arm" path="sources/meta-fsl-arm"/>
   <project remote="yocto" name="meta-intel" path="sources/meta-intel" revision="53eea4f12311b4808b3af9695ac822eea1fc60c2"/>
-  <project remote="yocto" name="meta-xilinx" path="sources/meta-xilinx"/>
   <project remote="yocto" name="meta-ti" path="sources/meta-ti" revision="9aac69cf99f5c71c51de62cba577fbd817152f42"/>
   <project remote="yocto" name="meta-mono" path="sources/meta-mono" revision="7bc3cbb5db021700c445f07e2a95219f7298315f"/>
   <project remote="yocto" name="meta-minnow" path="sources/meta-minnow" revision="13a5f2ab84c7284647a3e067a33109c11dae0568"/>
