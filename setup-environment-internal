@@ -25,16 +25,32 @@ fi
 
 OEROOT=${PWD}
 cd $OEROOT
-
+if [ -n "$ZSH_VERSION" ]; then
+    setopt sh_word_split
+fi
 if [ -z "${MACHINE}" ]; then
-    MACHINELIST=`ls $OEROOT/sources/*/conf/machine/*.conf | sed s/\.conf//g | sed -r 's/^.+\///' | sort`
-    PS3='Please choose your machine by entering its number: '
-    select MACHINE in $MACHINELIST; do
-        if [ -n "$MACHINE" ]; then
-            break
-        fi
-        echo "invalid choice, please try again"
+    whipver="`whiptail -v`"
+    if [ $? -ne 0 ]; then
+        echo "please install whiptail package for interactive setup menu to work"
+	echo "You can use the setup in non-interactive mode"
+	echo "MACHINE=<your-machine> . ./setup-environment"
+	return
+    fi
+    MACHINELIST=`/bin/ls $OEROOT/sources/*/conf/machine/*.conf | sed s/\.conf//g | sed -r 's/^.+\///' | sort | tr '\n' ' '`
+    for m in $MACHINELIST; do
+	    MACHINETABLE="${MACHINETABLE} ${m} ${m}_config OFF\n"
     done
+    MACHINE=$(whiptail --title "Available Machines" --radiolist \
+	    "Please choose a machine" 30 66 20 \
+	    ${MACHINETABLE} 3>&1 1>&2 2>&3)
+
+    #echo $MACHINE
+fi
+
+exitstatus=$?
+if [ $exitstatus -ne 0 ]; then
+   echo "You chose Cancel."
+   return
 fi
 
 # guard against Ctrl-D
