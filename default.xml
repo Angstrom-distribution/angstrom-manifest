@@ -10,7 +10,7 @@
   <remote fetch="git://git.linaro.org" name="linaro"/>
   <remote fetch="http://git.shr-project.org" name="shr"/>
 
-  <project remote="linaro" name="openembedded/meta-linaro" path="sources/meta-linaro" revision="fido"/>
+  <project remote="linaro" name="openembedded/meta-linaro" path="sources/meta-linaro"/>
   <project remote="linaro" name="people/nicolas.dechesne/meta-qualcomm" path="sources/meta-qualcomm" revision="ffbcdf0cfc07347ac4c560014d1ae41cd00db3cb"/>
 
   <project remote="oe"     name="meta-handheld" path="sources/meta-handheld" revision="318318c74f0e37f4cf54a4c8f3aab9e59555111d"/>
@@ -19,8 +19,8 @@
   <project remote="bitbucket" name="gen_dev_sst/meta-kde4" path="sources/meta-kde4" revision="4287bd4a5e23e084b1f9e9d3235b4248bbe772f6"/>
 
   <project remote="github" name="schnitzeltony/meta-gumstix-community" path="sources/meta-gumstix-community" revision="c4d7973f18fa8acb632f47e9ead074988d535343"/>
-  <project remote="github" name="openembedded/openembedded-core" path="sources/openembedded-core" revision="fido"/>
-  <project remote="github" name="openembedded/meta-openembedded" path="sources/meta-openembedded" revision="fido"/>
+  <project remote="github" name="openembedded/openembedded-core" path="sources/openembedded-core"/>
+  <project remote="github" name="openembedded/meta-openembedded" path="sources/meta-openembedded"/>
   <project remote="github" name="openembedded/bitbake" path="sources/bitbake" revision="1.26"/>
   <project remote="github" name="koenkooi/meta-beagleboard" path="sources/meta-beagleboard" revision="e8505570c5bc788ca0be0bff1ddeaf31bf185b68"/>
   <project remote="github" name="balister/meta-ettus" path="sources/meta-ettus" revision="4b6b5be45032f147b930528ea92ff0b6de454146"/>
@@ -29,9 +29,9 @@
   <project remote="github" name="kraj/meta-musl" path="sources/meta-musl" revision="ca780947d7894e5bb0215ccd41a6a470a80954e3"/>
   <project remote="github" name="openpandora/meta-openpandora" path="sources/meta-openpandora" revision="ef92fcb6d87908ae0be44cd9cc9539395a666cc8"/>
   <project remote="github" name="OSSystems/meta-browser" path="sources/meta-browser" revision="30b8d6b3d0d6501c56ef6967a2fa73a3d4bf5fe9"/>
-  <project remote="github" name="meta-qt5/meta-qt5" path="sources/meta-qt5" revision="fido"/>
-  <project remote="github" name="shr-distribution/meta-smartphone" path="sources/meta-smartphone" revision="fido"/>
-  <project remote="github" name="Freescale/meta-fsl-arm-extra" path="sources/meta-fsl-arm-extra" revision="fido"/>
+  <project remote="github" name="meta-qt5/meta-qt5" path="sources/meta-qt5"/>
+  <project remote="github" name="shr-distribution/meta-smartphone" path="sources/meta-smartphone"/>
+  <project remote="github" name="Freescale/meta-fsl-arm-extra" path="sources/meta-fsl-arm-extra"/>
   <project remote="github" name="bmwcarit/meta-ros" path="sources/meta-ros" revision="312e6c4ddd76f56fce22a7b9b1a5b0fd8d39c224"/>
   <project remote="github" name="linux-sunxi/meta-sunxi" path="sources/meta-sunxi" revision="4f66286422457d029a55fb8b0c93c10990ebd9f4"/>
   <project remote="github" name="96boards/meta-96boards" path="sources/meta-96boards" revision="55f684bcf3fb433d43023542f60414254391627e"/>
@@ -47,13 +47,13 @@
       <copyfile dest="setup-environment" src="../../.repo/manifests/setup-environment"/>
   </project>
 
-  <project remote="yocto" name="meta-fsl-arm" path="sources/meta-fsl-arm" revision="fido"/>
+  <project remote="yocto" name="meta-fsl-arm" path="sources/meta-fsl-arm"/>
   <project remote="yocto" name="meta-intel" path="sources/meta-intel" revision="53eea4f12311b4808b3af9695ac822eea1fc60c2"/>
-  <project remote="yocto" name="meta-xilinx" path="sources/meta-xilinx" revision="fido"/>
+  <project remote="yocto" name="meta-xilinx" path="sources/meta-xilinx"/>
   <project remote="yocto" name="meta-ti" path="sources/meta-ti" revision="9aac69cf99f5c71c51de62cba577fbd817152f42"/>
   <project remote="yocto" name="meta-mono" path="sources/meta-mono" revision="7bc3cbb5db021700c445f07e2a95219f7298315f"/>
   <project remote="yocto" name="meta-minnow" path="sources/meta-minnow" revision="13a5f2ab84c7284647a3e067a33109c11dae0568"/>
-  <project remote="yocto" name="meta-raspberrypi" path="sources/meta-raspberrypi" revision="fido"/>
+  <project remote="yocto" name="meta-raspberrypi" path="sources/meta-raspberrypi"/>
   <project remote="yocto" name="meta-java" path="sources/meta-java" revision="d2b75b615e4612f9fa05950c1d76d4a719e573d4"/>
 
 </manifest>
