@@ -22,7 +22,7 @@ To check out a branch other than "master", specify it with -b:
 
 	$ repo init -u git://github.com/Angstrom-distribution/angstrom-manifest -b angstrom-v2015.06-yocto1.8
 
-When prompted, configure Repo with your real name and email address. 
+When prompted, configure Repo with your real name and email address.
 
 A successful initialization will end with a message stating that Repo is initialized in your working directory. Your client directory should now contain a .repo directory where files such as the manifest will be kept.
 
@@ -55,7 +55,7 @@ Setup will already create a branch called $USER/work
 but if you need to create local branches for all repos which then can be done e.g.
 
 	$ ~/bin/repo start myangstrom --all
-	
+
 Where 'myangstrom' is the name of branch you choose
 
 Updating the sandbox
@@ -75,7 +75,7 @@ If you find any bugs please report them here
 
 https://github.com/Angstrom-distribution/angstrom-manifest/issues
 
-If you have questions or feedback, please subscribe to 
+If you have questions or feedback, please subscribe to
 
 http://lists.linuxtogo.org/cgi-bin/mailman/listinfo/angstrom-distro-devel
 
