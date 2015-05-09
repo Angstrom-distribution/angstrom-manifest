@@ -73,8 +73,8 @@ export PATH=${OEROOT}/sources/openembedded-core/scripts:${OEROOT}/sources/bitbak
 export BB_ENV_EXTRAWHITE="MACHINE DISTRO TCLIBC TCMODE GIT_PROXY_COMMAND http_proxy ftp_proxy https_proxy all_proxy ALL_PROXY no_proxy SSH_AGENT_PID SSH_AUTH_SOCK BB_SRCREV_POLICY SDKMACHINE BB_NUMBER_THREADS"
 
 mkdir -p conf
-
-if [ -e conf/checksum ]
+oldmach=`grep "^MACHINE" ${OEROOT}/conf/auto.conf | sed -e 's%^MACHINE ?= %%' | sed -e 's/^"//'  -e 's/"$//'`
+if [ -e conf/checksum -a "${MACHINE}" = "$oldmach" ]
 then
     sha512sum --quiet -c conf/checksum > /dev/null 2>&1
     if [ $? -eq 0 ]
@@ -87,8 +87,7 @@ fi
 sha512sum ${TEMPLATES}/setup-environment-internal 2>&1 > conf/checksum
 
 repo sync
-# start a default topic branch for all repos
-repo start $USER/work --all
+repo start work --all
 repo rebase
 
 ln -sf ${TEMPLATES}/conf/local.conf conf/local.conf
@@ -139,10 +138,11 @@ Your build environemnt has been configured with:
 
 You can now run 'bitbake <target>'
 
-Common targets are:
-    systemd-image
+Some of common targets are:
+    console-image
     systemd-gnome-image
-    meta-toolchain
-    meta-toolchain-sdk
+    xfce-nm-image
+    development-xfce-image
+    development-gnome-image
 
 EOF
