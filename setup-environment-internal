@@ -28,32 +28,45 @@ cd $OEROOT
 if [ -n "$ZSH_VERSION" ]; then
     setopt sh_word_split
 fi
+
 if [ -z "${MACHINE}" ]; then
-    whipver="`whiptail -v`"
-    if [ $? -ne 0 ]; then
-        echo "please install whiptail package for interactive setup menu to work"
-	echo "You can use the setup in non-interactive mode"
-	echo "MACHINE=<your-machine> . ./setup-environment"
-	return
+    # whiptail
+    which whiptail > /dev/null 2>&1
+    if [ $? -eq 0 ]; then
+        MACHINELIST=`/bin/ls $OEROOT/sources/*/conf/machine/*.conf | sed s/\.conf//g | sed -r 's/^.+\///' | sort | tr '\n' ' '`
+        for m in $MACHINELIST; do
+            MACHINETABLE="${MACHINETABLE} ${m} ${m}_config OFF\n"
+        done
+        MACHINE=$(whiptail --title "Available Machines" --radiolist \
+            "Please choose a machine" 30 66 20 \
+            ${MACHINETABLE} 3>&1 1>&2 2>&3)
+        unset MACHINELIST
+        unset MACHINETABLE
     fi
-    MACHINELIST=`/bin/ls $OEROOT/sources/*/conf/machine/*.conf | sed s/\.conf//g | sed -r 's/^.+\///' | sort | tr '\n' ' '`
-    for m in $MACHINELIST; do
-	    MACHINETABLE="${MACHINETABLE} ${m} ${m}_config OFF\n"
-    done
-    MACHINE=$(whiptail --title "Available Machines" --radiolist \
-	    "Please choose a machine" 30 66 20 \
-	    ${MACHINETABLE} 3>&1 1>&2 2>&3)
+
+    # dialog
+    if [ -z "$MACHINE" ]; then
+        which dialog > /dev/null 2>&1
+        if [ $? -eq 0 ]; then
+            MENULIST=$(ls sources/*/conf/machine/*.conf | sed s/\.conf//g | awk -F'/' '{print $4 " " $2}' | sed -r 's/^.+\///' | sort | tr '\n' ' ')
+            MENUCNT=$(ls sources/*/conf/machine/*.conf | wc -l)
+            MACHINE=$(dialog --title "Available Machines" --menu "Please choose a machine" $MENUCNT 51 $MENUCNT $MENULIST 3>&1 1>&2 2>&3)
+            unset MENULIST
+            unset MENUCNT
+        fi
+    fi
 fi
 
-exitstatus=$?
-if [ $exitstatus -ne 0 ]; then
-   echo "You chose Cancel."
-   return
-fi
-
-# guard against Ctrl-D
+# guard against Ctrl-D or cancel
 if [ -z "$MACHINE" ]; then
-    MACHINE='beaglebone'
+    echo "To choose a machine interactively please install whiptail or dialog."
+    echo "To choose a machine non-interactively please use the following syntax:"
+    echo "    MACHINE=<your-machine> . ./setup-environment"
+    echo ""
+    echo "Press <ENTER> to see a list of your choices"
+    read
+    ls sources/*/conf/machine/*.conf | sed s/\.conf//g | awk -F'/' '{print $4 " (" $2 ")"}' | sed -r 's/^.+\///' | sort
+    return
 fi
 
 if [ -z "${SDKMACHINE}" ]; then
