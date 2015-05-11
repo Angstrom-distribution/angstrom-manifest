@@ -43,8 +43,6 @@ if [ -z "${MACHINE}" ]; then
     MACHINE=$(whiptail --title "Available Machines" --radiolist \
 	    "Please choose a machine" 30 66 20 \
 	    ${MACHINETABLE} 3>&1 1>&2 2>&3)
-
-    #echo $MACHINE
 fi
 
 exitstatus=$?
