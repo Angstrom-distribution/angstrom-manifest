@@ -42,6 +42,7 @@ if [ -z "${MACHINE}" ]; then
             ${MACHINETABLE} 3>&1 1>&2 2>&3)
         unset MACHINELIST
         unset MACHINETABLE
+        unset whipver
     fi
 
     # dialog
@@ -73,7 +74,7 @@ if [ -z "${SDKMACHINE}" ]; then
     SDKMACHINE='x86_64'
 fi
 
-TEMPLATES=${OEROOT}/sources/manifest
+MANIFESTS=${OEROOT}/.repo/manifests
 
 # Clean up PATH, because if it includes tokens to current directories somehow,
 # wrong binaries can be used instead of the expected ones during task execution
@@ -95,15 +96,17 @@ then
 fi
 
 # evaluate new checksum and regenerate the conf files
-sha512sum ${TEMPLATES}/setup-environment-internal 2>&1 > conf/checksum
+sha512sum ${MANIFESTS}/setup-environment-internal 2>&1 > conf/checksum
+
+ln -sf ${MANIFESTS}/conf/local.conf conf/local.conf
+ln -sf ${MANIFESTS}/conf/bblayers.conf conf/bblayers.conf
+ln -sf ${MANIFESTS}/README.md README.md
+
+ln -sf ${MANIFESTS} sources/
 
 repo sync
 repo start work --all
 repo rebase
-
-ln -sf ${TEMPLATES}/conf/local.conf conf/local.conf
-ln -sf ${TEMPLATES}/conf/bblayers.conf conf/bblayers.conf
-ln -sf ${TEMPLATES}/README.md README.md
 
 DISTRO=$(grep -w DISTRO conf/local.conf | grep -v '^#' | awk -F\" '{print $2}')
 export DISTRO_DIRNAME=`echo ${DISTRO} | sed 's#[.-]#_#g'`

@@ -26,6 +26,7 @@
   <project remote="github" name="balister/meta-ettus" path="sources/meta-ettus"/>
   <project remote="github" name="kraj/meta-nslu2" path="sources/meta-nslu2"/>
   <project remote="github" name="kraj/meta-altera" path="sources/meta-altera"/>
+  <project remote="github" name="kraj/meta-jetson-tk1" path="sources/meta-jetson-tk1"/>
   <project remote="github" name="kraj/meta-musl" path="sources/meta-musl"/>
   <project remote="github" name="openpandora/meta-openpandora" path="sources/meta-openpandora"/>
   <project remote="github" name="OSSystems/meta-browser" path="sources/meta-browser"/>
@@ -42,7 +43,6 @@
   <project remote="github" name="koenkooi/meta-edison" path="sources/meta-edison"/>
   <project remote="github" name="slimlogic/meta-exynos" path="sources/meta-exynos"/>
   <project remote="github" name="sysmocom/meta-telephony" path="sources/meta-telephony"/>
-  <project remote="github" name="Angstrom-distribution/angstrom-manifest" path="sources/manifest" />
   <project remote="github" name="Angstrom-distribution/meta-angstrom" path="sources/meta-angstrom">
       <copyfile dest="setup-environment" src="../../.repo/manifests/setup-environment"/>
   </project>
