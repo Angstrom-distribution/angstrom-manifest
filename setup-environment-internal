@@ -30,33 +30,34 @@ if [ -n "$ZSH_VERSION" ]; then
     setopt sh_word_split
 fi
 
+# create a common list of "<machine>(<layer>)", sorted by <machine>
+MACHLAYERS=$(find sources -print | grep "conf/machine/.*\.conf" | grep -v scripts | sed -e 's/\.conf//g' | awk -F'/' '{print $NF "(" $2 ")"}' | sort)
+
 if [ -z "${MACHINE}" ]; then
     # whiptail
     which whiptail > /dev/null 2>&1
     if [ $? -eq 0 ]; then
-        MACHINELIST=`/bin/ls $OEROOT/sources/*/conf/machine/*.conf | sed s/\.conf//g | sed -r 's/^.+\///' | sort | tr '\n' ' '`
-        for m in $MACHINELIST; do
-            MACHINETABLE="${MACHINETABLE} ${m} ${m}_config OFF\n"
+        for ITEM in $MACHLAYERS; do
+            MACHINETABLE="${MACHINETABLE} $(echo $ITEM | cut -d'(' -f1) $(echo $ITEM | cut -d'(' -f2 | cut -d')' -f1) OFF\n"
         done
         MACHINE=$(whiptail --title "Available Machines" --radiolist \
             "Please choose a machine" 30 66 20 \
             ${MACHINETABLE} 3>&1 1>&2 2>&3)
-        unset MACHINELIST
         unset MACHINETABLE
-        unset whipver
     fi
 
     # dialog
     if [ -z "$MACHINE" ]; then
         which dialog > /dev/null 2>&1
         if [ $? -eq 0 ]; then
-            MENULIST=$(ls sources/*/conf/machine/*.conf | sed s/\.conf//g | awk -F'/' '{print $4 " " $2}' | sed -r 's/^.+\///' | sort | tr '\n' ' ')
-            MENUCNT=$(ls sources/*/conf/machine/*.conf | wc -l)
-            MACHINE=$(dialog --title "Available Machines" --menu "Please choose a machine" $MENUCNT 51 $MENUCNT $MENULIST 3>&1 1>&2 2>&3)
-            unset MENULIST
-            unset MENUCNT
+            for ITEM in $MACHLAYERS; do
+                MACHINETABLE="$MACHINETABLE $(echo $ITEM | cut -d'(' -f1) $(echo $ITEM | cut -d'(' -f2 | cut -d')' -f1)"
+            done
+            MACHINE=$(dialog --title "Available Machines" --menu "Please choose a machine" 30 66 20 $MACHINETABLE 3>&1 1>&2 2>&3)
         fi
     fi
+    unset MACHINETABLE
+    unset ITEM
 fi
 
 # guard against Ctrl-D or cancel
@@ -67,9 +68,10 @@ if [ -z "$MACHINE" ]; then
     echo ""
     echo "Press <ENTER> to see a list of your choices"
     read
-    ls sources/*/conf/machine/*.conf | sed s/\.conf//g | awk -F'/' '{print $4 " (" $2 ")"}' | sed -r 's/^.+\///' | sort
+    echo $MACHLAYERS | sed -e 's/(/ (/g' | sed -e 's/)/)\n/g' | sed -e 's/^ */\t/g'
     return
 fi
+unset MACHLAYERS
 
 if [ -z "${SDKMACHINE}" ]; then
     SDKMACHINE='x86_64'
