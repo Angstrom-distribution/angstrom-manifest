@@ -41,7 +41,7 @@ if [ -z "${MACHINE}" ]; then
             MACHINETABLE="${MACHINETABLE} $(echo $ITEM | cut -d'(' -f1) $(echo $ITEM | cut -d'(' -f2 | cut -d')' -f1) OFF\n"
         done
         MACHINE=$(whiptail --title "Available Machines" --radiolist \
-            "Please choose a machine" 30 66 20 \
+            "Please choose a machine" 0 0 20 \
             ${MACHINETABLE} 3>&1 1>&2 2>&3)
         unset MACHINETABLE
     fi
@@ -53,7 +53,7 @@ if [ -z "${MACHINE}" ]; then
             for ITEM in $MACHLAYERS; do
                 MACHINETABLE="$MACHINETABLE $(echo $ITEM | cut -d'(' -f1) $(echo $ITEM | cut -d'(' -f2 | cut -d')' -f1)"
             done
-            MACHINE=$(dialog --title "Available Machines" --menu "Please choose a machine" 30 66 20 $MACHINETABLE 3>&1 1>&2 2>&3)
+            MACHINE=$(dialog --title "Available Machines" --menu "Please choose a machine" 0 0 20 $MACHINETABLE 3>&1 1>&2 2>&3)
         fi
     fi
     unset MACHINETABLE
