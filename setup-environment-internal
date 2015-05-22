@@ -24,8 +24,8 @@ if [ "$(whoami)" = "root" ]; then
     return
 fi
 
-OEROOT=${PWD}
-cd $OEROOT
+OEROOT="`pwd`"
+cd "$OEROOT"
 if [ -n "$ZSH_VERSION" ]; then
     setopt sh_word_split
 fi
