@@ -77,18 +77,22 @@ if [ -z "${SDKMACHINE}" ]; then
     SDKMACHINE='x86_64'
 fi
 
-MANIFESTS=${OEROOT}/.repo/manifests
+MANIFESTS="${OEROOT}"/.repo/manifests
 
 # Clean up PATH, because if it includes tokens to current directories somehow,
 # wrong binaries can be used instead of the expected ones during task execution
 export PATH="`echo ${PATH} | sed 's/\(:.\|:\)*:/:/g;s/^.\?://;s/:.\?$//'`"
-export PATH=${OEROOT}/sources/openembedded-core/scripts:${OEROOT}/sources/bitbake/bin:${OEROOT}/.repo/repo:${PATH}
+export PATH="${OEROOT}"/sources/openembedded-core/scripts:"${OEROOT}"/sources/bitbake/bin:"${OEROOT}"/.repo/repo:"${PATH}"
+#remove duplicate path entries
+export PATH="`echo $PATH | awk -F: '{for (i=1;i<=NF;i++) { if ( !x[$i]++ ) printf("%s:",$i); }}'`"
 # Make sure Bitbake doesn't filter out the following variables from our
 # environment.
 export BB_ENV_EXTRAWHITE="MACHINE DISTRO TCLIBC TCMODE GIT_PROXY_COMMAND http_proxy ftp_proxy https_proxy all_proxy ALL_PROXY no_proxy SSH_AGENT_PID SSH_AUTH_SOCK BB_SRCREV_POLICY SDKMACHINE BB_NUMBER_THREADS"
 
 mkdir -p conf
-oldmach=`grep "^MACHINE" ${OEROOT}/conf/auto.conf | sed -e 's%^MACHINE ?= %%' | sed -e 's/^"//'  -e 's/"$//'`
+if [ -f "${OEROOT}/conf/auto.conf" ]; then
+    oldmach=`fgrep "^MACHINE" "${OEROOT}/conf/auto.conf" | sed -e 's%^MACHINE ?= %%' | sed -e 's/^"//'  -e 's/"$//'`
+fi
 if [ -e conf/checksum -a "${MACHINE}" = "$oldmach" ]
 then
     sha512sum --quiet -c conf/checksum > /dev/null 2>&1
@@ -99,19 +103,19 @@ then
 fi
 
 # evaluate new checksum and regenerate the conf files
-sha512sum ${MANIFESTS}/setup-environment-internal 2>&1 > conf/checksum
+sha512sum "${MANIFESTS}"/setup-environment-internal 2>&1 > conf/checksum
 
-ln -sf ${MANIFESTS}/conf/local.conf conf/local.conf
-ln -sf ${MANIFESTS}/conf/bblayers.conf conf/bblayers.conf
-ln -sf ${MANIFESTS}/README.md README.md
+ln -sf "${MANIFESTS}"/conf/local.conf conf/local.conf
+ln -sf "${MANIFESTS}"/conf/bblayers.conf conf/bblayers.conf
+ln -sf "${MANIFESTS}"/README.md README.md
 
-ln -sf ${MANIFESTS} sources/
+ln -sf "${MANIFESTS}" sources/
 
 repo sync
 repo start work --all
 repo rebase
 
-DISTRO=$(grep -w DISTRO conf/local.conf | grep -v '^#' | awk -F\" '{print $2}')
+DISTRO=$(grep -w DISTRO conf/local.conf | grep -v '^#' | awk -F\" "'{print $2}'")
 export DISTRO_DIRNAME=`echo ${DISTRO} | sed 's#[.-]#_#g'`
 
 cat > conf/auto.conf <<EOF
