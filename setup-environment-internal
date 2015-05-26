@@ -115,7 +115,7 @@ repo sync
 repo start work --all
 repo rebase
 
-DISTRO=$(grep -w DISTRO conf/local.conf | grep -v '^#' | awk -F\" \"'{print $2}'\")
+DISTRO=$(grep -w DISTRO conf/local.conf | grep -v '^#' | awk -F\" '{print $2}')
 export DISTRO_DIRNAME=`echo ${DISTRO} | sed 's#[.-]#_#g'`
 
 cat > conf/auto.conf <<EOF
