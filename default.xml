@@ -37,7 +37,7 @@
   <project remote="github" name="linux-sunxi/meta-sunxi" path="sources/meta-sunxi"/>
   <project remote="github" name="96boards/meta-96boards" path="sources/meta-96boards"/>
   <project remote="github" name="linux4sam/meta-atmel" path="sources/meta-atmel"/>
-  <project remote="github" name="koenkooi/meta-dominion" path="sources/meta-dominion"/>
+  <project remote="github" name="koenkooi/meta-dominion" path="sources/meta-dominion" revision="dizzy"/>
   <project remote="github" name="koenkooi/meta-uav" path="sources/meta-uav"/>
   <project remote="github" name="koenkooi/meta-photography" path="sources/meta-photography"/>
   <project remote="github" name="koenkooi/meta-edison" path="sources/meta-edison"/>
