@@ -49,7 +49,7 @@
   <project remote="yocto" name="meta-intel" path="sources/meta-intel" revision="fido"/>
   <project remote="yocto" name="meta-ti" path="sources/meta-ti" revision="fido"/>
   <project remote="yocto" name="meta-mono" path="sources/meta-mono" revision="7bc3cbb5db021700c445f07e2a95219f7298315f"/>
-  <project remote="yocto" name="meta-minnow" path="sources/meta-minnow" revision="13a5f2ab84c7284647a3e067a33109c11dae0568"/>
+  <project remote="yocto" name="meta-minnow" path="sources/meta-minnow" revision="fido"/>
   <project remote="yocto" name="meta-raspberrypi" path="sources/meta-raspberrypi" revision="fido"/>
   <project remote="yocto" name="meta-java" path="sources/meta-java" revision="d2b75b615e4612f9fa05950c1d76d4a719e573d4"/>
 
