@@ -21,7 +21,7 @@
   <project remote="github" name="openembedded/openembedded-core" path="sources/openembedded-core" revision="fido" />
   <project remote="github" name="openembedded/meta-openembedded" path="sources/meta-openembedded" revision="fido" />
   <project remote="github" name="openembedded/bitbake" path="sources/bitbake" revision="1.26"/>
-  <project remote="github" name="koenkooi/meta-beagleboard" path="sources/meta-beagleboard" revision="e8505570c5bc788ca0be0bff1ddeaf31bf185b68"/>
+  <project remote="github" name="koenkooi/meta-beagleboard" path="sources/meta-beagleboard" revision="fido"/>
   <project remote="github" name="balister/meta-ettus" path="sources/meta-ettus" revision="4b6b5be45032f147b930528ea92ff0b6de454146"/>
   <project remote="github" name="kraj/meta-nslu2" path="sources/meta-nslu2" revision="ddf38dba9426b4a2047679e936521a5b1b06653e"/>
   <project remote="github" name="kraj/meta-altera" path="sources/meta-altera" revision="0b497d6c59f644eedeab0a6bbf9a258525ab40ef"/>
