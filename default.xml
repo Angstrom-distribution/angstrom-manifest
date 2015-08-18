@@ -55,5 +55,6 @@
   <project remote="yocto" name="meta-minnow" path="sources/meta-minnow"/>
   <project remote="yocto" name="meta-raspberrypi" path="sources/meta-raspberrypi"/>
   <project remote="yocto" name="meta-java" path="sources/meta-java"/>
+  <project remote="yocto" name="meta-maker" path="sources/meta-maker"/>
 
 </manifest>
