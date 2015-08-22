@@ -32,7 +32,7 @@
   <project remote="github" name="shr-distribution/meta-smartphone" path="sources/meta-smartphone" revision="fido" />
   <project remote="github" name="Freescale/meta-fsl-arm-extra" path="sources/meta-fsl-arm-extra" revision="fido" />
   <project remote="github" name="bmwcarit/meta-ros" path="sources/meta-ros" revision="312e6c4ddd76f56fce22a7b9b1a5b0fd8d39c224"/>
-  <project remote="github" name="linux-sunxi/meta-sunxi" path="sources/meta-sunxi" revision="211d55b4374ff3df5eabee39b5173c8e7c824c34"/>
+  <project remote="github" name="linux-sunxi/meta-sunxi" path="sources/meta-sunxi" revision="fido"/>
   <project remote="github" name="96boards/meta-96boards" path="sources/meta-96boards" revision="fido"/>
   <project remote="github" name="linux4sam/meta-atmel" path="sources/meta-atmel" revision="fido"/>
   <project remote="github" name="koenkooi/meta-dominion" path="sources/meta-dominion" revision="master"/>
