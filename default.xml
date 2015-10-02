@@ -11,7 +11,7 @@
   <remote fetch="http://git.shr-project.org" name="shr"/>
 
   <project remote="linaro" name="openembedded/meta-linaro" path="sources/meta-linaro" revision="fido" />
-  <project remote="linaro" name="people/nicolas.dechesne/meta-qualcomm" path="sources/meta-qualcomm" revision="ffbcdf0cfc07347ac4c560014d1ae41cd00db3cb"/>
+  <project remote="linaro" name="people/nicolas.dechesne/meta-qualcomm" path="sources/meta-qualcomm" revision="7bf6fe9437e3a39cd8b454916fe3f79e5b3ed5b2"/>
 
   <project remote="oe"     name="meta-handheld" path="sources/meta-handheld" revision="fido"/>
 
