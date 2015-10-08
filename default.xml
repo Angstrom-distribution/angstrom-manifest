@@ -11,7 +11,6 @@
   <remote fetch="http://git.shr-project.org" name="shr"/>
 
   <project remote="linaro" name="openembedded/meta-linaro" path="sources/meta-linaro"/>
-  <project remote="linaro" name="people/nicolas.dechesne/meta-qualcomm" path="sources/meta-qualcomm"/>
 
   <project remote="oe"     name="meta-handheld" path="sources/meta-handheld"/>
   <project remote="oe"     name="meta-opie" path="sources/meta-opie"/>
@@ -42,6 +41,7 @@
   <project remote="github" name="koenkooi/meta-photography" path="sources/meta-photography"/>
   <project remote="github" name="koenkooi/meta-edison" path="sources/meta-edison"/>
   <project remote="github" name="slimlogic/meta-exynos" path="sources/meta-exynos"/>
+  <project remote="github" name="ndechesne/meta-qualcomm" path="sources/meta-qualcomm"/>
   <project remote="github" name="sysmocom/meta-telephony" path="sources/meta-telephony"/>
   <project remote="github" name="Angstrom-distribution/meta-angstrom" path="sources/meta-angstrom">
       <copyfile dest="setup-environment" src="../../.repo/manifests/setup-environment"/>
