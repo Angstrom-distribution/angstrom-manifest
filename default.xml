@@ -41,7 +41,7 @@
   <project name="meta-raspberrypi" path="sources/meta-raspberrypi" remote="yocto" revision="20c8e6a5bce17fba97af7365d8bdf04e5c7b17b9" upstream="master"/>
   <project name="meta-ti" path="sources/meta-ti" remote="yocto" revision="5920c55bc0764338cd29debeb67a885a12d12fe2" upstream="master"/>
   <project name="meta-xilinx" path="sources/meta-xilinx" remote="yocto" revision="a14fc617ba10df1b4c5bcd2d1a62534df501931a" upstream="master"/>
-  <project name="ndechesne/meta-qcom" path="sources/meta-qcom" remote="github" revision="0e67c5955f918fc7b81f762e81ea251034a81abe" upstream="master"/>
+  <project name="ndechesne/meta-qcom" path="sources/meta-qcom" remote="github" revision="jethro"/>
   <project name="openembedded/bitbake" path="sources/bitbake" remote="github" revision="7b3ed62800cb7352154897c1c5ad2440a54df198" upstream="master"/>
   <project name="openembedded/meta-linaro" path="sources/meta-linaro" remote="linaro" revision="8a236054eac0cfcda280a22e6b29be0ca843dd6b" upstream="master"/>
   <project name="openembedded/meta-openembedded" path="sources/meta-openembedded" remote="github" revision="47f7d287a09329734629cb9d194ef4e077117d79" upstream="master"/>
