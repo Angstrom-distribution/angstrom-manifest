@@ -10,7 +10,7 @@
   <default revision="master" sync-j="4"/>
   
   <project name="96boards/meta-96boards" path="sources/meta-96boards" remote="github" revision="aa2b10da58b8c6c5c0ef10489a62f79206b929cc" upstream="master"/>
-  <project name="Angstrom-distribution/meta-angstrom" path="sources/meta-angstrom" remote="github" revision="ad5209af062e87daa805b69186bf1da006a0a0c5" upstream="master">
+  <project name="Angstrom-distribution/meta-angstrom" path="sources/meta-angstrom" remote="github" revision="angstrom-v2015.12-yocto2.0">
     <copyfile dest="setup-environment" src="../../.repo/manifests/setup-environment"/>
   </project>
   <project name="Freescale/meta-fsl-arm-extra" path="sources/meta-fsl-arm-extra" remote="github" revision="3757ea15f5bae89e09cd76137bb2fbb6821099b5" upstream="master"/>
