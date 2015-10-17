@@ -45,7 +45,7 @@
   <project name="openembedded/bitbake" path="sources/bitbake" remote="github" revision="7b3ed62800cb7352154897c1c5ad2440a54df198" upstream="master"/>
   <project name="openembedded/meta-linaro" path="sources/meta-linaro" remote="linaro" revision="8a236054eac0cfcda280a22e6b29be0ca843dd6b" upstream="master"/>
   <project name="openembedded/meta-openembedded" path="sources/meta-openembedded" remote="github" revision="84069b5dfb4a885fb7ea60ed62b5576b485a5994" upstream="master"/>
-  <project name="openembedded/openembedded-core" path="sources/openembedded-core" remote="github" revision="jethro">
+  <project name="openembedded/openembedded-core" path="sources/openembedded-core" remote="github" revision="jethro"/>
   <project name="openpandora/meta-openpandora" path="sources/meta-openpandora" remote="github" revision="be558b76ca2b8130af875e2f2a96dd1a0868744f" upstream="master"/>
   <project name="schnitzeltony/meta-gumstix-community" path="sources/meta-gumstix-community" remote="github" revision="509371d964b2923d6e526254beb6551c99b5140b" upstream="master"/>
   <project name="shr-distribution/meta-smartphone" path="sources/meta-smartphone" remote="github" revision="3c8dfa658e964130aa57e2d689c62e26a0689e4c" upstream="master"/>
