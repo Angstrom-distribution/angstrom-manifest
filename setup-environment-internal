@@ -113,7 +113,6 @@ ln -sf "${MANIFESTS}" sources/
 
 repo sync
 repo start work --all
-repo rebase
 
 DISTRO=$(grep -w DISTRO conf/local.conf | grep -v '^#' | awk -F\" '{print $2}')
 export DISTRO_DIRNAME=`echo ${DISTRO} | sed 's#[.-]#_#g'`
