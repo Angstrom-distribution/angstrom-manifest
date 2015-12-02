@@ -28,6 +28,9 @@ OEROOT="`pwd`"
 cd "$OEROOT"
 if [ -n "$ZSH_VERSION" ]; then
     setopt sh_word_split
+    setopt clobber
+elif [ -n "$BASH_VERSION" ]; then
+    set +o noclobber
 fi
 
 # create a common list of "<machine>(<layer>)", sorted by <machine>
