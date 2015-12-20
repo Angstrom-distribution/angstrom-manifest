@@ -13,8 +13,8 @@
   <project name="Angstrom-distribution/meta-angstrom" path="sources/meta-angstrom" remote="github" revision="angstrom-v2015.12-yocto2.0">
     <copyfile dest="setup-environment" src="../../.repo/manifests/setup-environment"/>
   </project>
-  <project name="Freescale/meta-fsl-arm-extra" path="sources/meta-fsl-arm-extra" remote="github" revision="3757ea15f5bae89e09cd76137bb2fbb6821099b5" upstream="master"/>
-  <project name="OSSystems/meta-browser" path="sources/meta-browser" remote="github" revision="6ae140b29f0201fe3bb470da8c96c9e142294ebf" upstream="master"/>
+  <project name="Freescale/meta-fsl-arm-extra" path="sources/meta-fsl-arm-extra" remote="github" revision="jethro"/>
+  <project name="OSSystems/meta-browser" path="sources/meta-browser" remote="github" revision="jethro"/>
   <project name="balister/meta-ettus" path="sources/meta-ettus" remote="github" revision="ca682b9801bc04e56acd52a0384ed6bd711834a7" upstream="master"/>
   <project name="bmwcarit/meta-ros" path="sources/meta-ros" remote="github" revision="9a4b87f6925813d003cb82226e9dab389fff5179" upstream="master"/>
   <project name="gen_dev_sst/meta-kde4" path="sources/meta-kde4" remote="bitbucket" revision="4287bd4a5e23e084b1f9e9d3235b4248bbe772f6" upstream="master"/>
@@ -25,30 +25,30 @@
   <project name="koenkooi/meta-uav" path="sources/meta-uav" remote="github" revision="95b5977627853f82b13310c35739b51cf449a1d6" upstream="master"/>
   <project name="kraj/meta-altera" path="sources/meta-altera" remote="github" revision="996b8127c431472cf35b691e8d1c9f0cc79a0650" upstream="master"/>
   <project name="kraj/meta-jetson-tk1" path="sources/meta-jetson-tk1" remote="github" revision="5f1fd26c7d51700f594a799dec1010a79caba06f" upstream="master"/>
-  <project name="kraj/meta-musl" path="sources/meta-musl" remote="github" revision="135db4df36e1114efab9fd3471ba2c65896cbe10" upstream="master"/>
+  <project name="kraj/meta-musl" path="sources/meta-musl" remote="github" revision="jethro"/>
   <project name="kraj/meta-nslu2" path="sources/meta-nslu2" remote="github" revision="df0f6b8337d73c79a0047ba348ebd74e3778a3cf" upstream="master"/>
   <project name="linux-sunxi/meta-sunxi" path="sources/meta-sunxi" remote="github" revision="14da837096f2c4bf1471b9cce5cf7fd30f55999b" upstream="master"/>
-  <project name="linux4sam/meta-atmel" path="sources/meta-atmel" remote="github" revision="3d9104286de486db6bc4d0f6c3e31b53a1589d9c" upstream="master"/>
-  <project name="meta-fsl-arm" path="sources/meta-fsl-arm" remote="yocto" revision="5efa2d7c81a4c1f3590a3e2f8cf77bf2f2d756e9" upstream="master"/>
+  <project name="linux4sam/meta-atmel" path="sources/meta-atmel" remote="github" revision="jethro"/>
+  <project name="meta-fsl-arm" path="sources/meta-fsl-arm" remote="yocto" revision="jethro"/>
   <project name="meta-handheld" path="sources/meta-handheld" remote="oe" revision="1dc06f845b2ac531f64d3154ea6280f9243fc865" upstream="master"/>
-  <project name="meta-intel" path="sources/meta-intel" remote="yocto" revision="6e91701dcf68f9351db8bb0b92eb2d26af1b8f7f" upstream="master"/>
+  <project name="meta-intel" path="sources/meta-intel" remote="yocto" revision="jethro"/>
   <project name="meta-java" path="sources/meta-java" remote="yocto" revision="a73939323984fca1e919d3408d3301ccdbceac9c" upstream="master"/>
   <project name="meta-maker" path="sources/meta-maker" remote="yocto" revision="94051fc9d26750a51807eeaa5de82c953274b41f" upstream="master"/>
   <project name="meta-minnow" path="sources/meta-minnow" remote="yocto" revision="9c965ef5252e383843d796cd8b50c61b3034b6ae" upstream="master"/>
   <project name="meta-mono" path="sources/meta-mono" remote="yocto" revision="5d2c0bca86ed81a6d428b0e8317db94906e091dd" upstream="master"/>
   <project name="meta-opie" path="sources/meta-opie" remote="oe" revision="4c5c35631e1e58905c4488dd521899b668f9ee82" upstream="master"/>
-  <project name="meta-qt5/meta-qt5" path="sources/meta-qt5" remote="github" revision="51b4620392aa9041d8512549bfa554bea368c5ea" upstream="master"/>
-  <project name="meta-raspberrypi" path="sources/meta-raspberrypi" remote="yocto" revision="20c8e6a5bce17fba97af7365d8bdf04e5c7b17b9" upstream="master"/>
+  <project name="meta-qt5/meta-qt5" path="sources/meta-qt5" remote="github" revision="jethro"/>
+  <project name="meta-raspberrypi" path="sources/meta-raspberrypi" remote="yocto" revision="jethro"/>
   <project name="meta-ti" path="sources/meta-ti" remote="yocto" revision="5920c55bc0764338cd29debeb67a885a12d12fe2" upstream="master"/>
-  <project name="meta-xilinx" path="sources/meta-xilinx" remote="yocto" revision="a14fc617ba10df1b4c5bcd2d1a62534df501931a" upstream="master"/>
+  <project name="meta-xilinx" path="sources/meta-xilinx" remote="yocto" revision="jethro"/>
   <project name="ndechesne/meta-qcom" path="sources/meta-qcom" remote="github" revision="jethro"/>
   <project name="openembedded/bitbake" path="sources/bitbake" remote="github" revision="7b3ed62800cb7352154897c1c5ad2440a54df198" upstream="master"/>
-  <project name="openembedded/meta-linaro" path="sources/meta-linaro" remote="linaro" revision="8a236054eac0cfcda280a22e6b29be0ca843dd6b" upstream="master"/>
-  <project name="openembedded/meta-openembedded" path="sources/meta-openembedded" remote="github" revision="47f7d287a09329734629cb9d194ef4e077117d79" upstream="master"/>
+  <project name="openembedded/meta-linaro" path="sources/meta-linaro" remote="linaro" revision="jethro"/>
+  <project name="openembedded/meta-openembedded" path="sources/meta-openembedded" remote="github" revision="jethro"/>
   <project name="openembedded/openembedded-core" path="sources/openembedded-core" remote="github" revision="jethro"/>
   <project name="openpandora/meta-openpandora" path="sources/meta-openpandora" remote="github" revision="be558b76ca2b8130af875e2f2a96dd1a0868744f" upstream="master"/>
   <project name="schnitzeltony/meta-gumstix-community" path="sources/meta-gumstix-community" remote="github" revision="509371d964b2923d6e526254beb6551c99b5140b" upstream="master"/>
-  <project name="shr-distribution/meta-smartphone" path="sources/meta-smartphone" remote="github" revision="3c8dfa658e964130aa57e2d689c62e26a0689e4c" upstream="master"/>
+  <project name="shr-distribution/meta-smartphone" path="sources/meta-smartphone" remote="github" revision="jethro"/>
   <project name="slimlogic/meta-exynos" path="sources/meta-exynos" remote="github" revision="d91f975a06e0797340432908fc89a1f1cadc1ee3" upstream="master"/>
   <project name="sysmocom/meta-telephony" path="sources/meta-telephony" remote="github" revision="97676796f729efd1c847ff65da9a5076ab0a8cbb" upstream="master"/>
 </manifest>
