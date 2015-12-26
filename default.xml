@@ -3,7 +3,7 @@
 
   <default revision="master" sync-j="4"/>
 
-  <remote fetch="http://git.yoctoproject.org" name="yocto"/>
+  <remote fetch="http://git.yoctoproject.org/git" name="yocto"/>
   <remote fetch="git://git.openembedded.org" name="oe"/>
   <remote fetch="https://github.com" name="github"/>
   <remote fetch="https://bitbucket.org" name="bitbucket"/>
