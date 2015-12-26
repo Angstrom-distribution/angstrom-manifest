@@ -5,7 +5,7 @@
   <remote fetch="http://git.linaro.org" name="linaro"/>
   <remote fetch="git://git.openembedded.org" name="oe"/>
   <remote fetch="http://git.shr-project.org" name="shr"/>
-  <remote fetch="http://git.yoctoproject.org" name="yocto"/>
+  <remote fetch="http://git.yoctoproject.org/git" name="yocto"/>
   
   <default revision="master" sync-j="4"/>
   
