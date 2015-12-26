@@ -3,11 +3,11 @@
 
   <default revision="master" sync-j="4"/>
 
-  <remote fetch="git://git.yoctoproject.org" name="yocto"/>
+  <remote fetch="http://git.yoctoproject.org" name="yocto"/>
   <remote fetch="git://git.openembedded.org" name="oe"/>
-  <remote fetch="git://github.com" name="github"/>
+  <remote fetch="https://github.com" name="github"/>
   <remote fetch="https://bitbucket.org" name="bitbucket"/>
-  <remote fetch="git://git.linaro.org" name="linaro"/>
+  <remote fetch="http://git.linaro.org" name="linaro"/>
   <remote fetch="http://git.shr-project.org" name="shr"/>
 
   <project remote="linaro" name="openembedded/meta-linaro" path="sources/meta-linaro" revision="fido" />
