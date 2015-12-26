@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
   <remote fetch="https://bitbucket.org" name="bitbucket"/>
-  <remote fetch="git://github.com" name="github"/>
-  <remote fetch="git://git.linaro.org" name="linaro"/>
+  <remote fetch="https://github.com" name="github"/>
+  <remote fetch="http://git.linaro.org" name="linaro"/>
   <remote fetch="git://git.openembedded.org" name="oe"/>
   <remote fetch="http://git.shr-project.org" name="shr"/>
-  <remote fetch="git://git.yoctoproject.org" name="yocto"/>
+  <remote fetch="http://git.yoctoproject.org" name="yocto"/>
   
   <default revision="master" sync-j="4"/>
   
