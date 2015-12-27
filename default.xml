@@ -26,7 +26,7 @@
   <project remote="github" name="kraj/meta-altera" path="sources/meta-altera" revision="0b497d6c59f644eedeab0a6bbf9a258525ab40ef"/>
   <project remote="github" name="kraj/meta-jetson-tk1" path="sources/meta-jetson-tk1" revision="6e335008d2ad019e6f9b78fa9e2e2f23e50f1a5d"/>
   <project remote="github" name="kraj/meta-musl" path="sources/meta-musl" revision="135db4df36e1114efab9fd3471ba2c65896cbe10"/>
-  <project remote="github" name="OSSystems/meta-browser" path="sources/meta-browser" revision="c44a4ac0970938999c2533042a6629f37d7047cc"/>
+  <project remote="github" name="OSSystems/meta-browser" path="sources/meta-browser" revision="bb799af123f1361767885d5b8f7e14b334d3fd7a"/>
   <project remote="github" name="meta-qt5/meta-qt5" path="sources/meta-qt5" revision="fido" />
   <project remote="github" name="shr-distribution/meta-smartphone" path="sources/meta-smartphone" revision="fido" />
   <project remote="github" name="Freescale/meta-fsl-arm-extra" path="sources/meta-fsl-arm-extra" revision="fido" />
