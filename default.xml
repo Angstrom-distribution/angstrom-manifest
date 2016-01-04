@@ -41,6 +41,7 @@
   <project remote="github" name="slimlogic/meta-exynos" path="sources/meta-exynos" revision="fido"/>
   <project remote="github" name="ndechesne/meta-qcom" path="sources/meta-qcom" revision="054abb9148dd0cf2d538eed8c87f13a19882bd0b"/>
   <project remote="github" name="sysmocom/meta-telephony" path="sources/meta-telephony" revision="f44fee44be75a06deb85248b6e82c21a52bf34a7"/>
+  <project remote="github" name="koenkooi/meta-minnow" path="sources/meta-minnow" revision="fido"/>
   <project remote="github" name="Angstrom-distribution/meta-angstrom" path="sources/meta-angstrom" revision="angstrom-v2015.06-yocto1.8">
       <linkfile dest="setup-environment" src="../../.repo/manifests/setup-environment"/>
   </project>
@@ -49,7 +50,6 @@
   <project remote="yocto" name="meta-intel" path="sources/meta-intel" revision="fido"/>
   <project remote="yocto" name="meta-ti" path="sources/meta-ti" revision="fido"/>
   <project remote="yocto" name="meta-mono" path="sources/meta-mono" revision="7bc3cbb5db021700c445f07e2a95219f7298315f"/>
-  <project remote="yocto" name="meta-minnow" path="sources/meta-minnow" revision="fido"/>
   <project remote="yocto" name="meta-raspberrypi" path="sources/meta-raspberrypi" revision="fido"/>
   <project remote="yocto" name="meta-java" path="sources/meta-java" revision="fdd91aaec07e232fe5fdde316c3c97120ec25cd8"/>
   <project remote="yocto" name="meta-maker" path="sources/meta-maker" revision="fido"/>
