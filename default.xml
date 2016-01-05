@@ -51,7 +51,7 @@
   <project remote="yocto" name="meta-ti" path="sources/meta-ti" revision="fido"/>
   <project remote="yocto" name="meta-mono" path="sources/meta-mono" revision="7bc3cbb5db021700c445f07e2a95219f7298315f"/>
   <project remote="yocto" name="meta-raspberrypi" path="sources/meta-raspberrypi" revision="fido"/>
-  <project remote="yocto" name="meta-java" path="sources/meta-java" revision="fdd91aaec07e232fe5fdde316c3c97120ec25cd8"/>
+  <project remote="yocto" name="meta-java" path="sources/meta-java" revision="8b776ac68f9af4596be3824152bcf0bc6b67fa1d"/>
   <project remote="yocto" name="meta-maker" path="sources/meta-maker" revision="fido"/>
 
 </manifest>
