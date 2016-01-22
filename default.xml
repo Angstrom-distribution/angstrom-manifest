@@ -24,7 +24,7 @@
   <project name="koenkooi/meta-photography" path="sources/meta-photography" remote="github" revision="06e16858cd9a35b40c8b8e6d2b76ab8c1db4b054" upstream="master"/>
   <project name="koenkooi/meta-uav" path="sources/meta-uav" remote="github" revision="95b5977627853f82b13310c35739b51cf449a1d6" upstream="master"/>
   <project name="kraj/meta-altera" path="sources/meta-altera" remote="github" revision="996b8127c431472cf35b691e8d1c9f0cc79a0650" upstream="master"/>
-  <project name="kraj/meta-jetson-tk1" path="sources/meta-jetson-tk1" remote="github" revision="5f1fd26c7d51700f594a799dec1010a79caba06f" upstream="master"/>
+  <project name="kraj/meta-jetson-tk1" path="sources/meta-jetson-tk1" remote="github" revision="86e911e4042d48f1353f5798f1deb2ef5ff7308f" upstream="master"/>
   <project name="kraj/meta-musl" path="sources/meta-musl" remote="github" revision="jethro"/>
   <project name="kraj/meta-nslu2" path="sources/meta-nslu2" remote="github" revision="df0f6b8337d73c79a0047ba348ebd74e3778a3cf" upstream="master"/>
   <project name="linux-sunxi/meta-sunxi" path="sources/meta-sunxi" remote="github" revision="14da837096f2c4bf1471b9cce5cf7fd30f55999b" upstream="master"/>
