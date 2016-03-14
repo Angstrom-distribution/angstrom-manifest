@@ -14,7 +14,7 @@
     <copyfile dest="setup-environment" src="../../.repo/manifests/setup-environment"/>
   </project>
   <project name="Freescale/meta-fsl-arm-extra" path="sources/meta-fsl-arm-extra" remote="github" revision="jethro"/>
-  <project name="OSSystems/meta-browser" path="sources/meta-browser" remote="github" revision="jethro"/>
+  <project name="OSSystems/meta-browser" path="sources/meta-browser" remote="github" revision="a3789a4168fcd42f1cdf5b5febe2c779a9467919" upstream="master"/>
   <project name="balister/meta-ettus" path="sources/meta-ettus" remote="github" revision="ca682b9801bc04e56acd52a0384ed6bd711834a7" upstream="master"/>
   <project name="bmwcarit/meta-ros" path="sources/meta-ros" remote="github" revision="9a4b87f6925813d003cb82226e9dab389fff5179" upstream="master"/>
   <project name="gen_dev_sst/meta-kde4" path="sources/meta-kde4" remote="bitbucket" revision="4287bd4a5e23e084b1f9e9d3235b4248bbe772f6" upstream="master"/>
@@ -32,7 +32,7 @@
   <project name="meta-fsl-arm" path="sources/meta-fsl-arm" remote="yocto" revision="jethro"/>
   <project name="meta-handheld" path="sources/meta-handheld" remote="oe" revision="1dc06f845b2ac531f64d3154ea6280f9243fc865" upstream="master"/>
   <project name="meta-intel" path="sources/meta-intel" remote="yocto" revision="jethro"/>
-  <project name="meta-java" path="sources/meta-java" remote="yocto" revision="a73939323984fca1e919d3408d3301ccdbceac9c" upstream="master"/>
+  <project name="meta-java" path="sources/meta-java" remote="yocto" revision="4c9dfc2b14676db414d915ba3bab9e101de73e05" upstream="master"/>
   <project name="meta-maker" path="sources/meta-maker" remote="yocto" revision="94051fc9d26750a51807eeaa5de82c953274b41f" upstream="master"/>
   <project name="meta-minnow" path="sources/meta-minnow" remote="yocto" revision="9c965ef5252e383843d796cd8b50c61b3034b6ae" upstream="master"/>
   <project name="meta-mono" path="sources/meta-mono" remote="yocto" revision="5d2c0bca86ed81a6d428b0e8317db94906e091dd" upstream="master"/>
