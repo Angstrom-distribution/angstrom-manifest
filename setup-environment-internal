@@ -130,7 +130,7 @@ if [ ! -e conf/site.conf ]; then
 SCONF_VERSION = "1"
 
 # Where to store sources
-DL_DIR = "${OEROOT}/sources/downloads"
+DL_DIR = "${OEROOT}/downloads"
 
 # Where to save shared state
 SSTATE_DIR = "${OEROOT}/build/sstate-cache"
