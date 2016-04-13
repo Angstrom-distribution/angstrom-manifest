@@ -10,51 +10,51 @@
   <remote fetch="http://git.linaro.org" name="linaro"/>
   <remote fetch="http://git.shr-project.org" name="shr"/>
 
-  <project remote="linaro" name="openembedded/meta-linaro" path="sources/meta-linaro"/>
+  <project remote="linaro" name="openembedded/meta-linaro" path="layers/meta-linaro"/>
 
-  <project remote="oe"     name="meta-handheld" path="sources/meta-handheld"/>
-  <project remote="oe"     name="meta-opie" path="sources/meta-opie"/>
+  <project remote="oe"     name="meta-handheld" path="layers/meta-handheld"/>
+  <project remote="oe"     name="meta-opie" path="layers/meta-opie"/>
 
-  <project remote="bitbucket" name="gen_dev_sst/meta-kde4" path="sources/meta-kde4"/>
+  <project remote="bitbucket" name="gen_dev_sst/meta-kde4" path="layers/meta-kde4"/>
 
-  <project remote="github" name="schnitzeltony/meta-gumstix-community" path="sources/meta-gumstix-community"/>
-  <project remote="github" name="openembedded/openembedded-core" path="sources/openembedded-core"/>
-  <project remote="github" name="openembedded/meta-openembedded" path="sources/meta-openembedded"/>
+  <project remote="github" name="schnitzeltony/meta-gumstix-community" path="layers/meta-gumstix-community"/>
+  <project remote="github" name="openembedded/openembedded-core" path="layers/openembedded-core"/>
+  <project remote="github" name="openembedded/meta-openembedded" path="layers/meta-openembedded"/>
   <project remote="github" name="openembedded/bitbake" path="bitbake"/>
-  <project remote="github" name="koenkooi/meta-beagleboard" path="sources/meta-beagleboard"/>
-  <project remote="github" name="balister/meta-ettus" path="sources/meta-ettus"/>
-  <project remote="github" name="kraj/meta-nslu2" path="sources/meta-nslu2"/>
-  <project remote="github" name="kraj/meta-altera" path="sources/meta-altera"/>
-  <project remote="github" name="kraj/meta-jetson-tk1" path="sources/meta-jetson-tk1"/>
-  <project remote="github" name="kraj/meta-musl" path="sources/meta-musl"/>
-  <project remote="github" name="openpandora/meta-openpandora" path="sources/meta-openpandora"/>
-  <project remote="github" name="OSSystems/meta-browser" path="sources/meta-browser"/>
-  <project remote="github" name="meta-qt5/meta-qt5" path="sources/meta-qt5"/>
-  <project remote="github" name="shr-distribution/meta-smartphone" path="sources/meta-smartphone"/>
-  <project remote="github" name="Freescale/meta-fsl-arm-extra" path="sources/meta-fsl-arm-extra"/>
-  <project remote="github" name="bmwcarit/meta-ros" path="sources/meta-ros"/>
-  <project remote="github" name="linux-sunxi/meta-sunxi" path="sources/meta-sunxi"/>
-  <project remote="github" name="96boards/meta-96boards" path="sources/meta-96boards"/>
-  <project remote="github" name="linux4sam/meta-atmel" path="sources/meta-atmel"/>
-  <project remote="github" name="koenkooi/meta-dominion" path="sources/meta-dominion"/>
-  <project remote="github" name="koenkooi/meta-uav" path="sources/meta-uav"/>
-  <project remote="github" name="koenkooi/meta-photography" path="sources/meta-photography"/>
-  <project remote="github" name="koenkooi/meta-edison" path="sources/meta-edison"/>
-  <project remote="github" name="slimlogic/meta-exynos" path="sources/meta-exynos"/>
-  <project remote="github" name="ndechesne/meta-qcom" path="sources/meta-qcom"/>
-  <project remote="github" name="sysmocom/meta-telephony" path="sources/meta-telephony"/>
-  <project remote="github" name="Angstrom-distribution/meta-angstrom" path="sources/meta-angstrom">
+  <project remote="github" name="koenkooi/meta-beagleboard" path="layers/meta-beagleboard"/>
+  <project remote="github" name="balister/meta-ettus" path="layers/meta-ettus"/>
+  <project remote="github" name="kraj/meta-nslu2" path="layers/meta-nslu2"/>
+  <project remote="github" name="kraj/meta-altera" path="layers/meta-altera"/>
+  <project remote="github" name="kraj/meta-jetson-tk1" path="layers/meta-jetson-tk1"/>
+  <project remote="github" name="kraj/meta-musl" path="layers/meta-musl"/>
+  <project remote="github" name="openpandora/meta-openpandora" path="layers/meta-openpandora"/>
+  <project remote="github" name="OSSystems/meta-browser" path="layers/meta-browser"/>
+  <project remote="github" name="meta-qt5/meta-qt5" path="layers/meta-qt5"/>
+  <project remote="github" name="shr-distribution/meta-smartphone" path="layers/meta-smartphone"/>
+  <project remote="github" name="Freescale/meta-fsl-arm-extra" path="layers/meta-fsl-arm-extra"/>
+  <project remote="github" name="bmwcarit/meta-ros" path="layers/meta-ros"/>
+  <project remote="github" name="linux-sunxi/meta-sunxi" path="layers/meta-sunxi"/>
+  <project remote="github" name="96boards/meta-96boards" path="layers/meta-96boards"/>
+  <project remote="github" name="linux4sam/meta-atmel" path="layers/meta-atmel"/>
+  <project remote="github" name="koenkooi/meta-dominion" path="layers/meta-dominion"/>
+  <project remote="github" name="koenkooi/meta-uav" path="layers/meta-uav"/>
+  <project remote="github" name="koenkooi/meta-photography" path="layers/meta-photography"/>
+  <project remote="github" name="koenkooi/meta-edison" path="layers/meta-edison"/>
+  <project remote="github" name="slimlogic/meta-exynos" path="layers/meta-exynos"/>
+  <project remote="github" name="ndechesne/meta-qcom" path="layers/meta-qcom"/>
+  <project remote="github" name="sysmocom/meta-telephony" path="layers/meta-telephony"/>
+  <project remote="github" name="Angstrom-distribution/meta-angstrom" path="layers/meta-angstrom">
       <copyfile dest="setup-environment" src="../../.repo/manifests/setup-environment"/>
   </project>
 
-  <project remote="yocto" name="meta-fsl-arm" path="sources/meta-fsl-arm"/>
-  <project remote="yocto" name="meta-intel" path="sources/meta-intel"/>
-  <project remote="yocto" name="meta-xilinx" path="sources/meta-xilinx"/>
-  <project remote="yocto" name="meta-ti" path="sources/meta-ti"/>
-  <project remote="yocto" name="meta-mono" path="sources/meta-mono"/>
-  <project remote="yocto" name="meta-minnow" path="sources/meta-minnow"/>
-  <project remote="yocto" name="meta-raspberrypi" path="sources/meta-raspberrypi"/>
-  <project remote="yocto" name="meta-java" path="sources/meta-java"/>
-  <project remote="yocto" name="meta-maker" path="sources/meta-maker"/>
+  <project remote="yocto" name="meta-fsl-arm" path="layers/meta-fsl-arm"/>
+  <project remote="yocto" name="meta-intel" path="layers/meta-intel"/>
+  <project remote="yocto" name="meta-xilinx" path="layers/meta-xilinx"/>
+  <project remote="yocto" name="meta-ti" path="layers/meta-ti"/>
+  <project remote="yocto" name="meta-mono" path="layers/meta-mono"/>
+  <project remote="yocto" name="meta-minnow" path="layers/meta-minnow"/>
+  <project remote="yocto" name="meta-raspberrypi" path="layers/meta-raspberrypi"/>
+  <project remote="yocto" name="meta-java" path="layers/meta-java"/>
+  <project remote="yocto" name="meta-maker" path="layers/meta-maker"/>
 
 </manifest>

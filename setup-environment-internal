@@ -34,7 +34,7 @@ elif [ -n "$BASH_VERSION" ]; then
 fi
 
 # create a common list of "<machine>(<layer>)", sorted by <machine>
-MACHLAYERS=$(find sources -print | grep "conf/machine/.*\.conf" | grep -v scripts | sed -e 's/\.conf//g' | awk -F'/' '{print $NF "(" $2 ")"}' | sort)
+MACHLAYERS=$(find layers -print | grep "conf/machine/.*\.conf" | grep -v scripts | sed -e 's/\.conf//g' | awk -F'/' '{print $NF "(" $2 ")"}' | sort)
 
 if [ -z "${MACHINE}" ]; then
     # whiptail
@@ -85,7 +85,7 @@ MANIFESTS="${OEROOT}"/.repo/manifests
 # Clean up PATH, because if it includes tokens to current directories somehow,
 # wrong binaries can be used instead of the expected ones during task execution
 export PATH="`echo ${PATH} | sed 's/\(:.\|:\)*:/:/g;s/^.\?://;s/:.\?$//'`"
-export PATH="${OEROOT}"/sources/openembedded-core/scripts:"${OEROOT}"/bitbake/bin:"${OEROOT}"/.repo/repo:"${PATH}"
+export PATH="${OEROOT}"/layers/openembedded-core/scripts:"${OEROOT}"/bitbake/bin:"${OEROOT}"/.repo/repo:"${PATH}"
 #remove duplicate path entries
 export PATH="`echo $PATH | awk -F: '{for (i=1;i<=NF;i++) { if ( !x[$i]++ ) printf("%s:",$i); }}' | sed 's/:$//'`"
 # Make sure Bitbake doesn't filter out the following variables from our
@@ -112,7 +112,7 @@ ln -sf "${MANIFESTS}"/conf/local.conf conf/local.conf
 ln -sf "${MANIFESTS}"/conf/bblayers.conf conf/bblayers.conf
 ln -sf "${MANIFESTS}"/README.md README.md
 
-ln -sf "${MANIFESTS}" sources/
+ln -sf "${MANIFESTS}" layers/
 
 repo sync
 repo start work --all
@@ -136,7 +136,7 @@ DL_DIR = "${OEROOT}/downloads"
 SSTATE_DIR = "${OEROOT}/build/sstate-cache"
 
 # Which files do we want to parse:
-BBFILES ?= "${OEROOT}/sources/openembedded-core/meta/recipes-*/*/*.bb"
+BBFILES ?= "${OEROOT}/layers/openembedded-core/meta/recipes-*/*/*.bb"
 
 TMPDIR = "${OEROOT}/build/tmp-${DISTRO_DIRNAME}"
 

@@ -26,7 +26,7 @@ When prompted, configure Repo with your real name and email address.
 
 A successful initialization will end with a message stating that Repo is initialized in your working directory. Your client directory should now contain a .repo directory where files such as the manifest will be kept.
 
-To pull down the metadata sources to your working directory from the repositories as specified in the default manifest, run
+To pull down the metadata layers to your working directory from the repositories as specified in the default manifest, run
 
 	$ repo sync
 
