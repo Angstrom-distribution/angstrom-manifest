@@ -133,7 +133,7 @@ SCONF_VERSION = "1"
 DL_DIR = "${OEROOT}/downloads"
 
 # Where to save shared state
-SSTATE_DIR = "${OEROOT}/build/sstate-cache"
+SSTATE_DIR = "${OEROOT}/sstate-cache"
 
 # Which files do we want to parse:
 BBFILES ?= "${OEROOT}/layers/openembedded-core/meta/recipes-*/*/*.bb"
