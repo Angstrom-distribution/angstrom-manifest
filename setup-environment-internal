@@ -85,7 +85,7 @@ MANIFESTS="${OEROOT}"/.repo/manifests
 # Clean up PATH, because if it includes tokens to current directories somehow,
 # wrong binaries can be used instead of the expected ones during task execution
 export PATH="`echo ${PATH} | sed 's/\(:.\|:\)*:/:/g;s/^.\?://;s/:.\?$//'`"
-export PATH="${OEROOT}"/sources/openembedded-core/scripts:"${OEROOT}"/sources/bitbake/bin:"${OEROOT}"/.repo/repo:"${PATH}"
+export PATH="${OEROOT}"/sources/openembedded-core/scripts:"${OEROOT}"/bitbake/bin:"${OEROOT}"/.repo/repo:"${PATH}"
 #remove duplicate path entries
 export PATH="`echo $PATH | awk -F: '{for (i=1;i<=NF;i++) { if ( !x[$i]++ ) printf("%s:",$i); }}' | sed 's/:$//'`"
 # Make sure Bitbake doesn't filter out the following variables from our

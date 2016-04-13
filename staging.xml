@@ -21,7 +21,7 @@
   <project remote="github" name="schnitzeltony/meta-gumstix-community" path="sources/meta-gumstix-community"/>
   <project remote="github" name="openembedded/openembedded-core" path="sources/openembedded-core"/>
   <project remote="github" name="openembedded/meta-openembedded" path="sources/meta-openembedded"/>
-  <project remote="github" name="openembedded/bitbake" path="sources/bitbake"/>
+  <project remote="github" name="openembedded/bitbake" path="bitbake"/>
   <project remote="github" name="koenkooi/meta-beagleboard" path="sources/meta-beagleboard"/>
   <project remote="github" name="balister/meta-ettus" path="sources/meta-ettus"/>
   <project remote="github" name="kraj/meta-nslu2" path="sources/meta-nslu2"/>
