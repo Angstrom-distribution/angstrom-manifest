@@ -180,7 +180,7 @@ EOF
         echo
         REPLY=
         while [ -z "$REPLY" ]; do
-            echo -n "Do you read the EULA ? (y/n) "
+            echo -n "Would you like to read the EULA ? (y/n) "
             read REPLY
             case "$REPLY" in
                 y|Y)
