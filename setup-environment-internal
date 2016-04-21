@@ -46,7 +46,6 @@ if [ -z "${MACHINE}" ]; then
         MACHINE=$(whiptail --title "Available Machines" --radiolist \
             "Please choose a machine" 0 0 20 \
             ${MACHINETABLE} 3>&1 1>&2 2>&3)
-        unset MACHINETABLE
     fi
 
     # dialog
@@ -59,8 +58,6 @@ if [ -z "${MACHINE}" ]; then
             MACHINE=$(dialog --title "Available Machines" --menu "Please choose a machine" 0 0 20 $MACHINETABLE 3>&1 1>&2 2>&3)
         fi
     fi
-    unset MACHINETABLE
-    unset ITEM
 fi
 
 # guard against Ctrl-D or cancel
@@ -74,7 +71,6 @@ if [ -z "$MACHINE" ]; then
     echo $MACHLAYERS | sed -e 's/(/ (/g' | sed -e 's/)/)\n/g' | sed -e 's/^ */\t/g'
     return
 fi
-unset MACHLAYERS
 
 if [ -z "${SDKMACHINE}" ]; then
     SDKMACHINE='x86_64'
@@ -118,7 +114,7 @@ repo sync
 repo start work --all
 
 DISTRO=$(grep -w DISTRO conf/local.conf | grep -v '^#' | awk -F\" '{print $2}')
-export DISTRO_DIRNAME=`echo ${DISTRO} | sed 's#[.-]#_#g'`
+DISTRO_DIRNAME=`echo ${DISTRO} | sed 's#[.-]#_#g'`
 
 cat > conf/auto.conf <<EOF
 MACHINE ?= "${MACHINE}"
@@ -242,3 +238,7 @@ Some of common targets are:
     development-gnome-image
 
 EOF
+
+unset MACHINETABLE MACHLAYERS DISTROTABLE DISTROLAYERS DISTRO_DIRNAME OEROOT
+unset ITEM MANIFESTS EULA EULA_MACHINE REPLY READ_EULA MACHINE SDKMACHINE DISTRO
+unset oldmach
