@@ -56,5 +56,6 @@
   <project remote="yocto" name="meta-raspberrypi" path="layers/meta-raspberrypi"/>
   <project remote="yocto" name="meta-java" path="layers/meta-java"/>
   <project remote="yocto" name="meta-maker" path="layers/meta-maker"/>
+  <project remote="yocto" name="meta-qt4" path="layers/meta-qt4"/>
 
 </manifest>
