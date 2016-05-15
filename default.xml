@@ -25,7 +25,6 @@
   <project name="koenkooi/meta-uav" path="layers/meta-uav" remote="github" revision="95b5977627853f82b13310c35739b51cf449a1d6" upstream="master"/>
   <project name="kraj/meta-altera" path="layers/meta-altera" remote="github" revision="66f45d759bccfb36c6f99555dbc8e0a2e2e86cc3" upstream="master"/>
   <project name="kraj/meta-jetson-tk1" path="layers/meta-jetson-tk1" remote="github" revision="86e911e4042d48f1353f5798f1deb2ef5ff7308f" upstream="master"/>
-  <project name="kraj/meta-musl" path="layers/meta-musl" remote="github" revision="39e933936e11e186f21dacf4bccedddaa0a122df" upstream="master"/>
   <project name="kraj/meta-nslu2" path="layers/meta-nslu2" remote="github" revision="df0f6b8337d73c79a0047ba348ebd74e3778a3cf" upstream="master"/>
   <project name="linux-sunxi/meta-sunxi" path="layers/meta-sunxi" remote="github" revision="51fe0eecc655745755709dbaca12d941a1a98926" upstream="master"/>
   <project name="linux4sam/meta-atmel" path="layers/meta-atmel" remote="github" revision="df10071966a78f0a808216bd02cf961b171cbb0c" upstream="master"/>
