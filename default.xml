@@ -33,7 +33,7 @@
   <project name="meta-handheld" path="sources/meta-handheld" remote="oe" revision="1dc06f845b2ac531f64d3154ea6280f9243fc865" upstream="master"/>
   <project name="meta-intel" path="sources/meta-intel" remote="yocto" revision="jethro"/>
   <project name="meta-java" path="sources/meta-java" remote="yocto" revision="4c9dfc2b14676db414d915ba3bab9e101de73e05" upstream="master"/>
-  <project name="meta-maker" path="sources/meta-maker" remote="yocto" revision="b711054fa475e60519a8114d949eb4f8d46036a6" upstream="master"/>
+  <project name="meta-maker" path="sources/meta-maker" remote="yocto" revision="jethro"/>
   <project name="meta-minnow" path="sources/meta-minnow" remote="yocto" revision="9c965ef5252e383843d796cd8b50c61b3034b6ae" upstream="master"/>
   <project name="meta-mono" path="sources/meta-mono" remote="yocto" revision="5d2c0bca86ed81a6d428b0e8317db94906e091dd" upstream="master"/>
   <project name="meta-opie" path="sources/meta-opie" remote="oe" revision="4c5c35631e1e58905c4488dd521899b668f9ee82" upstream="master"/>
