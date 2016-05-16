@@ -33,7 +33,6 @@
   <project name="meta-intel" path="layers/meta-intel" remote="yocto" revision="48a09d7e7050f9448368285a0521673b8004c7a1" upstream="master"/>
   <project name="meta-java" path="layers/meta-java" remote="yocto" revision="74811bbadaf55fd105ad092a1fcb4923afd4d41d" upstream="master"/>
   <project name="meta-maker" path="layers/meta-maker" remote="yocto" revision="ef2edb4258ba5137000b4e74d4c29d1a9950d119" upstream="master"/>
-  <project name="meta-minnow" path="layers/meta-minnow" remote="yocto" revision="9c965ef5252e383843d796cd8b50c61b3034b6ae" upstream="master"/>
   <project name="meta-mono" path="layers/meta-mono" remote="yocto" revision="bec66698046eb112df0be281e9d3e080e1c61cdb" upstream="master"/>
   <project name="meta-opie" path="layers/meta-opie" remote="oe" revision="4240c659257f62f8128c89cfe62285ffc130f7c5" upstream="master"/>
   <project name="meta-qt4" path="layers/meta-qt4" remote="yocto" revision="4058b0773381f894d915ea3dfac5fe052d82a9a7" upstream="master"/>
