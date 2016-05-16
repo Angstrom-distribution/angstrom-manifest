@@ -23,7 +23,6 @@
   <project remote="github" name="balister/meta-ettus" path="layers/meta-ettus"/>
   <project remote="github" name="kraj/meta-nslu2" path="layers/meta-nslu2"/>
   <project remote="github" name="kraj/meta-altera" path="layers/meta-altera"/>
-  <project remote="github" name="kraj/meta-jetson-tk1" path="layers/meta-jetson-tk1"/>
   <project remote="github" name="openpandora/meta-openpandora" path="layers/meta-openpandora"/>
   <project remote="github" name="OSSystems/meta-browser" path="layers/meta-browser"/>
   <project remote="github" name="meta-qt5/meta-qt5" path="layers/meta-qt5"/>
