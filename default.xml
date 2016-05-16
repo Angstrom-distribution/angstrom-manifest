@@ -49,7 +49,6 @@
   <project remote="yocto" name="meta-xilinx" path="layers/meta-xilinx"/>
   <project remote="yocto" name="meta-ti" path="layers/meta-ti"/>
   <project remote="yocto" name="meta-mono" path="layers/meta-mono"/>
-  <project remote="yocto" name="meta-minnow" path="layers/meta-minnow"/>
   <project remote="yocto" name="meta-raspberrypi" path="layers/meta-raspberrypi"/>
   <project remote="yocto" name="meta-java" path="layers/meta-java"/>
   <project remote="yocto" name="meta-maker" path="layers/meta-maker"/>
