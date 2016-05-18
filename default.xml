@@ -19,7 +19,6 @@
   <project remote="github" name="openembedded/openembedded-core" path="layers/openembedded-core"/>
   <project remote="github" name="openembedded/meta-openembedded" path="layers/meta-openembedded"/>
   <project remote="github" name="openembedded/bitbake" path="bitbake"/>
-  <project remote="github" name="koenkooi/meta-beagleboard" path="layers/meta-beagleboard"/>
   <project remote="github" name="balister/meta-ettus" path="layers/meta-ettus"/>
   <project remote="github" name="kraj/meta-nslu2" path="layers/meta-nslu2"/>
   <project remote="github" name="kraj/meta-altera" path="layers/meta-altera"/>
