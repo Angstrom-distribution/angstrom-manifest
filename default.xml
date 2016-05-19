@@ -19,7 +19,7 @@
   <project name="bmwcarit/meta-ros" path="sources/meta-ros" remote="github" revision="9a4b87f6925813d003cb82226e9dab389fff5179" upstream="master"/>
   <project name="gen_dev_sst/meta-kde4" path="sources/meta-kde4" remote="bitbucket" revision="4287bd4a5e23e084b1f9e9d3235b4248bbe772f6" upstream="master"/>
   <project name="koenkooi/meta-beagleboard" path="sources/meta-beagleboard" remote="github" revision="e1d997b265bd2cf8fa42e4568d0d39ccf771364c" upstream="master"/>
-  <project name="koenkooi/meta-dominion" path="sources/meta-dominion" remote="github" revision="master" upstream="jehtro"/>
+  <project name="koenkooi/meta-dominion" path="sources/meta-dominion" remote="github" revision="jethro"/>
   <project name="koenkooi/meta-edison" path="sources/meta-edison" remote="github" revision="c6e86b0877e1161c511d39235c02e564250d5448" upstream="master"/>
   <project name="koenkooi/meta-photography" path="sources/meta-photography" remote="github" revision="06e16858cd9a35b40c8b8e6d2b76ab8c1db4b054" upstream="master"/>
   <project name="koenkooi/meta-uav" path="sources/meta-uav" remote="github" revision="95b5977627853f82b13310c35739b51cf449a1d6" upstream="master"/>
