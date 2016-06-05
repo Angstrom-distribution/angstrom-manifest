@@ -25,7 +25,7 @@
   <project name="koenkooi/meta-uav" path="layers/meta-uav" remote="github" revision="95b5977627853f82b13310c35739b51cf449a1d6" upstream="master"/>
   <project name="kraj/meta-altera" path="layers/meta-altera" remote="github" revision="6a1844a415247a389fafa4e0d2890ba349ae5d7a" upstream="master"/>
   <project name="kraj/meta-nslu2" path="layers/meta-nslu2" remote="github" revision="df0f6b8337d73c79a0047ba348ebd74e3778a3cf" upstream="master"/>
-  <project name="linux-sunxi/meta-sunxi" path="layers/meta-sunxi" remote="github" revision="51fe0eecc655745755709dbaca12d941a1a98926" upstream="master"/>
+  <project name="linux-sunxi/meta-sunxi" path="layers/meta-sunxi" remote="github" revision="krogoth" />
   <project name="linux4sam/meta-atmel" path="layers/meta-atmel" remote="github" revision="df10071966a78f0a808216bd02cf961b171cbb0c" upstream="master"/>
   <project name="meta-fsl-arm" path="layers/meta-fsl-arm" remote="yocto" revision="7e04a78f4a75de8ee587032d8644bbce2af1d1e8" upstream="master"/>
   <project name="meta-handheld" path="layers/meta-handheld" remote="oe" revision="796a12685dc6a32f6ccc1cb048291f8143d4c9fe" upstream="master"/>
