@@ -33,6 +33,20 @@ elif [ -n "$BASH_VERSION" ]; then
     set +o noclobber
 fi
 
+usage () {
+    cat <<EOF
+Usage: [DISTRO=<DISTRO>] [MACHINE=<MACHINE>] source $BASH_SOURCE [BUILDDIR]
+If no MACHINE is set, list all possible machines, and ask user to choose.
+If no DISTRO is set, list all possible distros, and ask user to choose.
+If no BUILDIR is set, it will be set to build-DISTRO.
+EOF
+}
+
+if [ $# -gt 1 ]; then
+    usage
+    return 1
+fi
+
 # create a common list of "<machine>(<layer>)", sorted by <machine>
 MACHLAYERS=$(find layers -print | grep "conf/machine/.*\.conf" | grep -v scripts | sed -e 's/\.conf//g' | awk -F'/' '{print $NF "(" $2 ")"}' | sort)
 
