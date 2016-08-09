@@ -23,6 +23,7 @@
   <project name="koenkooi/meta-edison" path="sources/meta-edison" remote="github" revision="c6e86b0877e1161c511d39235c02e564250d5448" upstream="master"/>
   <project name="koenkooi/meta-photography" path="sources/meta-photography" remote="github" revision="06e16858cd9a35b40c8b8e6d2b76ab8c1db4b054" upstream="master"/>
   <project name="koenkooi/meta-uav" path="sources/meta-uav" remote="github" revision="95b5977627853f82b13310c35739b51cf449a1d6" upstream="master"/>
+  <project name="koenkooi/meta-kodi" path="sources/meta-kodi" remote="github" revision="jethro"/>
   <project name="kraj/meta-altera" path="sources/meta-altera" remote="github" revision="996b8127c431472cf35b691e8d1c9f0cc79a0650" upstream="master"/>
   <project name="kraj/meta-jetson-tk1" path="sources/meta-jetson-tk1" remote="github" revision="86e911e4042d48f1353f5798f1deb2ef5ff7308f" upstream="master"/>
   <project name="kraj/meta-musl" path="sources/meta-musl" remote="github" revision="jethro"/>
