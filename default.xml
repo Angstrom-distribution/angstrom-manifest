@@ -23,6 +23,7 @@
   <project name="koenkooi/meta-edison" path="layers/meta-edison" remote="github" revision="c81ce49d2f9b8256b72258b264e52a555cfe9197" upstream="master"/>
   <project name="koenkooi/meta-photography" path="layers/meta-photography" remote="github" revision="06e16858cd9a35b40c8b8e6d2b76ab8c1db4b054" upstream="master"/>
   <project name="koenkooi/meta-uav" path="layers/meta-uav" remote="github" revision="95b5977627853f82b13310c35739b51cf449a1d6" upstream="master"/>
+  <project name="koenkooi/meta-kodi" path="layers/meta-kodi" remote="github" revision="krogoth"/>
   <project name="kraj/meta-altera" path="layers/meta-altera" remote="github" revision="6a1844a415247a389fafa4e0d2890ba349ae5d7a" upstream="master"/>
   <project name="kraj/meta-nslu2" path="layers/meta-nslu2" remote="github" revision="df0f6b8337d73c79a0047ba348ebd74e3778a3cf" upstream="master"/>
   <project name="linux-sunxi/meta-sunxi" path="layers/meta-sunxi" remote="github" revision="krogoth" />
