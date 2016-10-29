@@ -128,8 +128,8 @@ ln -sf "${MANIFESTS}"/README.md README.md
 
 ln -sf "${MANIFESTS}" layers/
 
-repo sync
-repo start work --all
+python2 `which repo` sync
+python2 `which repo` start work --all
 
 DISTRO=$(grep -w DISTRO conf/local.conf | grep -v '^#' | awk -F\" '{print $2}')
 DISTRO_DIRNAME=$(echo "${DISTRO}" | sed 's#[.-]#_#g')
@@ -169,7 +169,7 @@ fi
 # If the env variable EULA_$MACHINE is set it is used by default,
 # without prompting the user.
 # FIXME: there is a potential issue if the same $MACHINE is set in more than one layer.. but we should assert that earlier
-EULA=$(find ../layers -print | grep "conf/eula/$MACHINE" | grep -v scripts | grep -v openembedded-core | grep -v meta-linaro || true)
+EULA=$(find layers -print | grep "conf/eula/$MACHINE" | grep -v scripts | grep -v openembedded-core | grep -v meta-linaro || true)
 
 if [ -n "$EULA" ]; then
 

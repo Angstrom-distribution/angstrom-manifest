@@ -43,7 +43,7 @@ More rarely, Linux clients experience connectivity issues, getting stuck in the 
 
 Setup Environment
 -----------------
-	$ . setup-environment
+	$ . ./setup-environment
 
 	$ MACHINE=<machine> bitbake <image>
 	e.g. MACHINE=beaglebone bitbake systemd-image
