@@ -96,12 +96,27 @@ fi
 
 MANIFESTS="${OEROOT}"/.repo/manifests
 
+# set up soft links to /usr/bin/python2 if it exists
+# this helps if /usr/bin/python is python3
+
+TOOLSPATH=$(pwd)/tools
+mkdir -p ${TOOLSPATH}
+if [ -e /usr/bin/python2 ] && ! [ -L tools/python ]; then
+    echo "linking to python2"
+    ln -s /usr/bin/python2 tools/python
+fi
+
+if [ -e /usr/bin/python2-config ] && ! [ -L tools/python-config ]; then
+    echo "linking to python2-config"
+    ln -s /usr/bin/python2-config tools/python-config
+fi
+
 # Clean up PATH, because if it includes tokens to current directories somehow,
 # wrong binaries can be used instead of the expected ones during task execution
 export PATH=$(echo "${PATH}" | sed 's/\(:.\|:\)*:/:/g;s/^.\?://;s/:.\?$//')
 REPOBIN=`which repo`
 REPOPATH=`dirname ${REPOBIN}`
-export PATH="${OEROOT}"/layers/openembedded-core/scripts:"${OEROOT}"/bitbake/bin:"${REPOPATH}":"${PATH}"
+export PATH="${OEROOT}"/layers/openembedded-core/scripts:"${OEROOT}"/bitbake/bin:"${REPOPATH}":"${TOOLSPATH}":"${PATH}"
 #remove duplicate path entries
 export PATH=$(echo "$PATH" | awk -F: '{for (i=1;i<=NF;i++) { if ( !x[$i]++ ) printf("%s:",$i); }}' | sed 's/:$//')
 # Make sure Bitbake doesn't filter out the following variables from our
