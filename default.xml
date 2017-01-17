@@ -18,6 +18,7 @@
   <project name="koenkooi/meta-dominion" path="layers/meta-dominion" remote="github" />
   <project name="ndechesne/meta-qcom" path="layers/meta-qcom" remote="github" />
   <project name="meta-intel" path="layers/meta-intel" remote="yocto" />
+  <project name="linux-sunxi/meta-sunxi" path="layers/meta-sunxi" remote="github" />
  
   <project name="Freescale/meta-freescale-3rdparty" path="layers/meta-freescale-3rdparty" remote="github" revision="742fbd6da4a87c4412dbecee42f859e99c9cb614" upstream="master"/>
   <project name="OSSystems/meta-browser" path="layers/meta-browser" remote="github" revision="c3978ffb9a58009d63cb948249bbba7d3411cc4a" upstream="master"/>
@@ -29,7 +30,6 @@
   <project name="kraj/meta-altera" path="layers/meta-altera" remote="github" revision="ab2ee2812670be650d6a722de08dff9bf05131f8" upstream="master"/>
   <project name="koenkooi/meta-kodi" path="layers/meta-kodi" remote="github" revision="morty"/>
   <project name="kraj/meta-nslu2" path="layers/meta-nslu2" remote="github" revision="df0f6b8337d73c79a0047ba348ebd74e3778a3cf" upstream="master"/>
-  <project name="linux-sunxi/meta-sunxi" path="layers/meta-sunxi" remote="github" revision="0b21d3bd2fe70e446bbc4c02ba6cf21208a63fa5" upstream="master"/>
   <project name="linux4sam/meta-atmel" path="layers/meta-atmel" remote="github" revision="6a22f84388f9c444627e40a08cb89de462cd0a5b" upstream="master"/>
   <project name="meta-freescale" path="layers/meta-freescale" remote="yocto" revision="085f99ae9ecaf2f88e89a050d36e5231334e33bb" upstream="master"/>
   <project name="meta-handheld" path="layers/meta-handheld" remote="oe" revision="3bf35a8a1da5b1ef63acd70988fcb89128297d97" upstream="master"/>
