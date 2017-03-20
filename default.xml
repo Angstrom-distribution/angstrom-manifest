@@ -19,6 +19,7 @@
   <project name="ndechesne/meta-qcom" path="layers/meta-qcom" remote="github" />
   <project name="meta-intel" path="layers/meta-intel" remote="yocto" />
   <project name="linux-sunxi/meta-sunxi" path="layers/meta-sunxi" remote="github" />
+  <project name="agherzan/meta-chip.git" path="layers/meta-chip" remote="github" revision="ddfd006069216ddcd78d5dcdd3f67ac209a438ab" />
   <project name="Angstrom-distribution/meta-freescale" path="layers/meta-freescale" remote="github" />
  
   <project name="Freescale/meta-freescale-3rdparty" path="layers/meta-freescale-3rdparty" remote="github" revision="742fbd6da4a87c4412dbecee42f859e99c9cb614" upstream="master"/>
@@ -50,4 +51,5 @@
   <project name="shr-distribution/meta-smartphone" path="layers/meta-smartphone" remote="github" revision="32541df3f691fc6c5b6103d5cdb1ee44d4897b5a" upstream="master"/>
   <project name="slimlogic/meta-exynos" path="layers/meta-exynos" remote="github" revision="d91f975a06e0797340432908fc89a1f1cadc1ee3" upstream="master"/>
   <project name="sysmocom/meta-telephony" path="layers/meta-telephony" remote="github" revision="8cf5a67850adf270bc2fdb4c0ed708b0ba037670" upstream="master"/>
+  <project name="meta-virtualization" remote="yocto"  path="layers/meta-virtualization"/>
 </manifest>
