@@ -22,6 +22,7 @@
   <project name="agherzan/meta-chip.git" path="layers/meta-chip" remote="github" revision="ddfd006069216ddcd78d5dcdd3f67ac209a438ab" />
   <project name="Angstrom-distribution/meta-freescale" path="layers/meta-freescale" remote="github" />
   <project name="openembedded/meta-backports" path="layers/meta-backports" remote="linaro" />
+  <project name="openembedded/meta-linaro" path="layers/meta-linaro" remote="linaro" ">
  
   <project name="Freescale/meta-freescale-3rdparty" path="layers/meta-freescale-3rdparty" remote="github" revision="742fbd6da4a87c4412dbecee42f859e99c9cb614" upstream="master"/>
   <project name="OSSystems/meta-browser" path="layers/meta-browser" remote="github" revision="c3978ffb9a58009d63cb948249bbba7d3411cc4a" upstream="master"/>
@@ -46,7 +47,6 @@
   <project name="meta-raspberrypi" path="layers/meta-raspberrypi" remote="yocto" revision="17f0c233054791ff21dcaf747f842d901282ae05" upstream="master"/>
   <project name="meta-ti" path="layers/meta-ti" remote="yocto" revision="8457b4359319c50a4dce68afecfced5b367985fb" upstream="master"/>
   <project name="meta-xilinx" path="layers/meta-xilinx" remote="yocto" revision="b2da4ccc5db004181b322c1992cac9120954138f" upstream="master"/>
-  <project name="openembedded/meta-linaro" path="layers/meta-linaro" remote="linaro" revision="db09d028933ba2f86c2db2de916426103c6f20c8" upstream="master"/>
   <project name="openpandora/meta-openpandora" path="layers/meta-openpandora" remote="github" revision="be558b76ca2b8130af875e2f2a96dd1a0868744f" upstream="master"/>
   <project name="schnitzeltony/meta-gumstix-community" path="layers/meta-gumstix-community" remote="github" revision="c8e7ec7f391a4b66adadac090d55beba18e1117e" upstream="master"/>
   <project name="shr-distribution/meta-smartphone" path="layers/meta-smartphone" remote="github" revision="32541df3f691fc6c5b6103d5cdb1ee44d4897b5a" upstream="master"/>
