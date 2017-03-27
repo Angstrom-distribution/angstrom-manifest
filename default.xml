@@ -21,6 +21,7 @@
   <project name="linux-sunxi/meta-sunxi" path="layers/meta-sunxi" remote="github" />
   <project name="agherzan/meta-chip.git" path="layers/meta-chip" remote="github" revision="ddfd006069216ddcd78d5dcdd3f67ac209a438ab" />
   <project name="Angstrom-distribution/meta-freescale" path="layers/meta-freescale" remote="github" />
+  <project name="openembedded/meta-backports" path="layers/meta-backports" remote="linaro" />
  
   <project name="Freescale/meta-freescale-3rdparty" path="layers/meta-freescale-3rdparty" remote="github" revision="742fbd6da4a87c4412dbecee42f859e99c9cb614" upstream="master"/>
   <project name="OSSystems/meta-browser" path="layers/meta-browser" remote="github" revision="c3978ffb9a58009d63cb948249bbba7d3411cc4a" upstream="master"/>
