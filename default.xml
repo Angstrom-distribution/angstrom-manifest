@@ -30,7 +30,7 @@
   <project name="bmwcarit/meta-ros" path="layers/meta-ros" remote="github" revision="6581c77b04495dcc9f5a371a7dc6077638e64c61" upstream="master"/>
   <project name="koenkooi/meta-edison" path="layers/meta-edison" remote="github" revision="395c66f21526ee07d963233218e4eaa8d47f32dd" upstream="master"/>
   <project name="koenkooi/meta-photography" path="layers/meta-photography" remote="github" revision="c6ea81dbb2c60f37b336b9d8ad5e463cbce2fd2c" upstream="master"/>
-  <project name="koenkooi/meta-beagleboard" path="layers/meta-beagleboard" remote="github" revision="3803dc2e65f8ca6ec940b346ed39d09eba3cc6b1" upstream="master"/>
+  <project name="koenkooi/meta-beagleboard" path="layers/meta-beagleboard" remote="github" revision="cb5514d39e3efc69f05c23e05ff8ff9e52cc6659" upstream="master"/>
   <project name="koenkooi/meta-uav" path="layers/meta-uav" remote="github" revision="95b5977627853f82b13310c35739b51cf449a1d6" upstream="master"/>
   <project name="kraj/meta-altera" path="layers/meta-altera" remote="github" revision="ab2ee2812670be650d6a722de08dff9bf05131f8" upstream="master"/>
   <project name="koenkooi/meta-kodi" path="layers/meta-kodi" remote="github" revision="morty"/>
