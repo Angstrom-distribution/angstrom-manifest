@@ -38,7 +38,7 @@
   <project name="linux4sam/meta-atmel" path="layers/meta-atmel" remote="github" revision="6a22f84388f9c444627e40a08cb89de462cd0a5b" upstream="master"/>
   <project name="meta-handheld" path="layers/meta-handheld" remote="oe" revision="3bf35a8a1da5b1ef63acd70988fcb89128297d97" upstream="master"/>
   <project name="meta-intel-iot-middleware" path="layers/meta-intel-iot-middleware" remote="yocto" revision="821cf14c8304669d9ce0c5b87b9be5a6eecff6e5" upstream="master"/>
-  <project name="meta-java" path="layers/meta-java" remote="yocto" revision="a265b31ec7d022be254abdf959360a7624208585" upstream="master"/>
+  <project name="meta-java" path="layers/meta-java" remote="yocto" revision="6eed0bbfa831f736bbab4d285c57deeec8f5d562" upstream="master"/>
   <project name="meta-maker" path="layers/meta-maker" remote="yocto" revision="c039fafa7a0276769d0928d16bdacd2012f2aff6" upstream="master"/>
   <project name="meta-mono" path="layers/meta-mono" remote="yocto" revision="e96e04f81b19e758e5c1ef6df8130871999e115c" upstream="master"/>
   <project name="meta-opie" path="layers/meta-opie" remote="oe" revision="92dab737a1fe7f709e99924e6fe56f7b31b52950" upstream="master"/>
