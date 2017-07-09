@@ -1,8 +1,10 @@
 ## Welcome to the Ångström Distribution
 
-You can use the [editor on GitHub](https://github.com/Angstrom-distribution/angstrom-manifest/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+Ångström was started by a small group of people who worked on the OpenEmbedded, OpenZaurus and OpenSimpad projects to unify their effort to make a stable and userfriendly distribution for embedded devices like handhelds, set top boxes and network-attached storage devices and more.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+Our name is **Ångström**, not **OpenEmbedded Ångström**. While Ångström is currently using OpenEmbedded heavily through the Yocto Project it isn’t including it in its name. So if you send out a press-release, please use the proper name.
+
+Ångström is versatile, it scales down to devices with 4MB of flash to devices with terabytes of RAID storage. Someday it might even run on a toaster 🙂
 
 ### Markdown
 
