@@ -40,7 +40,6 @@
   <project remote="github" name="koenkooi/meta-edison" path="sources/meta-edison" revision="fido"/>
   <project remote="github" name="slimlogic/meta-exynos" path="sources/meta-exynos" revision="fido"/>
   <project remote="github" name="ndechesne/meta-qcom" path="sources/meta-qcom" revision="054abb9148dd0cf2d538eed8c87f13a19882bd0b"/>
-  <project remote="github" name="sysmocom/meta-telephony" path="sources/meta-telephony" revision="f44fee44be75a06deb85248b6e82c21a52bf34a7"/>
   <project remote="github" name="koenkooi/meta-minnow" path="sources/meta-minnow" revision="fido"/>
   <project remote="github" name="Angstrom-distribution/meta-angstrom" path="sources/meta-angstrom" revision="angstrom-v2015.06-yocto1.8">
       <linkfile dest="setup-environment" src="../../.repo/manifests/setup-environment"/>
