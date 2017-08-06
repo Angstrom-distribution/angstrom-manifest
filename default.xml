@@ -51,6 +51,5 @@
   <project name="schnitzeltony/meta-gumstix-community" path="layers/meta-gumstix-community" remote="github" revision="c8e7ec7f391a4b66adadac090d55beba18e1117e" upstream="master"/>
   <project name="shr-distribution/meta-smartphone" path="layers/meta-smartphone" remote="github" revision="32541df3f691fc6c5b6103d5cdb1ee44d4897b5a" upstream="master"/>
   <project name="slimlogic/meta-exynos" path="layers/meta-exynos" remote="github" revision="d91f975a06e0797340432908fc89a1f1cadc1ee3" upstream="master"/>
-  <project name="sysmocom/meta-telephony" path="layers/meta-telephony" remote="github" revision="8cf5a67850adf270bc2fdb4c0ed708b0ba037670" upstream="master"/>
   <project name="meta-virtualization" remote="yocto"  path="layers/meta-virtualization"/>
 </manifest>
