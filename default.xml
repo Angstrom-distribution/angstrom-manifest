@@ -25,7 +25,6 @@
   <project remote="github" name="koenkooi/meta-photography" path="layers/meta-photography"/>
   <project remote="github" name="koenkooi/meta-edison" path="layers/meta-edison"/>
   <project remote="github" name="ndechesne/meta-qcom" path="layers/meta-qcom"/>
-  <project remote="github" name="sysmocom/meta-telephony" path="layers/meta-telephony" revision="8cf5a67850adf270bc2fdb4c0ed708b0ba037670" upstream="master"/>
   <project remote="github" name="linux4sam/meta-atmel" path="layers/meta-atmel" revision="41cffff1bd4cc0e553b5b4a170cdbec9dec18443" upstream="master"/>
   <project remote="github" name="kraj/meta-altera" path="layers/meta-altera" revision="9d22d2dab4fd219a9d9651cbfce1bab3c3a7fb6a" upstream="master"/>
   <project remote="github" name="kraj/meta-nslu2" path="layers/meta-nslu2" revision="df0f6b8337d73c79a0047ba348ebd74e3778a3cf" upstream="master"/>
