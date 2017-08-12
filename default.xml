@@ -27,7 +27,7 @@
   <project remote="github" name="ndechesne/meta-qcom" path="layers/meta-qcom"/>
   <project remote="github" name="linux4sam/meta-atmel" path="layers/meta-atmel" revision="41cffff1bd4cc0e553b5b4a170cdbec9dec18443" upstream="master"/>
   <project remote="github" name="kraj/meta-altera" path="layers/meta-altera" revision="9d22d2dab4fd219a9d9651cbfce1bab3c3a7fb6a" upstream="master"/>
-  <project remote="github" name="kraj/meta-nslu2" path="layers/meta-nslu2" revision="df0f6b8337d73c79a0047ba348ebd74e3778a3cf" upstream="master"/>
+  <project remote="github" name="kraj/meta-nslu2" path="layers/meta-nslu2" revision="8f35264fe9bb38439ece38c0c324cec792b22a8f" upstream="master"/>
   <project remote="github" name="OSSystems/meta-browser" path="layers/meta-browser" revision="6edb45804c5e532fdbca31e9d358d9052eaee90b" upstream="master"/>
   <project remote="github" name="meta-qt5/meta-qt5" path="layers/meta-qt5" revision="3ae86cb32edd1449f702e0a094929ae9b21ce191" upstream="master"/>
   <project remote="github" name="linux-sunxi/meta-sunxi" path="layers/meta-sunxi" revision="a84d6a40c1c786c64824e8e13b289fccc0b32b92" upstream="master"/>
