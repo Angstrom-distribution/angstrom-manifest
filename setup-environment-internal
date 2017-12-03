@@ -186,7 +186,10 @@ fi
 # If the env variable EULA_$MACHINE is set it is used by default,
 # without prompting the user.
 # FIXME: there is a potential issue if the same $MACHINE is set in more than one layer.. but we should assert that earlier
-EULA=$(find layers -print | grep "conf/eula/$MACHINE" | grep -v scripts | grep -v openembedded-core | grep -v meta-linaro || true)
+
+# Disable it for now
+
+#EULA=$(find layers -print | grep "conf/eula/$MACHINE" | grep -v scripts | grep -v openembedded-core | grep -v meta-linaro || true)
 
 if [ -n "$EULA" ]; then
 
