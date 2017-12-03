@@ -24,6 +24,7 @@
   <project remote="github" name="koenkooi/meta-uav" path="layers/meta-uav"/>
   <project remote="github" name="koenkooi/meta-photography" path="layers/meta-photography"/>
   <project remote="github" name="koenkooi/meta-edison" path="layers/meta-edison"/>
+  <project remote="github" name="koenkooi/meta-kodi" path="layers/meta-kodi"/>
   <project remote="github" name="ndechesne/meta-qcom" path="layers/meta-qcom"/>
   <project remote="github" name="linux-sunxi/meta-sunxi" path="layers/meta-sunxi" />
   <project remote="github" name="linux4sam/meta-atmel" path="layers/meta-atmel" revision="9deeb0a3ca64c7d8e48e2f861c4d1bffeba24220" upstream="morty"/>
