@@ -34,6 +34,7 @@
   <project remote="github" name="meta-qt5/meta-qt5" path="layers/meta-qt5" revision="3ae86cb32edd1449f702e0a094929ae9b21ce191" upstream="master"/>
   <project remote="github" name="bmwcarit/meta-ros" path="layers/meta-ros" revision="f591713a1494772882d6b4459c7cb1fa6bc059ba" upstream="master"/>
   <project remote="github" name="schnitzeltony/meta-gumstix-community" path="layers/meta-gumstix-community" revision="c8e7ec7f391a4b66adadac090d55beba18e1117e" upstream="master"/>
+  <project remote="github" name="schnitzeltony/meta-office" path="layers/meta-office" revision="3213948bafb7fae4fa00ce6dc997d1801e870b5e" upstream="master"/>
 
   <project remote="github" name="Angstrom-distribution/meta-angstrom" path="layers/meta-angstrom" revision="angstrom-v2017.06-yocto2.3">
       <copyfile dest="setup-environment" src="../../.repo/manifests/setup-environment"/>
