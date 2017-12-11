@@ -38,11 +38,11 @@
   <project remote="yocto" name="meta-freescale" path="layers/meta-freescale"/>
   <project remote="yocto" name="meta-intel" path="layers/meta-intel"/>
   <project remote="yocto" name="meta-xilinx" path="layers/meta-xilinx"/>
-  <project remote="yocto" name="meta-ti" path="layers/meta-ti"/>
   <project remote="yocto" name="meta-mono" path="layers/meta-mono"/>
   <project remote="yocto" name="meta-raspberrypi" path="layers/meta-raspberrypi"/>
   <project remote="yocto" name="meta-java" path="layers/meta-java"/>
   <project remote="yocto" name="meta-maker" path="layers/meta-maker"/>
   <project remote="yocto" name="meta-qt4" path="layers/meta-qt4"/>
+  <project remote="yocto" name="meta-ti" path="layers/meta-ti" revision="8fcd2f60720acf46555b45a1a48ad1fa0c52b75a" upstream="master"/>
 
 </manifest>
