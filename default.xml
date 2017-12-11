@@ -11,7 +11,6 @@
 
   <project remote="linaro" name="openembedded/meta-linaro" path="layers/meta-linaro"/>
 
-  <project remote="oe"     name="meta-handheld" path="layers/meta-handheld"/>
   <project remote="oe"     name="meta-opie" path="layers/meta-opie"/>
 
   <project remote="github" name="schnitzeltony/meta-gumstix-community" path="layers/meta-gumstix-community"/>
