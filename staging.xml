@@ -39,7 +39,6 @@
   <project remote="github" name="koenkooi/meta-uav" path="layers/meta-uav"/>
   <project remote="github" name="koenkooi/meta-photography" path="layers/meta-photography"/>
   <project remote="github" name="koenkooi/meta-edison" path="layers/meta-edison"/>
-  <project remote="github" name="slimlogic/meta-exynos" path="layers/meta-exynos"/>
   <project remote="github" name="sysmocom/meta-telephony" path="layers/meta-telephony"/>
   <project remote="github" name="Angstrom-distribution/meta-angstrom" path="layers/meta-angstrom">
       <copyfile dest="setup-environment" src="../../.repo/manifests/setup-environment"/>
