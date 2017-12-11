@@ -24,7 +24,6 @@
   <project remote="github" name="meta-qt5/meta-qt5" path="layers/meta-qt5"/>
   <project remote="github" name="shr-distribution/meta-smartphone" path="layers/meta-smartphone"/>
   <project remote="github" name="Freescale/meta-freescale-3rdparty" path="layers/meta-freescale-3rdparty"/>
-  <project remote="github" name="bmwcarit/meta-ros" path="layers/meta-ros"/>
   <project remote="github" name="96boards/meta-96boards" path="layers/meta-96boards"/>
   <project remote="github" name="linux4sam/meta-atmel" path="layers/meta-atmel" revision="morty"/>
   <project remote="github" name="koenkooi/meta-dominion" path="layers/meta-dominion"/>
@@ -32,10 +31,11 @@
   <project remote="github" name="koenkooi/meta-photography" path="layers/meta-photography"/>
   <project remote="github" name="koenkooi/meta-edison" path="layers/meta-edison"/>
   <project remote="github" name="ndechesne/meta-qcom" path="layers/meta-qcom"/>
-  <project remote="github" name="Angstrom-distribution/meta-angstrom" path="layers/meta-angstrom" branch="angstrom-v2017.12-rocko" >
+  <project remote="github" name="Angstrom-distribution/meta-angstrom" path="layers/meta-angstrom" revision="angstrom-v2017.12-rocko" >
       <copyfile dest="setup-environment" src="../../.repo/manifests/setup-environment"/>
   </project>
   <project remote="github" name="linux-sunxi/meta-sunxi" path="layers/meta-sunxi" revision="cee0b74ce4f72710b594a5bdcc7e533f43f71bc9" upstream="master"/>
+  <project remote="github" name="bmwcarit/meta-ros" path="layers/meta-ros" revision="121b182599a06335c0e648d90f781e66007bcd18" upstream="master"/>
 
   <project remote="yocto" name="meta-intel-iot-middleware" path="layers/meta-intel-iot-middleware"/>
   <project remote="yocto" name="meta-freescale" path="layers/meta-freescale"/>
