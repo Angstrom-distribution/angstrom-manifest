@@ -27,7 +27,6 @@
   <project remote="github" name="kraj/meta-nslu2" path="layers/meta-nslu2"/>
   <project remote="github" name="kraj/meta-altera" path="layers/meta-altera"/>
   <project remote="github" name="kraj/meta-musl" path="layers/meta-musl"/>
-  <project remote="github" name="openpandora/meta-openpandora" path="layers/meta-openpandora"/>
   <project remote="github" name="OSSystems/meta-browser" path="layers/meta-browser"/>
   <project remote="github" name="meta-qt5/meta-qt5" path="layers/meta-qt5"/>
   <project remote="github" name="shr-distribution/meta-smartphone" path="layers/meta-smartphone"/>
