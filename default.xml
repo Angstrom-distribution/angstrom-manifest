@@ -25,6 +25,7 @@
   <project remote="github" name="koenkooi/meta-photography" path="layers/meta-photography"/>
   <project remote="github" name="koenkooi/meta-edison" path="layers/meta-edison"/>
   <project remote="github" name="ndechesne/meta-qcom" path="layers/meta-qcom"/>
+  <project remote="github" name="agherzan/meta-raspberrypi" path="layers/meta-raspberrypi"/>
   <project remote="github" name="Angstrom-distribution/meta-angstrom" path="layers/meta-angstrom" revision="angstrom-v2017.12-rocko" >
       <copyfile dest="setup-environment" src="../../.repo/manifests/setup-environment"/>
   </project>
@@ -33,11 +34,11 @@
   <project remote="github" name="OSSystems/meta-browser" path="layers/meta-browser" revision="4dda3fb94072a515763d816e15855d7fdf210a25" upstream="master"/>
   <project remote="github" name="schnitzeltony/meta-gumstix-community" path="layers/meta-gumstix-community" revision="c8e7ec7f391a4b66adadac090d55beba18e1117e" upstream="master"/>
   <project remote="github" name="kraj/meta-nslu2" path="layers/meta-nslu2" revision="8f35264fe9bb38439ece38c0c324cec792b22a8f" upstream="master"/>
+  <project remote="github" name="agherzan/meta-chip" path="layers/meta-chip" revision="2944b3f8011a0e838827a2a792ac1e22b0f19f96" upstream="master"/>
 
   <project remote="yocto" name="meta-freescale" path="layers/meta-freescale"/>
   <project remote="yocto" name="meta-intel" path="layers/meta-intel"/>
   <project remote="yocto" name="meta-mono" path="layers/meta-mono"/>
-  <project remote="yocto" name="meta-raspberrypi" path="layers/meta-raspberrypi"/>
   <project remote="yocto" name="meta-maker" path="layers/meta-maker"/>
   <project remote="yocto" name="meta-qt4" path="layers/meta-qt4"/>
   <project remote="yocto" name="meta-ti" path="layers/meta-ti" revision="8fcd2f60720acf46555b45a1a48ad1fa0c52b75a" upstream="master"/>
