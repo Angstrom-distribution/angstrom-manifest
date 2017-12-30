@@ -35,7 +35,7 @@
   <project remote="github" name="OSSystems/meta-browser" path="layers/meta-browser" revision="4dda3fb94072a515763d816e15855d7fdf210a25" upstream="master"/>
   <project remote="github" name="schnitzeltony/meta-gumstix-community" path="layers/meta-gumstix-community" revision="c8e7ec7f391a4b66adadac090d55beba18e1117e" upstream="master"/>
   <project remote="github" name="kraj/meta-nslu2" path="layers/meta-nslu2" revision="8f35264fe9bb38439ece38c0c324cec792b22a8f" upstream="master"/>
-  <project remote="github" name="agherzan/meta-chip" path="layers/meta-chip" revision="2944b3f8011a0e838827a2a792ac1e22b0f19f96" upstream="master"/>
+  <project remote="github" name="agherzan/meta-chip" path="layers/meta-chip" revision="4ce5116136daec211a58b0579f88569ed21a075c" upstream="master"/>
 
   <project remote="yocto" name="meta-freescale" path="layers/meta-freescale"/>
   <project remote="yocto" name="meta-intel" path="layers/meta-intel"/>
