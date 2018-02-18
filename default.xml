@@ -10,6 +10,7 @@
   <remote fetch="http://git.shr-project.org" name="shr"/>
 
   <project remote="linaro" name="openembedded/meta-linaro" path="layers/meta-linaro"/>
+  <project remote="linaro" name="openembedded/meta-backports" path="layers/meta-backports"/>
 
   <project remote="oe"     name="meta-handheld" path="layers/meta-handheld"/>
 
@@ -31,6 +32,7 @@
   <project remote="github" name="koenkooi/meta-photography" path="layers/meta-photography"/>
   <project remote="github" name="koenkooi/meta-edison" path="layers/meta-edison"/>
   <project remote="github" name="koenkooi/meta-beagleboard" path="layers/meta-beagleboard"/>
+  <project remote="github" name="koenkooi/meta-kodi" path="layers/meta-kodi"/>
   <project remote="github" name="ndechesne/meta-qcom" path="layers/meta-qcom"/>
   <project remote="github" name="agherzan/meta-chip" path="layers/meta-chip" revision="4ce5116136daec211a58b0579f88569ed21a075c" branch="master" />
   <project remote="github" name="agherzan/meta-raspberrypi" path="layers/meta-raspberrypi"/>
