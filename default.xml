@@ -12,44 +12,38 @@
   <project remote="linaro" name="openembedded/meta-linaro" path="layers/meta-linaro"/>
 
   <project remote="oe"     name="meta-handheld" path="layers/meta-handheld"/>
-  <project remote="oe"     name="meta-opie" path="layers/meta-opie"/>
 
-  <project remote="github" name="schnitzeltony/meta-gumstix-community" path="layers/meta-gumstix-community"/>
   <project remote="github" name="openembedded/openembedded-core" path="layers/openembedded-core"/>
   <project remote="github" name="openembedded/meta-openembedded" path="layers/meta-openembedded"/>
   <project remote="github" name="openembedded/bitbake" path="bitbake" revision="1.38"/>
-  <project remote="github" name="balister/meta-ettus" path="layers/meta-ettus"/>
-  <project remote="github" name="kraj/meta-nslu2" path="layers/meta-nslu2"/>
-  <project remote="github" name="kraj/meta-altera" path="layers/meta-altera"/>
-  <project remote="github" name="openpandora/meta-openpandora" path="layers/meta-openpandora"/>
-  <project remote="github" name="OSSystems/meta-browser" path="layers/meta-browser"/>
+  <project remote="github" name="kraj/meta-nslu2" path="layers/meta-nslu2" revision="8f35264fe9bb38439ece38c0c324cec792b22a8f" branch="master" />
+  <project remote="github" name="kraj/meta-altera" path="layers/meta-altera" revision="374a62067cf5094cf177a724d1a179881d891a86" branch="master"/>
+  <project remote="github" name="OSSystems/meta-browser" path="layers/meta-browser" revision="53a3752c72a4ac1f509928f23b4b2c4aefa338b4" branch="master" />
   <project remote="github" name="meta-qt5/meta-qt5" path="layers/meta-qt5"/>
   <project remote="github" name="shr-distribution/meta-smartphone" path="layers/meta-smartphone"/>
-  <project remote="github" name="Freescale/meta-freescale-3rdparty" path="layers/meta-freescale-3rdparty"/>
-  <project remote="github" name="bmwcarit/meta-ros" path="layers/meta-ros"/>
-  <project remote="github" name="linux-sunxi/meta-sunxi" path="layers/meta-sunxi"/>
+  <project remote="github" name="Freescale/meta-freescale-3rdparty" path="layers/meta-freescale-3rdparty" revision="fa55a2527cc0f6b34f99bba4d5437fa5ea1feba1" branch="master" />
+  <project remote="github" name="bmwcarit/meta-ros" path="layers/meta-ros" revision="88b2a78fdbce470ab91647187e413fb7581c36a2" branch="master" />
+  <project remote="github" name="linux-sunxi/meta-sunxi" path="layers/meta-sunxi" revision="073dbda36669535e0907c1bb5fb5e5c67cc1b8c5" branch="master" />
   <project remote="github" name="96boards/meta-96boards" path="layers/meta-96boards"/>
   <project remote="github" name="linux4sam/meta-atmel" path="layers/meta-atmel" revision="morty"/>
   <project remote="github" name="koenkooi/meta-dominion" path="layers/meta-dominion"/>
   <project remote="github" name="koenkooi/meta-uav" path="layers/meta-uav"/>
   <project remote="github" name="koenkooi/meta-photography" path="layers/meta-photography"/>
   <project remote="github" name="koenkooi/meta-edison" path="layers/meta-edison"/>
-  <project remote="github" name="slimlogic/meta-exynos" path="layers/meta-exynos"/>
   <project remote="github" name="ndechesne/meta-qcom" path="layers/meta-qcom"/>
-  <project remote="github" name="agherzan/meta-chip" path="layers/meta-chip"/>
+  <project remote="github" name="agherzan/meta-chip" path="layers/meta-chip" revision="4ce5116136daec211a58b0579f88569ed21a075c" branch="master" />
   <project remote="github" name="agherzan/meta-raspberrypi" path="layers/meta-raspberrypi"/>
   <project remote="github" name="Angstrom-distribution/meta-angstrom" path="layers/meta-angstrom" revision="angstrom-v2018.06-sumo">
       <copyfile dest="setup-environment" src="../../.repo/manifests/setup-environment"/>
   </project>
 
-  <project remote="yocto" name="meta-intel-iot-middleware" path="layers/meta-intel-iot-middleware"/>
   <project remote="yocto" name="meta-freescale" path="layers/meta-freescale"/>
   <project remote="yocto" name="meta-intel" path="layers/meta-intel"/>
-  <project remote="yocto" name="meta-xilinx" path="layers/meta-xilinx"/>
-  <project remote="yocto" name="meta-ti" path="layers/meta-ti"/>
-  <project remote="yocto" name="meta-mono" path="layers/meta-mono"/>
+  <project remote="yocto" name="meta-xilinx" path="layers/meta-xilinx" revision="4e3520a9f4bb2386fb61f3e98c42b5e3721b973c" branch="master" />
+  <project remote="yocto" name="meta-ti" path="layers/meta-ti" revision="d867b19f3cac93d515a0974b0f1b90fc1c511dd2" branch="master"/>
+  <project remote="yocto" name="meta-mono" path="layers/meta-mono" revision="dced6635cae85794cc63aebcf61b9de1f47d2098" branch="master" />
   <project remote="yocto" name="meta-java" path="layers/meta-java"/>
   <project remote="yocto" name="meta-maker" path="layers/meta-maker"/>
-  <project remote="yocto" name="meta-qt4" path="layers/meta-qt4"/>
+  <project remote="yocto" name="meta-qt4" path="layers/meta-qt4" revision="8e791c40140460825956430ba86b6266fdec0a93" branch="master" />
 
 </manifest>
