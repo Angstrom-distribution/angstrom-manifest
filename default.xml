@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
 
-  <default revision="master" sync-j="4"/>
+  <default revision="sumo" sync-j="4"/>
 
   <remote fetch="http://git.yoctoproject.org/git" name="yocto"/>
   <remote fetch="git://git.openembedded.org" name="oe"/>
@@ -17,7 +17,7 @@
   <project remote="github" name="schnitzeltony/meta-gumstix-community" path="layers/meta-gumstix-community"/>
   <project remote="github" name="openembedded/openembedded-core" path="layers/openembedded-core"/>
   <project remote="github" name="openembedded/meta-openembedded" path="layers/meta-openembedded"/>
-  <project remote="github" name="openembedded/bitbake" path="bitbake"/>
+  <project remote="github" name="openembedded/bitbake" path="bitbake" revision="1.38"/>
   <project remote="github" name="balister/meta-ettus" path="layers/meta-ettus"/>
   <project remote="github" name="kraj/meta-nslu2" path="layers/meta-nslu2"/>
   <project remote="github" name="kraj/meta-altera" path="layers/meta-altera"/>
@@ -38,7 +38,7 @@
   <project remote="github" name="ndechesne/meta-qcom" path="layers/meta-qcom"/>
   <project remote="github" name="agherzan/meta-chip" path="layers/meta-chip"/>
   <project remote="github" name="agherzan/meta-raspberrypi" path="layers/meta-raspberrypi"/>
-  <project remote="github" name="Angstrom-distribution/meta-angstrom" path="layers/meta-angstrom">
+  <project remote="github" name="Angstrom-distribution/meta-angstrom" path="layers/meta-angstrom" revision="angstrom-v2018.06-sumo">
       <copyfile dest="setup-environment" src="../../.repo/manifests/setup-environment"/>
   </project>
 
