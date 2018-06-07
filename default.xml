@@ -10,7 +10,7 @@
   <remote fetch="http://git.shr-project.org" name="shr"/>
 
   <project remote="linaro" name="openembedded/meta-linaro" path="layers/meta-linaro"/>
-  <project remote="linaro" name="openembedded/meta-backports" path="layers/meta-backports"/>
+  <project remote="linaro" name="openembedded/meta-backports" path="layers/meta-backports" revision="127137fc37d1412620c97e723c438baf48c7e54a" branch="master" />
 
   <project remote="oe"     name="meta-handheld" path="layers/meta-handheld"/>
 
