@@ -24,7 +24,7 @@
   <project remote="github" name="shr-distribution/meta-smartphone" path="layers/meta-smartphone"/>
   <project remote="github" name="Freescale/meta-freescale-3rdparty" path="layers/meta-freescale-3rdparty" revision="fa55a2527cc0f6b34f99bba4d5437fa5ea1feba1" branch="master" />
   <project remote="github" name="bmwcarit/meta-ros" path="layers/meta-ros" revision="88b2a78fdbce470ab91647187e413fb7581c36a2" branch="master" />
-  <project remote="github" name="linux-sunxi/meta-sunxi" path="layers/meta-sunxi" revision="073dbda36669535e0907c1bb5fb5e5c67cc1b8c5" branch="master" />
+  <project remote="github" name="linux-sunxi/meta-sunxi" path="layers/meta-sunxi" revision="df468d72d74b6af224060b78e4d5daf66c536cb6" branch="master" />
   <project remote="github" name="96boards/meta-96boards" path="layers/meta-96boards"/>
   <project remote="github" name="linux4sam/meta-atmel" path="layers/meta-atmel" revision="morty"/>
   <project remote="github" name="koenkooi/meta-dominion" path="layers/meta-dominion"/>
