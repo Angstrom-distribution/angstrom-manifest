@@ -7,44 +7,44 @@
   <remote fetch="http://git.shr-project.org" name="shr"/>
   <remote fetch="http://git.yoctoproject.org/git" name="yocto"/>
   
-  <default revision="master" sync-j="4"/>
+  <default revision="krogoth" sync-j="4"/>
   
-  <project name="96boards/meta-96boards" path="layers/meta-96boards" remote="github" revision="2090710fe2dc8aac1e356852a4a8ba54012f6a3d" upstream="master"/>
+  <project name="96boards/meta-96boards" path="layers/meta-96boards" remote="github" />
   <project name="Angstrom-distribution/meta-angstrom" path="layers/meta-angstrom" remote="github" revision="angstrom-v2016.06-yocto2.1">
     <copyfile dest="setup-environment" src="../../.repo/manifests/setup-environment"/>
   </project>
-  <project name="Freescale/meta-fsl-arm-extra" path="layers/meta-fsl-arm-extra" remote="github" revision="698cf389aa446244a39b597fbf58be1d55096500" upstream="master"/>
-  <project name="OSSystems/meta-browser" path="layers/meta-browser" remote="github" revision="62c20f96a92d6082d2fdde82ca825cb2823e2577" upstream="master"/>
+  <project name="Freescale/meta-fsl-arm-extra" path="layers/meta-fsl-arm-extra" remote="github" />
+  <project name="OSSystems/meta-browser" path="layers/meta-browser" remote="github" />
   <project name="balister/meta-ettus" path="layers/meta-ettus" remote="github" revision="ca682b9801bc04e56acd52a0384ed6bd711834a7" upstream="master"/>
   <project name="bmwcarit/meta-ros" path="layers/meta-ros" remote="github" revision="87e40b0d0bf40f0fb17f809a5bc53191f0b46d07" upstream="master"/>
   <project name="gen_dev_sst/meta-kde4" path="layers/meta-kde4" remote="bitbucket" revision="4287bd4a5e23e084b1f9e9d3235b4248bbe772f6" upstream="master"/>
   <project name="koenkooi/meta-beagleboard" path="layers/meta-beagleboard" remote="github" revision="0fafda961f966fa3d5faabe6b6785edb6c93f61f" upstream="master"/>
-  <project name="koenkooi/meta-dominion" path="layers/meta-dominion" remote="github" revision="krogoth"/>
+  <project name="koenkooi/meta-dominion" path="layers/meta-dominion" remote="github" />
   <project name="koenkooi/meta-edison" path="layers/meta-edison" remote="github" revision="c81ce49d2f9b8256b72258b264e52a555cfe9197" upstream="master"/>
   <project name="koenkooi/meta-photography" path="layers/meta-photography" remote="github" revision="06e16858cd9a35b40c8b8e6d2b76ab8c1db4b054" upstream="master"/>
   <project name="koenkooi/meta-uav" path="layers/meta-uav" remote="github" revision="95b5977627853f82b13310c35739b51cf449a1d6" upstream="master"/>
-  <project name="koenkooi/meta-kodi" path="layers/meta-kodi" remote="github" revision="krogoth"/>
+  <project name="koenkooi/meta-kodi" path="layers/meta-kodi" remote="github" />
   <project name="kraj/meta-altera" path="layers/meta-altera" remote="github" revision="6a1844a415247a389fafa4e0d2890ba349ae5d7a" upstream="master"/>
   <project name="kraj/meta-nslu2" path="layers/meta-nslu2" remote="github" revision="df0f6b8337d73c79a0047ba348ebd74e3778a3cf" upstream="master"/>
-  <project name="linux-sunxi/meta-sunxi" path="layers/meta-sunxi" remote="github" revision="krogoth" />
-  <project name="linux4sam/meta-atmel" path="layers/meta-atmel" remote="github" revision="df10071966a78f0a808216bd02cf961b171cbb0c" upstream="master"/>
-  <project name="meta-fsl-arm" path="layers/meta-fsl-arm" remote="yocto" revision="krogoth" />
+  <project name="linux-sunxi/meta-sunxi" path="layers/meta-sunxi" remote="github" />
+  <project name="linux4sam/meta-atmel" path="layers/meta-atmel" remote="github" />
+  <project name="meta-fsl-arm" path="layers/meta-fsl-arm" remote="yocto" />
   <project name="meta-handheld" path="layers/meta-handheld" remote="oe" revision="796a12685dc6a32f6ccc1cb048291f8143d4c9fe" upstream="master"/>
-  <project name="meta-intel" path="layers/meta-intel" remote="yocto" revision="krogoth" />
+  <project name="meta-intel" path="layers/meta-intel" remote="yocto" />
   <project name="meta-java" path="layers/meta-java" remote="yocto" revision="74811bbadaf55fd105ad092a1fcb4923afd4d41d" upstream="master"/>
   <project name="meta-maker" path="layers/meta-maker" remote="yocto" revision="c039fafa7a0276769d0928d16bdacd2012f2aff6" upstream="master"/>
   <project name="meta-mono" path="layers/meta-mono" remote="yocto" revision="bec66698046eb112df0be281e9d3e080e1c61cdb" upstream="master"/>
   <project name="meta-opie" path="layers/meta-opie" remote="oe" revision="4240c659257f62f8128c89cfe62285ffc130f7c5" upstream="master"/>
-  <project name="meta-qt4" path="layers/meta-qt4" remote="yocto" revision="krogoth" />
+  <project name="meta-qt4" path="layers/meta-qt4" remote="yocto" />
   <project name="meta-qt5/meta-qt5" path="layers/meta-qt5" remote="github" revision="0e5756c97ace089ddd9714f0eafffd71dd15c6ab" upstream="master"/>
   <project name="meta-raspberrypi" path="layers/meta-raspberrypi" remote="yocto" revision="6564e126aea0ac42a129595c79218ba69f8095eb" upstream="master"/>
   <project name="meta-ti" path="layers/meta-ti" remote="yocto" revision="af64c0cb48acd949928311c1c4b3bddf165de8f7" upstream="master"/>
   <project name="meta-xilinx" path="layers/meta-xilinx" remote="yocto" revision="8bb409cfd91292f13c4eeae070ad7d049b134440" upstream="master"/>
-  <project name="ndechesne/meta-qcom" path="layers/meta-qcom" remote="github" revision="krogoth" />
-  <project name="openembedded/bitbake" path="bitbake" remote="github" revision="d19e305ffa44a848b02ede63dc5de8d2640089e6" upstream="master"/>
-  <project name="openembedded/meta-linaro" path="layers/meta-linaro" remote="linaro" revision="krogoth" />
-  <project name="openembedded/meta-openembedded" path="layers/meta-openembedded" remote="github" revision="krogoth"/>
-  <project name="openembedded/openembedded-core" path="layers/openembedded-core" remote="github" revision="krogoth"/>
+  <project name="ndechesne/meta-qcom" path="layers/meta-qcom" remote="github" />
+  <project name="openembedded/bitbake" path="bitbake" remote="github" revision="1.30" />
+  <project name="openembedded/meta-linaro" path="layers/meta-linaro" remote="linaro" />
+  <project name="openembedded/meta-openembedded" path="layers/meta-openembedded" remote="github" />
+  <project name="openembedded/openembedded-core" path="layers/openembedded-core" remote="github" />
   <project name="openpandora/meta-openpandora" path="layers/meta-openpandora" remote="github" revision="be558b76ca2b8130af875e2f2a96dd1a0868744f" upstream="master"/>
   <project name="schnitzeltony/meta-gumstix-community" path="layers/meta-gumstix-community" remote="github" revision="9e8ab7d073013702f2a665024d16b587af750ad5" upstream="master"/>
   <project name="shr-distribution/meta-smartphone" path="layers/meta-smartphone" remote="github" revision="bd0d069630d418b9025ffd20c13aa38286c5e49f" upstream="master"/>
