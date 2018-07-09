@@ -41,6 +41,7 @@
       <copyfile dest="setup-environment" src="../../.repo/manifests/setup-environment"/>
   </project>
 
+  <project remote="yocto" name="meta-virtualization" path="layers/meta-virtualization"/>
   <project remote="yocto" name="meta-freescale" path="layers/meta-freescale"/>
   <project remote="yocto" name="meta-intel" path="layers/meta-intel"/>
   <project remote="yocto" name="meta-xilinx" path="layers/meta-xilinx" revision="4e3520a9f4bb2386fb61f3e98c42b5e3721b973c" branch="master" />
