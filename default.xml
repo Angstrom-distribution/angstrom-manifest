@@ -37,11 +37,11 @@
   <project remote="github" name="agherzan/meta-chip" path="layers/meta-chip" revision="4ce5116136daec211a58b0579f88569ed21a075c" branch="master" />
   <project remote="github" name="agherzan/meta-raspberrypi" path="layers/meta-raspberrypi"/>
   <project remote="github" name="superna9999/meta-meson" path="layers/meta-meson"/>
+  <project remote="github" name="koenkooi/meta-virtualization" path="layers/meta-virtualization" revision="sumo-k8s-cross"/>
   <project remote="github" name="Angstrom-distribution/meta-angstrom" path="layers/meta-angstrom" revision="angstrom-v2018.06-sumo">
       <copyfile dest="setup-environment" src="../../.repo/manifests/setup-environment"/>
   </project>
 
-  <project remote="yocto" name="meta-virtualization" path="layers/meta-virtualization"/>
   <project remote="yocto" name="meta-freescale" path="layers/meta-freescale"/>
   <project remote="yocto" name="meta-intel" path="layers/meta-intel"/>
   <project remote="yocto" name="meta-xilinx" path="layers/meta-xilinx" revision="4e3520a9f4bb2386fb61f3e98c42b5e3721b973c" branch="master" />
