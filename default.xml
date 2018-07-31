@@ -49,6 +49,7 @@
   <project remote="yocto" name="meta-mono" path="layers/meta-mono" revision="dced6635cae85794cc63aebcf61b9de1f47d2098" branch="master" />
   <project remote="yocto" name="meta-java" path="layers/meta-java"/>
   <project remote="yocto" name="meta-maker" path="layers/meta-maker"/>
+  <project remote="yocto" name="meta-security" path="layers/meta-security"/>
   <project remote="yocto" name="meta-qt4" path="layers/meta-qt4" revision="8e791c40140460825956430ba86b6266fdec0a93" branch="master" />
 
 </manifest>
