@@ -14,7 +14,7 @@
   <project remote="oe"     name="meta-handheld" path="layers/meta-handheld"/>
   <project remote="oe"     name="meta-opie" path="layers/meta-opie"/>
 
-  <project remote="github" name="schnitzeltony/meta-gumstix-community" path="layers/meta-gumstix-community"/>
+  <project remote="github" name="ZeraGmbH/meta-gumstix-community" path="layers/meta-gumstix-community"/>
   <project remote="github" name="openembedded/openembedded-core" path="layers/openembedded-core"/>
   <project remote="github" name="openembedded/meta-openembedded" path="layers/meta-openembedded"/>
   <project remote="github" name="openembedded/bitbake" path="bitbake"/>
