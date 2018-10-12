@@ -19,12 +19,25 @@
 # 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 #
 
+export DISTRO="angstrom"
+
+RPBcleanup() {
+        unset MACHINETABLE MACHLAYERS DISTROTABLE DISTROLAYERS DISTRO_DIRNAME OEROOT
+        unset ITEM MANIFESTS EULA EULA_MACHINE REPLY READ_EULA
+        unset usage oldmach
+
+        if [ -n "$BUILDDIR" ]; then
+                export BUILDDIR
+        fi
+}
+trap RPBcleanup RETURN
+
 if [ "$(whoami)" = "root" ]; then
     echo "ERROR: do not use the BSP as root. Exiting..."
     return
 fi
 
-OEROOT="`pwd`"
+OEROOT=$(pwd)
 cd "$OEROOT"
 if [ -n "$ZSH_VERSION" ]; then
     setopt sh_word_split
@@ -36,11 +49,12 @@ fi
 usage () {
     cat <<EOF
 
-Usage: [MACHINE=<MACHINE>] source ${BASH_SOURCE[0]} [BUILDDIR]
+Usage: [DISTRO=<DISTRO>] [MACHINE=<MACHINE>] source ${BASH_SOURCE[0]} [BUILDDIR]
 
 If no MACHINE is set, list all possible machines, and ask user to choose.
 If no DISTRO is set, list all possible distros, and ask user to choose.
-If no BUILDIR is set, it will be set to build-DISTRO.
+If no BUILDIR is set, it will be set to ''.
+
 EOF
 }
 
@@ -48,9 +62,9 @@ if [ $# -gt 1 ]; then
     usage
     return 1
 fi
-
 # create a common list of "<machine>(<layer>)", sorted by <machine>
-MACHLAYERS=$(find layers -print | grep "conf/machine/.*\.conf" | grep -v scripts | sed -e 's/\.conf//g' | awk -F'/' '{print $NF "(" $2 ")"}' | sort)
+# Blacklist OE-core and meta-linaro, we only want 96boards + vendor layers
+MACHLAYERS=$(find layers -print | grep "conf/machine/.*\.conf" | grep -v scripts | grep -v openembedded-core | grep -v meta-linaro | sed -e 's/\.conf//g' -e 's/layers\///' | awk -F'/conf/machine/' '{print $NF "(" $1 ")"}' | LANG=C sort)
 
 if [ -z "${MACHINE}" ]; then
     # whiptail
@@ -78,6 +92,42 @@ if [ -z "${MACHINE}" ]; then
     fi
 fi
 
+# create a common list of "<distro>(<layer>)", sorted by <distro>
+# Blacklist OE-core and meta-linaro, we only want 96boards + vendor layers
+DISTROLAYERS=$(find layers -print | grep "conf/distro/.*\.conf" | grep -v scripts | grep -v openembedded-core | grep -v meta-linaro | sed -e 's/\.conf//g' -e 's/layers\///' | awk -F'/conf/distro/' '{print $NF "(" $1 ")"}' | LANG=C sort)
+
+
+if [ -n "${DISTROLAYERS}" ] && [ -z "${DISTRO}" ]; then
+    # whiptail
+    which whiptail > /dev/null 2>&1
+    if [ $? -eq 0 ]; then
+        DISTROTABLE=
+        for ITEM in $DISTROLAYERS; do
+            DISTROTABLE="${DISTROTABLE} $(echo "$ITEM" | cut -d'(' -f1) $(echo "$ITEM" | cut -d'(' -f2 | cut -d')' -f1)"
+        done
+        DISTRO=$(whiptail --title "Available Distributions" --menu \
+            "Please choose a distribution" 0 0 20 \
+            ${DISTROTABLE} 3>&1 1>&2 2>&3)
+    fi
+
+    # dialog
+    if [ -z "$DISTRO" ]; then
+        which dialog > /dev/null 2>&1
+        if [ $? -eq 0 ]; then
+            DISTROTABLE=
+            for ITEM in $DISTROLAYERS; do
+                DISTROTABLE="$DISTROTABLE $(echo "$ITEM" | cut -d'(' -f1) $(echo "$ITEM" | cut -d'(' -f2 | cut -d')' -f1)"
+            done
+            DISTRO=$(dialog --title "Available Distributions" --menu "Please choose a distribution" 0 0 20 $DISTROTABLE 3>&1 1>&2 2>&3)
+        fi
+    fi
+fi
+
+# If nothing has been set, go for 'nodistro'
+if [ -z "$DISTRO" ]; then
+    DISTRO="nodistro"
+fi
+
 # guard against Ctrl-D or cancel
 if [ -z "$MACHINE" ]; then
     echo "To choose a machine interactively please install whiptail or dialog."
@@ -96,35 +146,25 @@ fi
 
 MANIFESTS="${OEROOT}"/.repo/manifests
 
-# set up soft links to /usr/bin/python2 if it exists
-# this helps if /usr/bin/python is python3
-
-TOOLSPATH=$(pwd)/tools
-mkdir -p ${TOOLSPATH}
-if [ -e /usr/bin/python2 ] && ! [ -L tools/python ]; then
-    echo "linking to python2"
-    ln -s /usr/bin/python2 tools/python
+# we can be called with only 1 parameter max, <build> folder, or defaults to empty
+BUILDDIR=""
+if [ $# -eq 1 ]; then
+    BUILDDIR=$1
 fi
-
-if [ -e /usr/bin/python2-config ] && ! [ -L tools/python-config ]; then
-    echo "linking to python2-config"
-    ln -s /usr/bin/python2-config tools/python-config
-fi
+BUILDDIR=$OEROOT/$BUILDDIR
 
 # Clean up PATH, because if it includes tokens to current directories somehow,
 # wrong binaries can be used instead of the expected ones during task execution
 export PATH=$(echo "${PATH}" | sed 's/\(:.\|:\)*:/:/g;s/^.\?://;s/:.\?$//')
-REPOBIN=`which repo`
-REPOPATH=`dirname ${REPOBIN}`
-export PATH="${OEROOT}"/layers/openembedded-core/scripts:"${OEROOT}"/bitbake/bin:"${REPOPATH}":"${TOOLSPATH}":"${PATH}"
+export PATH="${OEROOT}"/layers/openembedded-core/scripts:"${OEROOT}"/bitbake/bin:"${OEROOT}"/.repo/repo:"${PATH}"
 #remove duplicate path entries
 export PATH=$(echo "$PATH" | awk -F: '{for (i=1;i<=NF;i++) { if ( !x[$i]++ ) printf("%s:",$i); }}' | sed 's/:$//')
 # Make sure Bitbake doesn't filter out the following variables from our
 # environment.
 export BB_ENV_EXTRAWHITE="MACHINE DISTRO TCLIBC TCMODE GIT_PROXY_COMMAND http_proxy ftp_proxy https_proxy all_proxy ALL_PROXY no_proxy SSH_AGENT_PID SSH_AUTH_SOCK BB_SRCREV_POLICY SDKMACHINE BB_NUMBER_THREADS"
 
-mkdir -p conf
-if [ -f "${OEROOT}/conf/auto.conf" ]; then
+mkdir -p "${BUILDDIR}"/conf && cd "${BUILDDIR}"
+if [ -f "conf/auto.conf" ]; then
     oldmach=$(egrep "^MACHINE" "conf/auto.conf" | sed -e 's%^MACHINE ?= %%' | sed -e 's/^"//'  -e 's/"$//')
 fi
 if [ -e conf/checksum -a "${MACHINE}" = "$oldmach" ]
@@ -143,7 +183,7 @@ ln -sf "${MANIFESTS}"/conf/local.conf conf/local.conf
 ln -sf "${MANIFESTS}"/conf/bblayers.conf conf/bblayers.conf
 ln -sf "${MANIFESTS}"/README.md README.md
 
-ln -sf "${MANIFESTS}" layers/
+ln -sf "${MANIFESTS}" "${OEROOT}"/layers/
 
 repo sync
 repo start work --all
@@ -152,8 +192,12 @@ DISTRO=$(grep -w DISTRO conf/local.conf | grep -v '^#' | awk -F\" '{print $2}')
 DISTRO_DIRNAME=$(echo "${DISTRO}" | sed 's#[.-]#_#g')
 
 cat > conf/auto.conf <<EOF
+#DISTRO ?= "${DISTRO}"
 MACHINE ?= "${MACHINE}"
 SDKMACHINE ?= "${SDKMACHINE}"
+
+# Extra options that can be changed by the user
+INHERIT += "rm_work"
 EOF
 if [ ! -e conf/site.conf ]; then
     cat > conf/site.conf <<_EOF
@@ -166,10 +210,7 @@ DL_DIR = "${OEROOT}/downloads"
 # Where to save shared state
 SSTATE_DIR = "${OEROOT}/sstate-cache"
 
-# Which files do we want to parse:
-BBFILES ?= "${OEROOT}/layers/openembedded-core/meta/recipes-*/*/*.bb"
-
-TMPDIR = "${OEROOT}/build/tmp-${DISTRO_DIRNAME}"
+TMPDIR = "${BUILDDIR}/tmp-${DISTRO_DIRNAME}"
 
 # Go through the Firewall
 #HTTP_PROXY        = "http://${PROXYHOST}:${PROXYPORT}/"
@@ -186,7 +227,7 @@ fi
 # If the env variable EULA_$MACHINE is set it is used by default,
 # without prompting the user.
 # FIXME: there is a potential issue if the same $MACHINE is set in more than one layer.. but we should assert that earlier
-EULA=$(find layers -print | grep "conf/eula/$MACHINE" | grep -v scripts | grep -v openembedded-core | grep -v meta-linaro || true)
+EULA=$(find layers -path "*/conf/eula/$MACHINE" -print | grep -v scripts | grep -v openembedded-core | grep -v meta-linaro || true)
 
 if [ -n "$EULA" ]; then
 
@@ -257,23 +298,16 @@ Welcome to Ångström ( A Yocto Project Compatible Distribution )
 For more information about OpenEmbedded see their website:
     http://www.openembedded.org/
 
-Your build environemnt has been configured with:
+Your build environment has been configured with:
 
-    MACHINE=${MACHINE}
-    SDKMACHINE=${SDKMACHINE}
-    DISTRO=${DISTRO}
+    MACHINE = ${MACHINE}
+    SDKMACHINE = ${SDKMACHINE}
+    DISTRO = ${DISTRO}
 
 You can now run 'bitbake <target>'
 
 Some of common targets are:
     console-image
-    systemd-gnome-image
-    xfce-nm-image
-    development-xfce-image
-    development-gnome-image
+    angstrom-image
 
 EOF
-
-unset MACHINETABLE MACHLAYERS DISTROTABLE DISTROLAYERS DISTRO_DIRNAME OEROOT
-unset ITEM MANIFESTS EULA EULA_MACHINE REPLY READ_EULA MACHINE SDKMACHINE DISTRO
-unset oldmach
