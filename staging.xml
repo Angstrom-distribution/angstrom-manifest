@@ -18,7 +18,7 @@
 
   <project remote="bitbucket" name="gen_dev_sst/meta-kde4" path="layers/meta-kde4"/>
 
-  <project remote="github" name="schnitzeltony/meta-gumstix-community" path="layers/meta-gumstix-community"/>
+  <project remote="github" name="ZeraGmbH/meta-gumstix-community" path="layers/meta-gumstix-community"/>
   <project remote="github" name="openembedded/openembedded-core" path="layers/openembedded-core"/>
   <project remote="github" name="openembedded/meta-openembedded" path="layers/meta-openembedded"/>
   <project remote="github" name="openembedded/bitbake" path="bitbake"/>
