@@ -23,7 +23,7 @@
   <project name="koenkooi/meta-photography" path="layers/meta-photography" remote="github"/>
   <project name="koenkooi/meta-uav" path="layers/meta-uav" remote="github"/>
   <project name="kraj/meta-altera" path="layers/meta-altera" remote="github"/>
-  <project name="kraj/meta-nslu2" path="layers/meta-nslu2" remote="github" revision="8f35264fe9bb38439ece38c0c324cec792b22a8f"/>
+  <project name="kraj/meta-nslu2" path="layers/meta-nslu2" remote="github" revision="21e90cd6f720c615a067318571178ee230ca1655"/>
   <project name="linux-sunxi/meta-sunxi" path="layers/meta-sunxi" remote="github"/>
   <project name="linux4sam/meta-atmel" path="layers/meta-atmel" remote="github" revision="morty"/>
   <project name="meta-freescale" path="layers/meta-freescale" remote="yocto"/>
