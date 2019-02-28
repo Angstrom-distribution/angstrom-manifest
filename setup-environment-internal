@@ -151,7 +151,12 @@ BUILDDIR=""
 if [ $# -eq 1 ]; then
     BUILDDIR=$1
 fi
-BUILDDIR=$OEROOT/$BUILDDIR
+
+if [ "${BUILDDIR}" != "" ] ; then 
+	BUILDDIR=$OEROOT/$BUILDDIR
+else
+	BUILDDIR=$OEROOT
+fi
 
 # Clean up PATH, because if it includes tokens to current directories somehow,
 # wrong binaries can be used instead of the expected ones during task execution
