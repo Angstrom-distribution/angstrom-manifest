@@ -21,6 +21,7 @@
   <project name="koenkooi/meta-beagleboard" path="layers/meta-beagleboard" remote="github"/>
   <project name="koenkooi/meta-dominion" path="layers/meta-dominion" remote="github"/>
   <project name="koenkooi/meta-edison" path="layers/meta-edison" remote="github"/>
+  <project name="koenkooi/meta-maker" path="layers/meta-maker" remote="github"/>
   <project name="koenkooi/meta-photography" path="layers/meta-photography" remote="github"/>
   <project name="koenkooi/meta-uav" path="layers/meta-uav" remote="github"/>
   <project name="kraj/meta-altera" path="layers/meta-altera" remote="github"/>
@@ -30,7 +31,6 @@
   <project name="meta-freescale" path="layers/meta-freescale" remote="yocto"/>
   <project name="meta-intel" path="layers/meta-intel" remote="yocto"/>
   <project name="meta-java" path="layers/meta-java" remote="yocto"/>
-  <project name="meta-maker" path="layers/meta-maker" remote="yocto"/>
   <project name="meta-qt4" path="layers/meta-qt4" remote="yocto"/>
   <project name="meta-qt5/meta-qt5" path="layers/meta-qt5" remote="github"/>
   <project name="meta-rust/meta-rust" path="layers/meta-rust" remote="github" revision="f4517aaba8026b44576c6407adf0175663d5a7b4"/>
