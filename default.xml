@@ -6,10 +6,10 @@
   <remote fetch="http://git.shr-project.org" name="shr"/>
   <remote fetch="http://git.yoctoproject.org/git" name="yocto"/>
   
-  <default revision="master" sync-j="4"/>
+  <default revision="warrior" sync-j="4"/>
   
   <project name="96boards/meta-96boards" path="layers/meta-96boards" remote="github"/>
-  <project name="Angstrom-distribution/meta-angstrom" path="layers/meta-angstrom" remote="github" revision="master">
+  <project name="Angstrom-distribution/meta-angstrom" path="layers/meta-angstrom" remote="github" revision="angstrom-v2019.06-warrior">
     <copyfile dest="setup-environment" src="../../.repo/manifests/setup-environment"/>
   </project>
   <project name="EmbeddedAndroid/meta-rtlwifi" path="layers/meta-rtlwifi" remote="github" revision="fd7ca0ca47c7095ced62a5a7cdef040dff87fb76"/>
