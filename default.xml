@@ -12,9 +12,9 @@
   <project name="Angstrom-distribution/meta-angstrom" path="layers/meta-angstrom" remote="github" revision="angstrom-v2019.06-warrior">
     <copyfile dest="setup-environment" src="../../.repo/manifests/setup-environment"/>
   </project>
-  <project name="EmbeddedAndroid/meta-rtlwifi" path="layers/meta-rtlwifi" remote="github" revision="fd7ca0ca47c7095ced62a5a7cdef040dff87fb76"/>
+  <project name="EmbeddedAndroid/meta-rtlwifi" path="layers/meta-rtlwifi" remote="github" revision="3d920444e433ceddecb7809da0ebab278d57e1ef"/>
   <project name="Freescale/meta-freescale-3rdparty" path="layers/meta-freescale-3rdparty" remote="github"/>
-  <project name="OSSystems/meta-browser" path="layers/meta-browser" remote="github" revision="924bb134726d5409393b6e1b22cbac6103e14222"/>
+  <project name="OSSystems/meta-browser" path="layers/meta-browser" remote="github" revision="3a0df19242cddda96efd91f195fe0df53fe4f955"/>
   <project name="agherzan/meta-chip" path="layers/meta-chip" remote="github" revision="4ce5116136daec211a58b0579f88569ed21a075c"/>
   <project name="agherzan/meta-raspberrypi" path="layers/meta-raspberrypi" remote="github"/>
   <project name="bmwcarit/meta-ros" path="layers/meta-ros" remote="github" revision="72068b17e4192b51e09c8dc633805a35edac8701"/>
@@ -26,6 +26,7 @@
   <project name="koenkooi/meta-uav" path="layers/meta-uav" remote="github" revision="thud"/>
   <project name="kraj/meta-altera" path="layers/meta-altera" remote="github" revision="d1eacd3b56bb5647c46f8601e83f1f8e309d6293"/>
   <project name="kraj/meta-nslu2" path="layers/meta-nslu2" remote="github" revision="21e90cd6f720c615a067318571178ee230ca1655"/>
+  <project name="kraj/meta-clang" path="layers/meta-clang" remote="github"/>
   <project name="linux-sunxi/meta-sunxi" path="layers/meta-sunxi" remote="github"/>
   <project name="linux4sam/meta-atmel" path="layers/meta-atmel" remote="github" revision="morty"/>
   <project name="meta-freescale" path="layers/meta-freescale" remote="yocto"/>
@@ -33,8 +34,8 @@
   <project name="meta-java" path="layers/meta-java" remote="yocto"/>
   <project name="meta-qt4" path="layers/meta-qt4" remote="yocto" revision="b37d8b93924b314df3591b4a61e194ff3feb5517"/>
   <project name="meta-qt5/meta-qt5" path="layers/meta-qt5" remote="github"/>
-  <project name="meta-rust/meta-rust" path="layers/meta-rust" remote="github" revision="f4517aaba8026b44576c6407adf0175663d5a7b4"/>
-  <project name="meta-ti" path="layers/meta-ti" remote="yocto" revision="afe0350facda1d0a94e3c5d83ddfa5ce1f4ca73c"/>
+  <project name="meta-rust/meta-rust" path="layers/meta-rust" remote="github" revision="9487b089ea4779c2b494b17b9254219226efa539"/>
+  <project name="meta-ti" path="layers/meta-ti" remote="yocto" revision="54f3d19b60411fd5db5d8df42974eb4038037a00"/>
   <project name="meta-virtualization" path="layers/meta-virtualization" remote="yocto"/>
   <project name="meta-xilinx" path="layers/meta-xilinx" remote="yocto" revision="f3c8b1c9a8ae6a1690f7f5d907b65c588f65446a"/>
   <project name="ndechesne/meta-qcom" path="layers/meta-qcom" remote="github"/>
