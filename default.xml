@@ -48,7 +48,6 @@
   <project name="meta-ti" path="layers/meta-ti" remote="yocto" revision="8457b4359319c50a4dce68afecfced5b367985fb" upstream="master"/>
   <project name="meta-xilinx" path="layers/meta-xilinx" remote="yocto" revision="b2da4ccc5db004181b322c1992cac9120954138f" upstream="master"/>
   <project name="openpandora/meta-openpandora" path="layers/meta-openpandora" remote="github" revision="be558b76ca2b8130af875e2f2a96dd1a0868744f" upstream="master"/>
-  <project name="schnitzeltony/meta-gumstix-community" path="layers/meta-gumstix-community" remote="github" revision="c8e7ec7f391a4b66adadac090d55beba18e1117e" upstream="master"/>
   <project name="shr-distribution/meta-smartphone" path="layers/meta-smartphone" remote="github" revision="32541df3f691fc6c5b6103d5cdb1ee44d4897b5a" upstream="master"/>
   <project name="slimlogic/meta-exynos" path="layers/meta-exynos" remote="github" revision="d91f975a06e0797340432908fc89a1f1cadc1ee3" upstream="master"/>
   <project name="meta-virtualization" remote="yocto"  path="layers/meta-virtualization"/>
