@@ -39,7 +39,7 @@
   <project name="meta-virtualization" path="layers/meta-virtualization" remote="yocto"/>
   <project name="meta-xilinx" path="layers/meta-xilinx" remote="yocto" revision="f3c8b1c9a8ae6a1690f7f5d907b65c588f65446a"/>
   <project name="ndechesne/meta-qcom" path="layers/meta-qcom" remote="github"/>
-  <project name="openembedded/bitbake" path="bitbake" remote="github" revision="master"/>
+  <project name="openembedded/bitbake" path="bitbake" remote="github" revision="1.42"/>
   <project name="openembedded/meta-linaro" path="layers/meta-linaro" remote="linaro"/>
   <project name="openembedded/meta-openembedded" path="layers/meta-openembedded" remote="github"/>
   <project name="openembedded/openembedded-core" path="layers/openembedded-core" remote="github"/>
