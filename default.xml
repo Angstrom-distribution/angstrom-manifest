@@ -46,7 +46,6 @@
   <project name="openembedded/meta-openembedded" path="layers/meta-openembedded" remote="github" />
   <project name="openembedded/openembedded-core" path="layers/openembedded-core" remote="github" />
   <project name="openpandora/meta-openpandora" path="layers/meta-openpandora" remote="github" revision="be558b76ca2b8130af875e2f2a96dd1a0868744f" upstream="master"/>
-  <project name="schnitzeltony/meta-gumstix-community" path="layers/meta-gumstix-community" remote="github" revision="9e8ab7d073013702f2a665024d16b587af750ad5" upstream="master"/>
   <project name="shr-distribution/meta-smartphone" path="layers/meta-smartphone" remote="github" revision="bd0d069630d418b9025ffd20c13aa38286c5e49f" upstream="master"/>
   <project name="slimlogic/meta-exynos" path="layers/meta-exynos" remote="github" revision="d91f975a06e0797340432908fc89a1f1cadc1ee3" upstream="master"/>
 </manifest>
