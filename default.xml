@@ -6,7 +6,7 @@
   <remote fetch="http://git.shr-project.org" name="shr"/>
   <remote fetch="http://git.yoctoproject.org/git" name="yocto"/>
   
-  <default revision="warrior" sync-j="4"/>
+  <default revision="warrior" sync-j="16"/>
   
   <project name="96boards/meta-96boards" path="layers/meta-96boards" remote="github"/>
   <project name="Angstrom-distribution/meta-angstrom" path="layers/meta-angstrom" remote="github" revision="angstrom-v2019.06-warrior">
@@ -21,6 +21,7 @@
   <project name="koenkooi/meta-beagleboard" path="layers/meta-beagleboard" remote="github" revision="thud"/>
   <project name="koenkooi/meta-dominion" path="layers/meta-dominion" remote="github" revision="thud"/>
   <project name="koenkooi/meta-edison" path="layers/meta-edison" remote="github" revision="9dee6d095dcc3ee62a11f96e7c74bd0754a73452"/>
+  <project name="koenkooi/meta-kodi" path="layers/meta-kodi" remote="github" revision="thud"/>
   <project name="koenkooi/meta-maker" path="layers/meta-maker" remote="github" revision="thud"/>
   <project name="koenkooi/meta-photography" path="layers/meta-photography" remote="github" revision="thud"/>
   <project name="koenkooi/meta-uav" path="layers/meta-uav" remote="github" revision="thud"/>
