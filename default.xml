@@ -27,6 +27,7 @@
   <project remote="github" name="koenkooi/meta-edison" path="layers/meta-edison"/>
   <project remote="github" name="koenkooi/meta-beagleboard" path="layers/meta-beagleboard"/>
   <project remote="github" name="koenkooi/meta-kodi" path="layers/meta-kodi"/>
+  <project remote="github" name="koenkooi/meta-maker" path="layers/meta-maker"/>
   <project remote="github" name="ndechesne/meta-qcom" path="layers/meta-qcom"/>
   <project remote="github" name="agherzan/meta-raspberrypi" path="layers/meta-raspberrypi"/>
   <project remote="github" name="superna9999/meta-meson" path="layers/meta-meson"/>
@@ -42,7 +43,6 @@
   <project remote="yocto" name="meta-freescale" path="layers/meta-freescale"/>
   <project remote="yocto" name="meta-intel" path="layers/meta-intel"/>
   <project remote="yocto" name="meta-mono" path="layers/meta-mono"/>
-  <project remote="yocto" name="meta-maker" path="layers/meta-maker"/>
   <project remote="yocto" name="meta-qt4" path="layers/meta-qt4"/>
   <project remote="yocto" name="meta-ti" path="layers/meta-ti" revision="8fcd2f60720acf46555b45a1a48ad1fa0c52b75a" upstream="master"/>
   <project remote="yocto" name="meta-xilinx" path="layers/meta-xilinx" revision="6ddc5873b0ede30e6542f0ab151a6236acc37944" upstream="master"/>
