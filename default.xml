@@ -22,7 +22,7 @@
   <project name="koenkooi/meta-dominion" path="layers/meta-dominion" remote="github" revision="thud"/>
   <project name="koenkooi/meta-edison" path="layers/meta-edison" remote="github" revision="9dee6d095dcc3ee62a11f96e7c74bd0754a73452"/>
   <project name="koenkooi/meta-kodi" path="layers/meta-kodi" remote="github" revision="thud"/>
-  <project name="koenkooi/meta-maker" path="layers/meta-maker" remote="github" revision="thud"/>
+  <project name="koenkooi/meta-maker" path="layers/meta-maker" remote="github" revision="warrior"/>
   <project name="koenkooi/meta-photography" path="layers/meta-photography" remote="github" revision="thud"/>
   <project name="koenkooi/meta-uav" path="layers/meta-uav" remote="github" revision="thud"/>
   <project name="kraj/meta-altera" path="layers/meta-altera" remote="github" revision="d1eacd3b56bb5647c46f8601e83f1f8e309d6293"/>
