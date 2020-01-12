@@ -6,13 +6,13 @@
   <remote fetch="http://git.shr-project.org" name="shr"/>
   <remote fetch="http://git.yoctoproject.org/git" name="yocto"/>
   
-  <default revision="warrior" sync-j="16"/>
+  <default revision="zeus" sync-j="16"/>
   
   <project name="96boards/meta-96boards" path="layers/meta-96boards" remote="github"/>
-  <project name="Angstrom-distribution/meta-angstrom" path="layers/meta-angstrom" remote="github" revision="angstrom-v2019.06-warrior">
+  <project name="Angstrom-distribution/meta-angstrom" path="layers/meta-angstrom" remote="github" revision="angstrom-v2019.12-zeus">
     <copyfile dest="setup-environment" src="../../.repo/manifests/setup-environment"/>
   </project>
-  <project name="EmbeddedAndroid/meta-rtlwifi" path="layers/meta-rtlwifi" remote="github" revision="3d920444e433ceddecb7809da0ebab278d57e1ef"/>
+  <project name="EmbeddedAndroid/meta-rtlwifi" path="layers/meta-rtlwifi" remote="github" revision="174c9bacc4af9873bfbecf618e331c6d464540bf"/>
   <project name="Freescale/meta-freescale-3rdparty" path="layers/meta-freescale-3rdparty" remote="github"/>
   <project name="OSSystems/meta-browser" path="layers/meta-browser" remote="github" revision="3a0df19242cddda96efd91f195fe0df53fe4f955"/>
   <project name="agherzan/meta-chip" path="layers/meta-chip" remote="github" revision="4ce5116136daec211a58b0579f88569ed21a075c"/>
@@ -40,8 +40,7 @@
   <project name="meta-virtualization" path="layers/meta-virtualization" remote="yocto"/>
   <project name="meta-xilinx" path="layers/meta-xilinx" remote="yocto" revision="f3c8b1c9a8ae6a1690f7f5d907b65c588f65446a"/>
   <project name="ndechesne/meta-qcom" path="layers/meta-qcom" remote="github"/>
-  <project name="openembedded/bitbake" path="bitbake" remote="github" revision="1.42"/>
-  <project name="openembedded/meta-linaro" path="layers/meta-linaro" remote="linaro"/>
+  <project name="openembedded/bitbake" path="bitbake" remote="github" revision="1.44"/>
   <project name="openembedded/meta-openembedded" path="layers/meta-openembedded" remote="github"/>
   <project name="openembedded/openembedded-core" path="layers/openembedded-core" remote="github"/>
   <project name="shr-distribution/meta-smartphone" path="layers/meta-smartphone" remote="github"/>
