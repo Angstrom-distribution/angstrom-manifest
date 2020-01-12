@@ -35,7 +35,7 @@
   <project name="meta-java" path="layers/meta-java" remote="yocto"/>
   <project name="meta-qt4" path="layers/meta-qt4" remote="yocto" revision="b37d8b93924b314df3591b4a61e194ff3feb5517"/>
   <project name="meta-qt5/meta-qt5" path="layers/meta-qt5" remote="github"/>
-  <project name="meta-rust/meta-rust" path="layers/meta-rust" remote="github" revision="9487b089ea4779c2b494b17b9254219226efa539"/>
+  <project name="meta-rust/meta-rust" path="layers/meta-rust" remote="github" revision="0f950f5e333a1c8999320bf18232144f3dd9c80e"/>
   <project name="meta-ti" path="layers/meta-ti" remote="yocto" revision="54f3d19b60411fd5db5d8df42974eb4038037a00"/>
   <project name="meta-virtualization" path="layers/meta-virtualization" remote="yocto"/>
   <project name="meta-xilinx" path="layers/meta-xilinx" remote="yocto" revision="f3c8b1c9a8ae6a1690f7f5d907b65c588f65446a"/>
