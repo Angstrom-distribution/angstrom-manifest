@@ -14,7 +14,7 @@
   </project>
   <project name="EmbeddedAndroid/meta-rtlwifi" path="layers/meta-rtlwifi" remote="github" revision="174c9bacc4af9873bfbecf618e331c6d464540bf"/>
   <project name="Freescale/meta-freescale-3rdparty" path="layers/meta-freescale-3rdparty" remote="github"/>
-  <project name="OSSystems/meta-browser" path="layers/meta-browser" remote="github" revision="3a0df19242cddda96efd91f195fe0df53fe4f955"/>
+  <project name="OSSystems/meta-browser" path="layers/meta-browser" remote="github" revision="7378141606822ef0bb985aaa00e442c9ea806429"/>
   <project name="agherzan/meta-chip" path="layers/meta-chip" remote="github" revision="4ce5116136daec211a58b0579f88569ed21a075c"/>
   <project name="agherzan/meta-raspberrypi" path="layers/meta-raspberrypi" remote="github"/>
   <project name="bmwcarit/meta-ros" path="layers/meta-ros" remote="github" revision="72068b17e4192b51e09c8dc633805a35edac8701"/>
