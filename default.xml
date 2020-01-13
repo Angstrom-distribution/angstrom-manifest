@@ -25,7 +25,7 @@
   <project name="koenkooi/meta-maker" path="layers/meta-maker" remote="github" revision="warrior"/>
   <project name="koenkooi/meta-photography" path="layers/meta-photography" remote="github" revision="thud"/>
   <project name="koenkooi/meta-uav" path="layers/meta-uav" remote="github" revision="thud"/>
-  <project name="kraj/meta-altera" path="layers/meta-altera" remote="github" revision="d1eacd3b56bb5647c46f8601e83f1f8e309d6293"/>
+  <project name="kraj/meta-altera" path="layers/meta-altera" remote="github" revision="8c725c59f86613907748414595b1adccf80909bc"/>
   <project name="kraj/meta-nslu2" path="layers/meta-nslu2" remote="github" revision="21e90cd6f720c615a067318571178ee230ca1655"/>
   <project name="kraj/meta-clang" path="layers/meta-clang" remote="github"/>
   <project name="linux-sunxi/meta-sunxi" path="layers/meta-sunxi" remote="github"/>
@@ -36,7 +36,7 @@
   <project name="meta-qt4" path="layers/meta-qt4" remote="yocto" revision="b37d8b93924b314df3591b4a61e194ff3feb5517"/>
   <project name="meta-qt5/meta-qt5" path="layers/meta-qt5" remote="github"/>
   <project name="meta-rust/meta-rust" path="layers/meta-rust" remote="github" revision="0f950f5e333a1c8999320bf18232144f3dd9c80e"/>
-  <project name="meta-ti" path="layers/meta-ti" remote="yocto" revision="54f3d19b60411fd5db5d8df42974eb4038037a00"/>
+  <project name="meta-ti" path="layers/meta-ti" remote="yocto" revision="2251edb9b93aef4dfcd8a0f7b3ec4e1ddeb970af"/>
   <project name="meta-virtualization" path="layers/meta-virtualization" remote="yocto"/>
   <project name="meta-xilinx" path="layers/meta-xilinx" remote="yocto" revision="f3c8b1c9a8ae6a1690f7f5d907b65c588f65446a"/>
   <project name="ndechesne/meta-qcom" path="layers/meta-qcom" remote="github"/>
