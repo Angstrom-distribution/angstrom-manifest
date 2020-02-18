@@ -10,7 +10,7 @@
   
   <project name="96boards/meta-96boards" path="layers/meta-96boards" remote="github"/>
   <project name="Angstrom-distribution/meta-angstrom" path="layers/meta-angstrom" remote="github" revision="angstrom-v2019.12-zeus">
-    <copyfile dest="setup-environment" src="../../.repo/manifests/setup-environment"/>
+    <copyfile dest="setup-environment" src="setup-environment-internal"/>
   </project>
   <project name="EmbeddedAndroid/meta-rtlwifi" path="layers/meta-rtlwifi" remote="github" revision="174c9bacc4af9873bfbecf618e331c6d464540bf"/>
   <project name="Freescale/meta-freescale-3rdparty" path="layers/meta-freescale-3rdparty" remote="github"/>
