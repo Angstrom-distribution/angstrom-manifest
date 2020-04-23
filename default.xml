@@ -15,7 +15,7 @@
   <project name="EmbeddedAndroid/meta-rtlwifi" path="layers/meta-rtlwifi" remote="github" revision="3d920444e433ceddecb7809da0ebab278d57e1ef"/>
   <project name="Freescale/meta-freescale-3rdparty" path="layers/meta-freescale-3rdparty" remote="github"/>
   <project name="OSSystems/meta-browser" path="layers/meta-browser" remote="github" revision="3a0df19242cddda96efd91f195fe0df53fe4f955"/>
-  <project name="agherzan/meta-chip" path="layers/meta-chip" remote="github" revision="4ce5116136daec211a58b0579f88569ed21a075c"/>
+  <project name="koenkooi/meta-chip" path="layers/meta-chip" remote="github" revision="fa780f4307adb30cfb827f95894108251a626137"/>
   <project name="agherzan/meta-raspberrypi" path="layers/meta-raspberrypi" remote="github"/>
   <project name="bmwcarit/meta-ros" path="layers/meta-ros" remote="github" revision="72068b17e4192b51e09c8dc633805a35edac8701"/>
   <project name="koenkooi/meta-beagleboard" path="layers/meta-beagleboard" remote="github" revision="thud"/>
