@@ -48,7 +48,6 @@
   <project name="openembedded/meta-openembedded" path="sources/meta-openembedded" remote="github" revision="jethro"/>
   <project name="openembedded/openembedded-core" path="sources/openembedded-core" remote="github" revision="jethro"/>
   <project name="openpandora/meta-openpandora" path="sources/meta-openpandora" remote="github" revision="be558b76ca2b8130af875e2f2a96dd1a0868744f" upstream="master"/>
-  <project name="schnitzeltony/meta-gumstix-community" path="sources/meta-gumstix-community" remote="github" revision="509371d964b2923d6e526254beb6551c99b5140b" upstream="master"/>
   <project name="shr-distribution/meta-smartphone" path="sources/meta-smartphone" remote="github" revision="jethro"/>
   <project name="slimlogic/meta-exynos" path="sources/meta-exynos" remote="github" revision="d91f975a06e0797340432908fc89a1f1cadc1ee3" upstream="master"/>
   <project name="meta-intel-iot-middleware" path="sources/meta-intel-iot-middleware" remote="yocto" revision="821cf14c8304669d9ce0c5b87b9be5a6eecff6e5" upstream="master"/>
