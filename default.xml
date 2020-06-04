@@ -11,7 +11,7 @@
   
   <project name="96boards/meta-96boards" path="layers/meta-96boards" remote="github" />
   <project name="Angstrom-distribution/meta-angstrom" path="layers/meta-angstrom" remote="github" revision="angstrom-v2016.06-yocto2.1">
-    <copyfile dest="setup-environment" src="../../.repo/manifests/setup-environment"/>
+    <copyfile dest="setup-environment" src="setup-environment-internal"/>
   </project>
   <project name="Freescale/meta-fsl-arm-extra" path="layers/meta-fsl-arm-extra" remote="github" />
   <project name="OSSystems/meta-browser" path="layers/meta-browser" remote="github" />
