@@ -42,7 +42,7 @@
   <project remote="github" name="ndechesne/meta-qcom" path="sources/meta-qcom" revision="054abb9148dd0cf2d538eed8c87f13a19882bd0b"/>
   <project remote="github" name="koenkooi/meta-minnow" path="sources/meta-minnow" revision="fido"/>
   <project remote="github" name="Angstrom-distribution/meta-angstrom" path="sources/meta-angstrom" revision="angstrom-v2015.06-yocto1.8">
-      <linkfile dest="setup-environment" src="../../.repo/manifests/setup-environment"/>
+      <linkfile dest="setup-environment" src="setup-environment-internal"/>
   </project>
 
   <project remote="yocto" name="meta-fsl-arm" path="sources/meta-fsl-arm" revision="fido" />
