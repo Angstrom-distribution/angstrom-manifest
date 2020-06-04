@@ -9,7 +9,7 @@
   <default revision="morty" sync-j="4"/>
 
   <project name="Angstrom-distribution/meta-angstrom" path="layers/meta-angstrom" remote="github" revision="angstrom-v2016.12-yocto2.2" >
-    <copyfile dest="setup-environment" src="../../.repo/manifests/setup-environment"/>
+    <copyfile dest="setup-environment" src="setup-environment-internal"/>
   </project>
   <project name="openembedded/bitbake" path="bitbake" remote="github" revision="1.32" />
   <project name="openembedded/meta-openembedded" path="layers/meta-openembedded" remote="github" />
