@@ -43,7 +43,7 @@
   <project name="openembedded/bitbake" path="bitbake" remote="github" revision="1.42"/>
   <project name="openembedded/meta-linaro" path="layers/meta-linaro" remote="linaro"/>
   <project name="openembedded/meta-openembedded" path="layers/meta-openembedded" remote="github"/>
-  <project name="openembedded/openembedded-core" path="layers/openembedded-core" remote="github"/>
+  <project name="angstrom-distribution/openembedded-core" path="layers/openembedded-core" remote="github"/>
   <project name="shr-distribution/meta-smartphone" path="layers/meta-smartphone" remote="github"/>
   <project name="superna9999/meta-meson" path="layers/meta-meson" remote="github"/>
 </manifest>
